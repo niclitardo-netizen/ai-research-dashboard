@@ -31,7 +31,7 @@
     padding: 0;
   }
 
-  /* ââ Header ââ */
+  /* &#9472;&#9472; Header &#9472;&#9472; */
   header {
     background: linear-gradient(135deg, #12152a 0%, #1a1f3a 100%);
     border-bottom: 1px solid var(--border);
@@ -71,7 +71,7 @@
   .stat-num { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
   .stat-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
 
-  /* ââ Filters ââ */
+  /* &#9472;&#9472; Filters &#9472;&#9472; */
   .controls {
     padding: 20px 40px;
     display: flex;
@@ -111,7 +111,7 @@
   }
   .search-wrap input:focus { border-color: var(--accent); }
   .search-wrap::before {
-    content: 'ð';
+    content: '&#128269;';
     position: absolute;
     left: 10px;
     top: 50%;
@@ -119,7 +119,7 @@
     font-size: 0.75rem;
   }
 
-  /* ââ Grid ââ */
+  /* &#9472;&#9472; Grid &#9472;&#9472; */
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
@@ -127,7 +127,7 @@
     padding: 28px 40px;
   }
 
-  /* ââ Cards ââ */
+  /* &#9472;&#9472; Cards &#9472;&#9472; */
   .card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -206,7 +206,7 @@
     line-height: 1.4;
   }
   .steps-done li::before {
-    content: 'â';
+    content: '&#10003;';
     position: absolute;
     left: 0;
     color: var(--green);
@@ -224,7 +224,7 @@
     line-height: 1.4;
   }
   .next-steps li::before {
-    content: 'â';
+    content: '&#8594;';
     position: absolute;
     left: 0;
     color: var(--accent);
@@ -274,8 +274,8 @@
 
 <header>
   <div class="header-left">
-    <h1>ð§  AI Research Projects</h1>
-    <p>University of Miami â Radiology AI Research Group &nbsp;Â·&nbsp; Last updated: March 2026</p>
+    <h1>&#129504; AI Research Projects</h1>
+    <p>University of Miami &#8212; Radiology AI Research Group &nbsp;&#183;&nbsp; Last updated: March 2026</p>
   </div>
   <div class="stats">
     <div class="stat"><div class="stat-num" id="total-count">15</div><div class="stat-label">Total Projects</div></div>
@@ -288,11 +288,11 @@
 <div class="controls">
   <label>Filter:</label>
   <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
-  <button class="filter-btn" onclick="filterCards('submitted', this)">ð Submitted</button>
-  <button class="filter-btn" onclick="filterCards('in-progress', this)">ð In Progress</button>
-  <button class="filter-btn" onclick="filterCards('data-collection', this)">ðï¸ Data Collection</button>
-  <button class="filter-btn" onclick="filterCards('early-stage', this)">ð± Early Stage</button>
-  <button class="filter-btn" onclick="filterCards('planning', this)">ð Planning</button>
+  <button class="filter-btn" onclick="filterCards('submitted', this)">&#128196; Submitted</button>
+  <button class="filter-btn" onclick="filterCards('in-progress', this)">&#128260; In Progress</button>
+  <button class="filter-btn" onclick="filterCards('data-collection', this)">&#128452;&#65039; Data Collection</button>
+  <button class="filter-btn" onclick="filterCards('early-stage', this)">&#127793; Early Stage</button>
+  <button class="filter-btn" onclick="filterCards('planning', this)">&#128203; Planning</button>
   <div class="search-wrap">
     <input type="text" id="search" placeholder="Search projects or team..." oninput="searchCards(this.value)" />
   </div>
@@ -303,25 +303,25 @@
   <!-- 1. ICH Project -->
   <div class="card" data-status="in-progress" data-search="ich intracranial hemorrhage kirby sarah aidoc triage">
     <div class="card-header">
-      <div class="card-title">ICH Project â AI-Directed Triage for Intracranial Hemorrhage</div>
+      <div class="card-title">ICH Project &#8212; AI-Directed Triage for Intracranial Hemorrhage</div>
       <span class="status-badge badge-in-progress">In Progress</span>
     </div>
     <div class="card-overview">
       Clinical impact of AI-directed triage for incidentally detected outpatient intracranial hemorrhage. Evaluating AIDOC algorithm performance in outpatient CT reads.
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>Presented at ACR 2025 by Kirby</li>
       <li>Abstract submitted & accepted (ACR 2025)</li>
       <li>Manuscript first draft nearly complete</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Finalize and submit manuscript</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Quinn, Kirby</span>
       <span class="team-tag">Sarah (co-author)</span>
@@ -331,26 +331,26 @@
   <!-- 2. iPE ARNP vs non-ARNP -->
   <div class="card" data-status="submitted" data-search="ipe arnp advanced practice providers outpatient pulmonary embolism kirby jacob braga mckinney">
     <div class="card-header">
-      <div class="card-title">iPE ARNP vs Non-ARNP Sites â AI at Point of Care</div>
+      <div class="card-title">iPE ARNP vs Non-ARNP Sites &#8212; AI at Point of Care</div>
       <span class="status-badge badge-submitted">Under Review</span>
     </div>
     <div class="card-overview">
       Integrating Advanced Practice Providers with Point-of-Care AI imaging solutions in the outpatient setting. Studies whether an AI-guided triage system significantly reduces time to treatment for suspected iPE.
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>Accepted & presented at RSNA 2025</li>
       <li>Submitted to Journal of Assisted Computed Tomography</li>
       <li>Resubmitted to Journal of European Radiology AI</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Pending with editors/reviewers at European Radiology AI (since 11/02/2025)</li>
       <li>If rejected, explore nursing journals</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Quinn, Kirby</span>
       <span class="team-tag">Jacob, Ayden</span>
@@ -363,26 +363,26 @@
   <!-- 3. Nuance Smart Impressions -->
   <div class="card" data-status="submitted" data-search="nuance smart impressions hedging dictation nlp radiology report rohit braga kirby albuquerque radiology artificial intelligence">
     <div class="card-header">
-      <div class="card-title">Nuance Smart Impressions â AI-Assisted Radiology Reporting</div>
+      <div class="card-title">Nuance Smart Impressions &#8212; AI-Assisted Radiology Reporting</div>
       <span class="status-badge badge-submitted">Under Review</span>
     </div>
     <div class="card-overview">
       AI-Assisted Impression Drafting: Effects on Hedging, Style Standards, and Critical-Finding Prioritization. Analyzes AI's effect on radiology impression length, style consistency, hedging language, and critical-finding detection.
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>Data analysis completed across 4 analytics buckets</li>
       <li>Manuscript reworked and revised (11/16/2025)</li>
       <li>Figures, tables, and supplementary materials updated</li>
       <li>Submitted to Radiology: Artificial Intelligence (02/12/2026)</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Awaiting peer review from Radiology: Artificial Intelligence</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Reddy, Rohit</span>
       <span class="team-tag">Quinn, Kirby</span>
@@ -395,26 +395,26 @@
   <!-- 4. AI IT Survey -->
   <div class="card" data-status="submitted" data-search="ai it survey satisfaction radiologists providers qualmetrics burnout litardo wahood reddy mckinney collado braga artificial intelligence">
     <div class="card-header">
-      <div class="card-title">AI IT Survey â Satisfaction & Workflow Impact</div>
+      <div class="card-title">AI IT Survey &#8212; Satisfaction & Workflow Impact</div>
       <span class="status-badge badge-submitted">Under Review</span>
     </div>
     <div class="card-overview">
       QUALMETRICS satisfaction survey targeting radiologists and providers (ED physicians, PERT team) impacted by AI integration. Assesses whether AI has significantly affected workflows and patient care, including a burnout module.
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>Survey designed and deployed</li>
       <li>Burnout question module added</li>
       <li>Internal data collected</li>
       <li>Manuscript developed and submitted to Artificial Intelligence (02/12/2026)</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Awaiting peer review from Artificial Intelligence journal</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Litardo, Nicolas A.</span>
       <span class="team-tag">Wahood, Waseem</span>
@@ -428,25 +428,25 @@
   <!-- 5. AI Revenue -->
   <div class="card" data-status="in-progress" data-search="ai revenue rsna 2025 jacob ayden reddy rohit manuscript">
     <div class="card-header">
-      <div class="card-title">AI Revenue â Financial Impact of AI Integration</div>
+      <div class="card-title">AI Revenue &#8212; Financial Impact of AI Integration</div>
       <span class="status-badge badge-in-progress">In Progress</span>
     </div>
     <div class="card-overview">
       Study evaluating the revenue impact of AI integration in radiology. Abstract accepted and presented at RSNA 2025. Now seeking a resident or student to lead manuscript writing.
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>Abstract accepted for RSNA 2025</li>
       <li>Presented at RSNA 2025</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Recruit resident/student as first author to write manuscript</li>
       <li>Reddy, Rohit and Jacob, Ayden coordinating</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Jacob, Ayden</span>
       <span class="team-tag">Reddy, Rohit</span>
@@ -457,26 +457,26 @@
   <!-- 6. AI Rib Fracture Algorithm -->
   <div class="card" data-status="data-collection" data-search="rib fracture vertebral aidoc algorithm pilot er rads reinaldo jose braga galan arcilla herekar reddy">
     <div class="card-header">
-      <div class="card-title">AI Rib Fracture Algorithm â AIDOC Validation</div>
+      <div class="card-title">AI Rib Fracture Algorithm &#8212; AIDOC Validation</div>
       <span class="status-badge badge-data-collection">Data Collection</span>
     </div>
     <div class="card-overview">
       AI doc rib and vertebral fracture detection algorithm (AIDOC). Small pilot with Dr. Braga and Jose validating IT and algorithm performance. Progressing with ER RADS group for vertebral/rib fracture detection.
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>Pilot algorithm deployed (February 2025)</li>
       <li>Small group validation complete</li>
       <li>ER RADS group enrolled for vertebral/rib fracture evaluation</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Resident/student evaluation of pilot data (opportunity open)</li>
       <li>System-wide deployment pending validation</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Reinaldo, Jose</span>
       <span class="team-tag">Braga</span>
@@ -490,26 +490,26 @@
   <!-- 7. Contrast Ultrasound -->
   <div class="card" data-status="data-collection" data-search="contrast ultrasound siemens irb grant griffin harris cinthia del toro litardo ott nicholas">
     <div class="card-header">
-      <div class="card-title">Contrast Ultrasound â AI-Enhanced Contrast US Study</div>
+      <div class="card-title">Contrast Ultrasound &#8212; AI-Enhanced Contrast US Study</div>
       <span class="status-badge badge-data-collection">Data Collection</span>
     </div>
     <div class="card-overview">
       Study examining AI-enhanced contrast use in ultrasound (CEUS). Siemens collaboration with IRB approval and $50k grant funding. 40 patients already scanned; additional 60 patients planned.
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>IRB approved</li>
       <li>$50k grant approved</li>
       <li>Siemens collected data from 40 patients (July 2025)</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Siemens returning in ~6 months to scan 60 additional patients</li>
       <li>Data analysis and manuscript preparation</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Griffin Harris</span>
       <span class="team-tag">Cinthia del Toro</span>
@@ -521,26 +521,26 @@
   <!-- 8. False Positives (ICH and iPE) -->
   <div class="card" data-status="submitted" data-search="false positives ich ipe incidental acr 2025 academic radiology kirby sarah">
     <div class="card-header">
-      <div class="card-title">False Positives (ICH & iPE) â AI Triage Accuracy</div>
+      <div class="card-title">False Positives (ICH & iPE) &#8212; AI Triage Accuracy</div>
       <span class="status-badge badge-submitted">Under Review</span>
     </div>
     <div class="card-overview">
       Evaluates the incidence and characteristics of false positive findings generated by an AI-guided triage system for intracranial hemorrhage (ICH) and incidental pulmonary embolism (iPE).
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>Abstract presented at ACR 2025 by Kirby</li>
       <li>Rough draft manuscript completed</li>
       <li>Sent to Dr. Jose and Braga for review</li>
       <li>Submitted to Academic Radiology (11/17/2025)</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Awaiting peer review response from Academic Radiology</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Quinn, Kirby</span>
       <span class="team-tag">Sarah (co-author)</span>
@@ -552,26 +552,26 @@
   <!-- 9. Gleamer Algorithm -->
   <div class="card" data-status="data-collection" data-search="gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel herekar rajeev">
     <div class="card-header">
-      <div class="card-title">Gleamer Algorithm â Periprosthetic Fracture Detection</div>
+      <div class="card-title">Gleamer Algorithm &#8212; Periprosthetic Fracture Detection</div>
       <span class="status-badge badge-data-collection">Data Collection</span>
     </div>
     <div class="card-overview">
-      Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization â diagnostic use only). Current project: evaluating AI detection of periprosthetic fractures after total hip and knee arthroplasties (~2,000 patients).
+      Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization &#8212; diagnostic use only). Current project: evaluating AI detection of periprosthetic fractures after total hip and knee arthroplasties (~2,000 patients).
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>Literature review conducted on AI algorithm performance</li>
       <li>~2,000 patient cohort identified</li>
       <li>Preliminary data review underway by Rosenblum, Joel</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Resolve PACS access for student/resident analyst</li>
       <li>Complete data extraction and analysis</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Rosenblum, Joel</span>
       <span class="team-tag">Herekar, Rajeev</span>
@@ -582,25 +582,25 @@
   <!-- 10. iCAC Project -->
   <div class="card" data-status="submitted" data-search="icac coronary calcium scoring aidoc chest ct cardiovascular quintero daniel ott nicholas nahourii michael jacc">
     <div class="card-header">
-      <div class="card-title">iCAC Project â AI Coronary Calcium Scoring</div>
+      <div class="card-title">iCAC Project &#8212; AI Coronary Calcium Scoring</div>
       <span class="status-badge badge-submitted">Under Review</span>
     </div>
     <div class="card-overview">
       Retrospective comparison of AIDOC AI non-gated vs. radiologist-gated coronary artery calcium (CAC) scoring on non-contrast chest CT. Evaluates AI's ability to automatically flag and quantify significant CAC findings.
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>Study designed and data collected</li>
       <li>Manuscript drafted and finalized</li>
       <li>Submitted to JACC: Cardiovascular Imaging (11/13/2025)</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Awaiting peer review from JACC: Cardiovascular Imaging</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Quintero, Daniel</span>
       <span class="team-tag">Ott, Nicholas Alexander</span>
@@ -611,26 +611,26 @@
   <!-- 11. Leads Grant Proposal (Net AI) -->
   <div class="card" data-status="in-progress" data-search="leads grant proposal net ai social network cancer trial recruitment kinomori 30k grant">
     <div class="card-header">
-      <div class="card-title">Leads Grant Proposal (Net AI) â Cancer Trial Recruitment</div>
+      <div class="card-title">Leads Grant Proposal (Net AI) &#8212; Cancer Trial Recruitment</div>
       <span class="status-badge badge-in-progress">In Progress</span>
     </div>
     <div class="card-overview">
       Social network integration study examining whether social media and AI increases recruitment in cancer clinical trials. $30k grant awarded July 2025, led by Dr. Kinomori.
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>Grant proposal draft completed (January 2025)</li>
       <li>Dr. Kinomori assigned to lead project (5/12/2025)</li>
       <li>$30k grant awarded (July 2025)</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Recruit medical student for long-term project support</li>
       <li>Begin study execution</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Dr. Kinomori</span>
       <span class="team-tag">Quinn, Kirby</span>
@@ -647,16 +647,16 @@
       AI-powered patient consent trainer tool. Manuscript being prepared for submission. Led by Krumins, Ryan.
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>Project development underway</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Submit manuscript (Krumins, Ryan leading)</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Krumins, Ryan</span>
     </div>
@@ -665,26 +665,26 @@
   <!-- 13. Rohit SIR Project -->
   <div class="card" data-status="early-stage" data-search="rohit sir project thrombectomy ipe aidoc nlp pe cases uht emergency inpatient reddy">
     <div class="card-header">
-      <div class="card-title">Rohit SIR Project â AI & Time to Thrombectomy</div>
+      <div class="card-title">Rohit SIR Project &#8212; AI & Time to Thrombectomy</div>
       <span class="status-badge badge-early-stage">Early Stage</span>
     </div>
     <div class="card-overview">
       Extension of the POCAID iPE project evaluating whether AIDOC's implementation at UHT (ED/Inpatient) minimizes time to thrombectomy compared to pre-implementation (pre-2024). Looks at ER and inpatient PE cases.
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>12 cases with + NLP and + AIDOC for PE @ UHT identified</li>
       <li>Study concept defined</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Rohit to contact AIDOC for data/accession numbers</li>
       <li>Expand cohort to ED and inpatient cases</li>
       <li>Design retrospective analysis</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Reddy, Rohit</span>
       <span class="team-tag">Quinn, Kirby</span>
@@ -694,25 +694,25 @@
   <!-- 14. Syngo Carbon -->
   <div class="card" data-status="planning" data-search="syngo carbon siemens pacs ehr report generation diagnoses jose mckinney braga">
     <div class="card-header">
-      <div class="card-title">Syngo Carbon â Next-Gen AI PACS Platform</div>
+      <div class="card-title">Syngo Carbon &#8212; Next-Gen AI PACS Platform</div>
       <span class="status-badge badge-planning">Planning</span>
     </div>
     <div class="card-overview">
-      Siemens Syngo Carbon â next-generation AI-powered PACS platform integrating EHR, automated report generation, and diagnostic decision support. Currently rolling out; resident/student opportunities anticipated.
+      Siemens Syngo Carbon &#8212; next-generation AI-powered PACS platform integrating EHR, automated report generation, and diagnostic decision support. Currently rolling out; resident/student opportunities anticipated.
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>Platform evaluation initiated</li>
       <li>Integration with EHR and PACS assessed</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Monitor rollout and identify research opportunities</li>
       <li>Open to resident/student involvement as platform deploys</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Dr. Jose</span>
       <span class="team-tag">McKinney</span>
@@ -723,24 +723,24 @@
   <!-- 15. Deep Resolve -->
   <div class="card" data-status="planning" data-search="deep resolve">
     <div class="card-header">
-      <div class="card-title">Deep Resolve â AI Image Reconstruction</div>
+      <div class="card-title">Deep Resolve &#8212; AI Image Reconstruction</div>
       <span class="status-badge badge-planning">Planning</span>
     </div>
     <div class="card-overview">
       Channel created for Deep Resolve AI image reconstruction project. No project details have been posted yet. Awaiting project kickoff.
     </div>
     <div class="divider"></div>
-    <div class="section-label">â Steps Completed</div>
+    <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
       <li>Channel created, team to be assigned</li>
     </ul>
-    <div class="section-label">â¡ Next Steps</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Define project scope and team members</li>
       <li>Post overview in Teams channel</li>
     </ul>
     <div class="divider"></div>
-    <div class="section-label">ð¥ Team</div>
+    <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">TBD</span>
     </div>
@@ -751,7 +751,7 @@
 </div>
 
 <footer>
-  AI Research Projects Dashboard &nbsp;Â·&nbsp; University of Miami Radiology &nbsp;Â·&nbsp; Built from Microsoft Teams data
+  AI Research Projects Dashboard &nbsp;&#183;&nbsp; University of Miami Radiology &nbsp;&#183;&nbsp; Built from Microsoft Teams data
 </footer>
 
 <script>
