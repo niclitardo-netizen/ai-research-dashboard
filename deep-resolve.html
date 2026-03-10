@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Deep Resolve MRI AI â Sedation Time Reduction Study</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --card: #1a1d27;
+    --border: #2a2e42;
+    --accent: #4f8ef7;
+    --accent2: #7c5cbf;
+    --green: #2ecc71;
+    --yellow: #f1c40f;
+    --orange: #e67e22;
+    --teal: #1abc9c;
+    --text: #e8eaf6;
+    --muted: #8892b0;
+    --tag-bg: #252941;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    padding: 0 0 60px;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #12152a 0%, #1a1f3a 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 40px 24px;
+  }
+  .header-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 14px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+  .back-link:hover { opacity: 1; }
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #4f8ef7, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .header-sub {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 5px;
+  }
+  .status-pill {
+    background: rgba(241,196,15,0.15);
+    color: #f1c40f;
+    border: 1px solid rgba(241,196,15,0.3);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    align-self: flex-start;
+    margin-top: 6px;
+  }
+
+  /* Downloads bar */
+  .downloads-bar {
+    background: #12152a;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .downloads-bar span {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .dl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--tag-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 14px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .dl-btn:hover { border-color: var(--accent); background: #2a2e42; }
+
+  /* Main content */
+  .content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* Sections */
+  .section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 14px 14px 0 0;
+  }
+  .section.blue::before { background: linear-gradient(90deg, #4f8ef7, #3498db); }
+  .section.purple::before { background: linear-gradient(90deg, #9b59b6, #8e44ad); }
+  .section.green::before { background: linear-gradient(90deg, #2ecc71, #1abc9c); }
+  .section.yellow::before { background: linear-gradient(90deg, #f1c40f, #e67e22); }
+  .section.teal::before { background: linear-gradient(90deg, #1abc9c, #16a085); }
+
+  .section-title {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 700;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .section-body {
+    font-size: 0.88rem;
+    color: #c0c8e8;
+    line-height: 1.7;
+  }
+  .section-body p + p { margin-top: 10px; }
+
+  .highlight-box {
+    background: rgba(79,142,247,0.08);
+    border: 1px solid rgba(79,142,247,0.25);
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* Design table */
+  .design-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin-top: 4px;
+  }
+  .design-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  .design-table td:first-child {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    width: 36%;
+    white-space: nowrap;
+  }
+  .design-table td:last-child { color: var(--text); }
+  .design-table tr:last-child td { border-bottom: none; }
+
+  /* Status bullets */
+  .status-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .status-list li {
+    font-size: 0.85rem;
+    color: #a8b4d8;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .status-list li::before {
+    content: 'â';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 700;
+    font-size: 0.75rem;
+  }
+
+  /* Timeline grid */
+  .timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 4px;
+  }
+  .timeline-col {
+    background: var(--tag-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .timeline-quarter {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .timeline-items { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .timeline-items li {
+    font-size: 0.78rem;
+    color: #a8b4d8;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.4;
+  }
+  .timeline-items li::before {
+    content: 'âº';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* Benchmarking table */
+  .bench-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    margin-top: 4px;
+  }
+  .bench-table th {
+    background: #252941;
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .bench-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid rgba(42,46,66,0.5);
+    vertical-align: top;
+    line-height: 1.5;
+    color: #c0c8e8;
+  }
+  .bench-table tr:last-child td { border-bottom: none; }
+  .bench-table tr:hover td { background: rgba(255,255,255,0.03); }
+  .case-tag {
+    background: rgba(79,142,247,0.12);
+    color: var(--accent);
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .drug-tag {
+    background: rgba(155,89,182,0.12);
+    color: #b388ff;
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+  .dose-val {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 0.85rem;
+  }
+  td.ref-cite {
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-style: italic;
+  }
+
+  /* UM Samples table */
+  .um-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+  }
+  .um-table th {
+    background: #252941;
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 9px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .um-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(42,46,66,0.5);
+    color: #c0c8e8;
+    vertical-align: middle;
+    line-height: 1.4;
+  }
+  .um-table tr:last-child td { border-bottom: none; }
+  .yes-badge {
+    background: rgba(46,204,113,0.15);
+    color: #2ecc71;
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+  /* References */
+  .ref-list { list-style: none; display: flex; flex-direction: column; gap: 10px; counter-reset: ref-counter; }
+  .ref-list li {
+    font-size: 0.78rem;
+    color: var(--muted);
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.6;
+    counter-increment: ref-counter;
+  }
+  .ref-list li::before {
+    content: counter(ref-counter) '.';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.75rem;
+  }
+  .ref-list a { color: var(--accent); text-decoration: none; }
+  .ref-list a:hover { text-decoration: underline; }
+
+  @media (max-width: 650px) {
+    header, .downloads-bar, .content { padding-left: 16px; padding-right: 16px; }
+    .timeline-grid { grid-template-columns: 1fr; }
+    .bench-table, .um-table { font-size: 0.72rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="index.html">&#8592; Back to AI Research Dashboard</a>
+  <div class="header-top">
+    <div>
+      <h1>&#129302; Deep Resolve MRI AI</h1>
+      <p class="header-sub">Sedation Time Reduction Research Project &nbsp;&#183;&nbsp; University of Miami Radiology &nbsp;&#183;&nbsp; March 2026</p>
+    </div>
+    <span class="status-pill">&#9654; In Progress</span>
+  </div>
+</header>
+
+<div class="downloads-bar">
+  <span>&#128196; Documents:</span>
+  <a class="dl-btn" href="docs/Admin_Briefing_March2026.docx" download>&#128462; Admin Briefing (March 2026)</a>
+  <a class="dl-btn" href="docs/MRI_Sedation_Benchmarking_With_References_UM.xlsx" download>&#128202; Sedation Benchmarking Data</a>
+</div>
+
+<div class="content">
+
+  <!-- Background -->
+  <div class="section blue">
+    <div class="section-title">&#128203; Background &amp; Rationale</div>
+    <div class="section-body">
+      <p>Deep Resolve (Siemens Healthineers) is an AI-powered MRI image reconstruction platform that enables significantly faster scan acquisition while maintaining diagnostic image quality. Our clinical hypothesis is that reduced scan times will translate directly to shorter sedation durations for patients who require anesthesia for MRI.</p>
+      <p>This study will quantify that benefit, generate peer-reviewable evidence, and inform future technology and resource decisions at our institution.</p>
+    </div>
+  </div>
+
+  <!-- Research Question -->
+  <div class="section purple">
+    <div class="section-title">&#10067; Primary Research Question</div>
+    <div class="highlight-box">
+      Does implementation of Deep Resolve MRI AI lead to a statistically significant reduction in sedation time (induction to extubation) in patients undergoing sedated MRI at our institution?
+    </div>
+  </div>
+
+  <!-- Study Design -->
+  <div class="section teal">
+    <div class="section-title">&#128300; Study Design at a Glance</div>
+    <table class="design-table">
+      <tr><td>Study Design</td><td>Retrospective pre/post cohort study</td></tr>
+      <tr><td>Patient Population</td><td>Mixed adult and pediatric patients requiring sedation for MRI</td></tr>
+      <tr><td>Primary Outcome</td><td>Sedation duration: time from anesthesia induction to extubation</td></tr>
+      <tr><td>Secondary Outcomes</td><td>Total drug doses administered, recovery room time, adverse events</td></tr>
+      <tr><td>Sedation Monitoring</td><td>RASS (Richmond Agitation-Sedation Scale) and Ramsay Scale</td></tr>
+      <tr><td>Data Source</td><td>EMR/Epic chart review â Anesthesia encounter records</td></tr>
+      <tr><td>Comparison</td><td>Pre-implementation cohort vs. post-implementation cohort</td></tr>
+    </table>
+  </div>
+
+  <!-- Current Status -->
+  <div class="section yellow">
+    <div class="section-title">&#9989; Current Status (March 2026)</div>
+    <ul class="status-list">
+      <li>Literature review initiated; baseline sedation benchmarking document received and reviewed from Siemens Healthineers</li>
+      <li>Initial institutional chart review sample validated (3 cases reviewed to confirm data availability and methodology)</li>
+      <li>Manufacturer follow-up questions addressed: study design, patient population (mixed adult/pediatric), and sedation scale confirmed</li>
+      <li>Step-by-step research project plan drafted; team responsibilities and timeline under development</li>
+    </ul>
+  </div>
+
+  <!-- Timeline -->
+  <div class="section blue">
+    <div class="section-title">&#128197; Next Steps &amp; Projected Timeline</div>
+    <div class="timeline-grid">
+      <div class="timeline-col">
+        <div class="timeline-quarter">Q2 2026</div>
+        <ul class="timeline-items">
+          <li>IRB application submission</li>
+          <li>Full literature review completion</li>
+          <li>Pre-implementation data pull</li>
+        </ul>
+      </div>
+      <div class="timeline-col">
+        <div class="timeline-quarter">Q3 2026</div>
+        <ul class="timeline-items">
+          <li>Deep Resolve implementation</li>
+          <li>Post-implementation data collection begins</li>
+          <li>Interim analysis &amp; safety review</li>
+        </ul>
+      </div>
+      <div class="timeline-col">
+        <div class="timeline-quarter">Q4 2026</div>
+        <ul class="timeline-items">
+          <li>Final data analysis</li>
+          <li>Manuscript preparation</li>
+          <li>Submission for publication</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Expected Impact -->
+  <div class="section green">
+    <div class="section-title">&#127919; Expected Patient &amp; Institutional Impact</div>
+    <div class="section-body">
+      <p>Shorter sedation durations directly reduce anesthetic risk, improve MRI scanner throughput, lower recovery room resource utilization, and decrease overall procedure cost. For pediatric patients in particular, reduced scan time can meaningfully lower cumulative anesthetic exposure.</p>
+      <p>This study will generate the first institution-specific evidence for this benefit, contributing to the published literature and supporting future technology procurement decisions.</p>
+    </div>
+  </div>
+
+  <!-- Sedation Benchmarking -->
+  <div class="section blue">
+    <div class="section-title">&#128202; Sedation Benchmarking â Case vs. Literature Baseline</div>
+    <p style="font-size:0.78rem; color:var(--muted); margin-bottom:14px;">Source: Siemens Healthineers baseline benchmarking document &mdash; UM case comparison</p>
+    <table class="bench-table">
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th>Medication</th>
+          <th>Case Dose</th>
+          <th>Literature Baseline</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="case-tag">Case 1</span></td>
+          <td><span class="drug-tag">Midazolam</span></td>
+          <td><span class="dose-val">2 mg</span></td>
+          <td>0.03 mg/kg IV</td>
+          <td>Adult IV anxiolysis for MRI: randomized data around 0.03 mg/kg IV in adults for MRI-related anxiety, producing mildâmoderate sedation and good completion rates.</td>
+          <td class="ref-cite">Wesely et al. 2023</td>
+        </tr>
+        <tr>
+          <td><span class="case-tag">Case 1</span></td>
+          <td><span class="drug-tag">Fentanyl</span></td>
+          <td><span class="dose-val">100 mcg</span></td>
+          <td>0.5â1 mcg/kg IV q2â3 min</td>
+          <td>Procedural sedation (adult): IV fentanyl 0.5â1 mcg/kg every 2â3 minutes until adequate analgesia/sedation, typical total doses in the 1â2 mcg/kg range.</td>
+          <td class="ref-cite">Benzoni T et al. 2025</td>
+        </tr>
+        <tr>
+          <td><span class="case-tag">Case 1</span></td>
+          <td><span class="drug-tag">Propofol</span></td>
+          <td><span class="dose-val">250 mg</span></td>
+          <td>100â250 mcg/kg/min IV</td>
+          <td>Pediatric MRI sedation: conventional dosing when used alone is 2â6 mg/kg IV bolus for induction, followed by 100â250 mcg/kg/min infusion for deep sedation suitable for MRI.</td>
+          <td class="ref-cite">Sethi D et al. 2014</td>
+        </tr>
+        <tr>
+          <td><span class="case-tag">Case 2</span></td>
+          <td><span class="drug-tag">Midazolam</span></td>
+          <td><span class="dose-val">2 mg</span></td>
+          <td colspan="2" style="color:var(--muted); font-style:italic;">See Case 1 above</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><span class="case-tag">Case 2</span></td>
+          <td><span class="drug-tag">Fentanyl</span></td>
+          <td><span class="dose-val">100 mcg</span></td>
+          <td colspan="2" style="color:var(--muted); font-style:italic;">See Case 1 above</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><span class="case-tag">Case 2</span></td>
+          <td><span class="drug-tag">Propofol</span></td>
+          <td><span class="dose-val">150 mg</span></td>
+          <td colspan="2" style="color:var(--muted); font-style:italic;">See Case 1 above</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><span class="case-tag">Case 2</span></td>
+          <td><span class="drug-tag">Rocuronium</span></td>
+          <td><span class="dose-val">50 mg</span></td>
+          <td>0.6 mg/kg IV</td>
+          <td>Neuromuscular blockade induction: 0.6 mg/kg IV is the standard intubating dose; higher doses 1.0â1.2 mg/kg provide faster onset similar to succinylcholine.</td>
+          <td class="ref-cite">Jain A et al. 2024</td>
+        </tr>
+        <tr>
+          <td><span class="case-tag">Case 2</span></td>
+          <td><span class="drug-tag">Sugammadex</span></td>
+          <td><span class="dose-val">200 mg</span></td>
+          <td>2 mg/kg IV (moderate block)</td>
+          <td>Standard reversal after rocuronium: 2 mg/kg IV for moderate block (â¥2 TOF twitches); 4 mg/kg IV for deep block (0â1 twitch or PTC 1â2).</td>
+          <td class="ref-cite">Falksen JA 2024</td>
+        </tr>
+        <tr>
+          <td><span class="case-tag">Case 3</span></td>
+          <td><span class="drug-tag">Fentanyl</span></td>
+          <td><span class="dose-val">100 mcg</span></td>
+          <td colspan="2" style="color:var(--muted); font-style:italic;">See Case 1 above</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><span class="case-tag">Case 3</span></td>
+          <td><span class="drug-tag">Propofol</span></td>
+          <td><span class="dose-val">150 mg</span></td>
+          <td colspan="2" style="color:var(--muted); font-style:italic;">See Case 1 above</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><span class="case-tag">Case 3</span></td>
+          <td><span class="drug-tag">Rocuronium</span></td>
+          <td><span class="dose-val">50 mg</span></td>
+          <td colspan="2" style="color:var(--muted); font-style:italic;">See Case 2 above</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><span class="case-tag">Case 3</span></td>
+          <td><span class="drug-tag">Sugammadex</span></td>
+          <td><span class="dose-val">200 mg</span></td>
+          <td colspan="2" style="color:var(--muted); font-style:italic;">See Case 2 above</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- UM Sample Cases -->
+  <div class="section purple">
+    <div class="section-title">&#127973; UM Sample Chart Review â Initial Validation (Oct 2025)</div>
+    <p style="font-size:0.78rem; color:var(--muted); margin-bottom:14px;">3 cases reviewed to confirm data availability and methodology via Epic anesthesia encounter records</p>
+    <table class="um-table">
+      <thead>
+        <tr>
+          <th>Patient</th>
+          <th>Date</th>
+          <th>Scheduled Time</th>
+          <th>Exam Start</th>
+          <th>Exam</th>
+          <th>Sedation</th>
+          <th>Induction</th>
+          <th>Extubation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Oct 9, 2025</td>
+          <td>09:00</td>
+          <td>08:18</td>
+          <td>MR Shoulder R w/o</td>
+          <td><span class="yes-badge">YES</span></td>
+          <td>0846</td>
+          <td>0946</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Oct 10, 2025</td>
+          <td>14:00</td>
+          <td>15:30</td>
+          <td>MR Abdomen MRCP w+w/o</td>
+          <td><span class="yes-badge">YES</span></td>
+          <td>1601</td>
+          <td>1732</td>
+        </tr>
+        <tr>
+          <td>&mdash;</td>
+          <td>Oct 10, 2025</td>
+          <td>15:00</td>
+          <td>15:28</td>
+          <td>MR Cervical Spine w/o</td>
+          <td><span class="yes-badge">YES</span></td>
+          <td>&mdash;</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr>
+          <td>&mdash;</td>
+          <td>Oct 10, 2025</td>
+          <td>16:00</td>
+          <td>15:28</td>
+          <td>MR Brain w/o</td>
+          <td><span class="yes-badge">YES</span></td>
+          <td>&mdash;</td>
+          <td>&mdash;</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Oct 10, 2025</td>
+          <td>17:10</td>
+          <td>17:48</td>
+          <td>MR Abdomen w+w/o</td>
+          <td><span class="yes-badge">YES</span></td>
+          <td>1809</td>
+          <td>1859</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- References -->
+  <div class="section teal">
+    <div class="section-title">&#128218; Literature References</div>
+    <ol class="ref-list">
+      <li>Wesely A, Somers A, Pabon-Ramos W, Allen D. Intravenous Midazolam for Anxiolysis in MRI. <em>Journal of Radiology Nursing.</em> 2023;42(3):290-295. doi:10.1016/j.jradnu.2023.04.003</li>
+      <li>Loh PS, Ariffin MA, Rai V, et al. Comparing the efficacy and safety between propofol and dexmedetomidine for sedation in claustrophobic adults undergoing MRI (PADAM trial). <em>J Clin Anesth.</em> 2016;34:216-22. doi:10.1016/j.jclinane.2016.03.074. PMID: 27687378</li>
+      <li>Benzoni T, Agarwal A, Cascella M. Procedural Sedation. In: <em>StatPearls</em> [Internet]. StatPearls Publishing; 2025. <a href="https://www.ncbi.nlm.nih.gov/books/NBK551685/" target="_blank">NBK551685</a></li>
+      <li>Sethi D, Gupta M, Subramanian S. A randomized trial evaluating low doses of propofol infusion after IV ketamine for ambulatory pediatric MRI. <em>Saudi J Anaesth.</em> 2014;8(4):510-6. doi:10.4103/1658-354X.140871. PMID: 25422610</li>
+      <li>Jain A, Wermuth HR, Dua A, et al. Rocuronium. In: <em>StatPearls</em> [Internet]. StatPearls Publishing; 2024. <a href="https://www.ncbi.nlm.nih.gov/books/NBK539888/" target="_blank">NBK539888</a></li>
+      <li>Falksen JA, Schomer KJ. Neurologic Examination Facilitated by Reversal of Rocuronium with Sugammadex. <em>J Pharm Pract.</em> 2024;37(4):880-884. doi:10.1177/08971900231194564. PMID: 37565995</li>
+    </ol>
+  </div>
+
+</div>
+</body>
+</html>
