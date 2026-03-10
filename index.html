@@ -178,6 +178,7 @@
   .badge-data-collection { background: rgba(155,89,182,0.15); color: #b388ff; border: 1px solid rgba(155,89,182,0.3); }
   .badge-early-stage { background: rgba(231,76,60,0.15); color: #e74c3c; border: 1px solid rgba(231,76,60,0.3); }
   .badge-planning { background: rgba(149,165,166,0.15); color: #bdc3c7; border: 1px solid rgba(149,165,166,0.3); }
+  .badge-revision { background: rgba(230,126,34,0.15); color: #e67e22; border: 1px solid rgba(230,126,34,0.3); }
 
   .card-overview {
     font-size: 0.82rem;
@@ -358,6 +359,7 @@
   <label>Filter:</label>
   <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
   <button class="filter-btn" onclick="filterCards('submitted', this)">&#128196; Submitted</button>
+  <button class="filter-btn" onclick="filterCards('revision', this)">&#9888;&#65039; Revision</button>
   <button class="filter-btn" onclick="filterCards('in-progress', this)">&#128260; In Progress</button>
   <button class="filter-btn" onclick="filterCards('data-collection', this)">&#128452;&#65039; Data Collection</button>
   <button class="filter-btn" onclick="filterCards('early-stage', this)">&#127793; Early Stage</button>
@@ -649,13 +651,13 @@
   </div>
 
   <!-- 10. iCAC Project -->
-  <div class="card" data-status="submitted" data-search="icac coronary calcium scoring aidoc chest ct cardiovascular quintero daniel ott nicholas nahourii michael jacc">
+  <div class="card" data-status="revision" data-search="icac coronary calcium scoring aidoc chest ct cardiovascular quintero daniel ott nicholas nahourii michael jacc rejected revision resubmission">
     <div class="card-header">
       <div class="card-title">iCAC Project &#8212; AI Coronary Calcium Scoring</div>
-      <span class="status-badge badge-submitted">Under Review</span>
+      <span class="status-badge badge-revision">Revision Required</span>
     </div>
     <div class="card-overview">
-      Retrospective comparison of AIDOC AI non-gated vs. radiologist-gated coronary artery calcium (CAC) scoring on non-contrast chest CT. Evaluates AI's ability to automatically flag and quantify significant CAC findings.
+      Retrospective comparison of AIDOC AI non-gated vs. radiologist-gated coronary artery calcium (CAC) scoring on non-contrast chest CT. Evaluates AI's ability to automatically flag and quantify significant CAC findings. Manuscript rejected by JACC: Cardiovascular Imaging (Feb 27, 2026); targeted for resubmission after revisions.
     </div>
     <div class="divider"></div>
     <div class="section-label">&#9989; Steps Completed</div>
@@ -663,10 +665,25 @@
       <li>Study designed and data collected</li>
       <li>Manuscript drafted and finalized</li>
       <li>Submitted to JACC: Cardiovascular Imaging (11/13/2025)</li>
+      <li><strong>Rejected by JACC: Cardiovascular Imaging (Feb 27, 2026)</strong> &mdash; <a href="https://outlook.office365.com/mail/inbox/id/AAQkADk1OTNmMDRmLTQ2MzItNGVmNS1iOTM3LTg4N2IzZjM0YTgxYwAQAHY%2BAUeRhb5Kv4%2F%2B%2BoN2Viw%3D" target="_blank" style="color:#4f8ef7; text-decoration:none;">View Decision &amp; Reviewer Emails &#8599;</a></li>
     </ul>
-    <div class="section-label">&#10145; Next Steps</div>
+    <div class="section-label">&#9888;&#65039; Reviewer Action Items</div>
     <ul class="next-steps">
-      <li>Awaiting peer review from JACC: Cardiovascular Imaging</li>
+      <li><strong>Fix regulatory ID:</strong> Correct K193658 (Viz.ai ICH) &#8594; K231631 (correct Aidoc CAC clearance, Nov 2023) and fix Lessmann et al. citation â metrics cited are not found in that paper</li>
+      <li><strong>Scan interval analysis:</strong> Report scan directionality (NCCT &#8594; gated vs. gated &#8594; NCCT), interval distribution, and sensitivity analyses restricted to &#8804;14 days and &#8804;30 days windows</li>
+      <li><strong>Category harmonization:</strong> Standardize CAC thresholds between AI and reference; analyze CAC=0 separately per SCCT CAC DRS guidelines (do not merge with CAC 1â99)</li>
+      <li><strong>Protocol transparency:</strong> Add slice thickness, reconstruction kernels, scanner vendors, kVp, contrast status; include exploratory stratification by high-yield protocol factors</li>
+      <li><strong>AI output clarification:</strong> Specify whether raw algorithm output or radiologist-modified results were evaluated; document deployed software version/build</li>
+      <li><strong>Expanded statistics:</strong> Add macro-averaged metrics (balanced accuracy, macro-recall, macro-F1), numeric confusion matrix table, and confidence intervals for small subgroups (n=22, n=24)</li>
+      <li><strong>Refine workflow recommendation:</strong> Emphasize clinician verification on same NCCT with selective escalation to gated CT; avoid blanket confirmatory imaging recommendation</li>
+    </ul>
+    <div class="section-label">&#128196; Target Journals for Resubmission</div>
+    <ul class="next-steps">
+      <li>Circulation: Cardiovascular Imaging</li>
+      <li>European Heart Journal &#8211; Cardiovascular Imaging</li>
+      <li>Radiology: Artificial Intelligence</li>
+      <li>Journal of Cardiovascular Computed Tomography (JCCT)</li>
+      <li>Academic Radiology</li>
     </ul>
     <div class="divider"></div>
     <div class="section-label">&#128101; Team</div>
@@ -674,6 +691,10 @@
       <span class="team-tag">Quintero, Daniel</span>
       <span class="team-tag">Ott, Nicholas Alexander</span>
       <span class="team-tag">Nahourii, Michael Robert</span>
+      <span class="team-tag">Jose, Jean</span>
+      <span class="team-tag">Reddy, Rohit</span>
+      <span class="team-tag">Braga, Thiago</span>
+      <span class="team-tag">Gorniak, Richard</span>
     </div>
   </div>
 
