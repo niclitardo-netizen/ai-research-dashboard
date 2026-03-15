@@ -179,6 +179,7 @@
   .badge-early-stage { background: rgba(231,76,60,0.15); color: #e74c3c; border: 1px solid rgba(231,76,60,0.3); }
   .badge-planning { background: rgba(149,165,166,0.15); color: #bdc3c7; border: 1px solid rgba(149,165,166,0.3); }
   .badge-revision { background: rgba(230,126,34,0.15); color: #e67e22; border: 1px solid rgba(230,126,34,0.3); }
+  .badge-on-hold { background: rgba(127,140,141,0.15); color: #95a5a6; border: 1px solid rgba(127,140,141,0.3); }
 
   .card-overview {
     font-size: 0.82rem;
@@ -414,11 +415,12 @@
       <li>Accepted & presented at RSNA 2025</li>
       <li>Submitted to Journal of Assisted Computed Tomography</li>
       <li>Resubmitted to Journal of European Radiology AI</li>
+      <li>Revisions completed and manuscript re-uploaded (March 14, 2026)</li>
     </ul>
     <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
-      <li>Pending with editors/reviewers at European Radiology AI (since 11/02/2025)</li>
-      <li>If rejected, explore nursing journals</li>
+      <li>Submit by this weekend</li>
+      <li>Awaiting editorial decision post-revision (European Radiology AI)</li>
     </ul>
     <div class="divider"></div>
     <div class="section-label">&#128101; Team</div>
@@ -513,8 +515,8 @@
     </ul>
     <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
+      <li>Follow up with Ayden (Jacob) for manuscript update</li>
       <li>Recruit resident/student as first author to write manuscript</li>
-      <li>Reddy, Rohit and Jacob, Ayden coordinating</li>
     </ul>
     <div class="divider"></div>
     <div class="section-label">&#128101; Team</div>
@@ -540,11 +542,12 @@
       <li>Pilot algorithm deployed (February 2025)</li>
       <li>Small group validation complete</li>
       <li>ER RADS group enrolled for vertebral/rib fracture evaluation</li>
+      <li>Leandro Singerman running pilot; AI doc analysis produced</li>
     </ul>
     <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
+      <li>Request AI doc results from Singerman</li>
       <li>Resident/student evaluation of pilot data (opportunity open)</li>
-      <li>System-wide deployment pending validation</li>
     </ul>
     <div class="divider"></div>
     <div class="section-label">&#128101; Team</div>
@@ -576,7 +579,8 @@
     </ul>
     <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
-      <li>Siemens returning in ~6 months to scan 60 additional patients</li>
+      <li>Actively recruiting additional patients (March 2026)</li>
+      <li>Siemens to return for 60 additional scans once recruitment complete</li>
       <li>Data analysis and manuscript preparation</li>
     </ul>
     <div class="divider"></div>
@@ -634,11 +638,11 @@
     <ul class="steps-done">
       <li>Literature review conducted on AI algorithm performance</li>
       <li>~2,000 patient cohort identified</li>
-      <li>Preliminary data review underway by Rosenblum, Joel</li>
+      <li>Joel reviewing pathologic and periprosthetic fracture cases through Gleamer</li>
     </ul>
     <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
-      <li>Resolve PACS access for student/resident analyst</li>
+      <li>Continue Gleamer review of periprosthetic fracture cases (Joel)</li>
       <li>Complete data extraction and analysis</li>
     </ul>
     <div class="divider"></div>
@@ -651,39 +655,25 @@
   </div>
 
   <!-- 10. iCAC Project -->
-  <div class="card" data-status="revision" data-search="icac coronary calcium scoring aidoc chest ct cardiovascular quintero daniel ott nicholas nahourii michael jacc rejected revision resubmission">
+  <div class="card" data-status="submitted" data-search="icac coronary calcium scoring aidoc chest ct cardiovascular quintero daniel ott nicholas nahourii michael jacc jcct resubmitted">
     <div class="card-header">
       <div class="card-title">iCAC Project &#8212; AI Coronary Calcium Scoring</div>
-      <span class="status-badge badge-revision">Revision Required</span>
+      <span class="status-badge badge-submitted">Under Review</span>
     </div>
     <div class="card-overview">
-      Retrospective comparison of AIDOC AI non-gated vs. radiologist-gated coronary artery calcium (CAC) scoring on non-contrast chest CT. Evaluates AI's ability to automatically flag and quantify significant CAC findings. Manuscript rejected by JACC: Cardiovascular Imaging (Feb 27, 2026); targeted for resubmission after revisions.
+      Retrospective comparison of AIDOC AI non-gated vs. radiologist-gated coronary artery calcium (CAC) scoring on non-contrast chest CT. Rejected by JACC: Cardiovascular Imaging (Feb 27, 2026); revisions completed and resubmitted to Journal of Cardiovascular Computed Tomography (03/15/2026).
     </div>
     <div class="divider"></div>
     <div class="section-label">&#9989; Steps Completed</div>
     <ul class="steps-done">
-      <li>Study designed and data collected</li>
-      <li>Manuscript drafted and finalized</li>
+      <li>Study designed, data collected, and manuscript finalized</li>
       <li>Submitted to JACC: Cardiovascular Imaging (11/13/2025)</li>
-      <li><strong>Rejected by JACC: Cardiovascular Imaging (Feb 27, 2026)</strong></li>
+      <li>Rejected by JACC: Cardiovascular Imaging (Feb 27, 2026)</li>
+      <li>Revisions completed with Quintero; Nick Ott resubmitted to JCCT (03/15/2026)</li>
     </ul>
-    <div class="section-label">&#9888;&#65039; Reviewer Action Items</div>
+    <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
-      <li><strong>Fix regulatory ID:</strong> Correct K193658 (Viz.ai ICH) &#8594; K231631 (correct Aidoc CAC clearance, Nov 2023) and fix Lessmann et al. citation â metrics cited are not found in that paper</li>
-      <li><strong>Scan interval analysis:</strong> Report scan directionality (NCCT &#8594; gated vs. gated &#8594; NCCT), interval distribution, and sensitivity analyses restricted to &#8804;14 days and &#8804;30 days windows</li>
-      <li><strong>Category harmonization:</strong> Standardize CAC thresholds between AI and reference; analyze CAC=0 separately per SCCT CAC DRS guidelines (do not merge with CAC 1â99)</li>
-      <li><strong>Protocol transparency:</strong> Add slice thickness, reconstruction kernels, scanner vendors, kVp, contrast status; include exploratory stratification by high-yield protocol factors</li>
-      <li><strong>AI output clarification:</strong> Specify whether raw algorithm output or radiologist-modified results were evaluated; document deployed software version/build</li>
-      <li><strong>Expanded statistics:</strong> Add macro-averaged metrics (balanced accuracy, macro-recall, macro-F1), numeric confusion matrix table, and confidence intervals for small subgroups (n=22, n=24)</li>
-      <li><strong>Refine workflow recommendation:</strong> Emphasize clinician verification on same NCCT with selective escalation to gated CT; avoid blanket confirmatory imaging recommendation</li>
-    </ul>
-    <div class="section-label">&#128196; Target Journals for Resubmission</div>
-    <ul class="next-steps">
-      <li>Circulation: Cardiovascular Imaging</li>
-      <li>European Heart Journal &#8211; Cardiovascular Imaging</li>
-      <li>Radiology: Artificial Intelligence</li>
-      <li>Journal of Cardiovascular Computed Tomography (JCCT)</li>
-      <li>Academic Radiology</li>
+      <li>Awaiting peer review from Journal of Cardiovascular Computed Tomography</li>
     </ul>
     <div class="divider"></div>
     <div class="section-label">&#128101; Team</div>
@@ -699,13 +689,13 @@
   </div>
 
   <!-- 11. Leads Grant Proposal (Net AI) -->
-  <div class="card" data-status="in-progress" data-search="leads grant proposal net ai social network cancer trial recruitment kinomori 30k grant">
+  <div class="card" data-status="on-hold" data-search="leads grant proposal net ai social network cancer trial recruitment kinomori 30k grant cybersecurity">
     <div class="card-header">
       <div class="card-title">Leads Grant Proposal (Net AI) &#8212; Cancer Trial Recruitment</div>
-      <span class="status-badge badge-in-progress">In Progress</span>
+      <span class="status-badge badge-on-hold">On Hold</span>
     </div>
     <div class="card-overview">
-      Social network integration study examining whether social media and AI increases recruitment in cancer clinical trials. $30k grant awarded July 2025, led by Dr. Kinomori.
+      Social network integration study examining whether social media and AI increases recruitment in cancer clinical trials. $30k grant awarded July 2025, led by Dr. Kinomori. Currently halted by UM IT due to cybersecurity concerns.
     </div>
     <div class="divider"></div>
     <div class="section-label">&#9989; Steps Completed</div>
@@ -716,8 +706,8 @@
     </ul>
     <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
-      <li>Recruit medical student for long-term project support</li>
-      <li>Begin study execution</li>
+      <li>&#9940; Project halted by UM IT (cybersecurity concerns) &#8212; resolution pending</li>
+      <li>Resume study execution once IT clearance obtained</li>
     </ul>
     <div class="divider"></div>
     <div class="section-label">&#128101; Team</div>
@@ -769,9 +759,9 @@
     </ul>
     <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
+      <li>Meet with Rohit to discuss SIR abstract and next steps</li>
       <li>Rohit to contact AIDOC for data/accession numbers</li>
       <li>Expand cohort to ED and inpatient cases</li>
-      <li>Design retrospective analysis</li>
     </ul>
     <div class="divider"></div>
     <div class="section-label">&#128101; Team</div>
@@ -782,13 +772,13 @@
   </div>
 
   <!-- 14. Syngo Carbon -->
-  <div class="card" data-status="planning" data-search="syngo carbon siemens pacs ehr report generation diagnoses jose mckinney braga">
+  <div class="card" data-status="on-hold" data-search="syngo carbon siemens pacs ehr report generation diagnoses jose mckinney braga on hold">
     <div class="card-header">
       <div class="card-title">Syngo Carbon &#8212; Next-Gen AI PACS Platform</div>
-      <span class="status-badge badge-planning">Planning</span>
+      <span class="status-badge badge-on-hold">On Hold</span>
     </div>
     <div class="card-overview">
-      Siemens Syngo Carbon &#8212; next-generation AI-powered PACS platform integrating EHR, automated report generation, and diagnostic decision support. Currently rolling out; resident/student opportunities anticipated.
+      Siemens Syngo Carbon &#8212; next-generation AI-powered PACS platform integrating EHR, automated report generation, and diagnostic decision support. Currently on hold.
     </div>
     <div class="divider"></div>
     <div class="section-label">&#9989; Steps Completed</div>
@@ -798,8 +788,7 @@
     </ul>
     <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
-      <li>Monitor rollout and identify research opportunities</li>
-      <li>Open to resident/student involvement as platform deploys</li>
+      <li>&#9940; Project on hold &#8212; monitor for resumption</li>
     </ul>
     <div class="divider"></div>
     <div class="section-label">&#128101; Team</div>
@@ -811,13 +800,13 @@
   </div>
 
   <!-- 15. Deep Resolve -->
-  <div class="card" data-status="in-progress" data-search="deep resolve mri sedation ai reconstruction siemens anesthesia benchmarking litardo">
+  <div class="card" data-status="in-progress" data-search="deep resolve mri sedation ai reconstruction siemens anesthesia benchmarking litardo emerge miguel garcia patrick foundation model">
     <div class="card-header">
       <div class="card-title">Deep Resolve &#8212; AI Image Reconstruction &amp; Sedation Reduction</div>
       <span class="status-badge badge-in-progress">In Progress</span>
     </div>
     <div class="card-overview">
-      Prospective study evaluating whether Siemens Deep Resolve AI reconstruction reduces MRI sedation rates. Benchmarking sedation drug usage against published literature; pilot chart review completed on 3 anesthesia cases. <a href="deep-resolve.html" style="color:#58a6ff;text-decoration:none;font-weight:500;">View Full Briefing &#8594;</a>
+      Prospective study evaluating whether Siemens Deep Resolve AI reconstruction reduces MRI sedation rates. Benchmarking sedation drug usage against published literature; pilot chart review completed on 3 anesthesia cases. Presenting at EMERGE April 21â24, Miami Beach Convention Center. <a href="deep-resolve.html" style="color:#58a6ff;text-decoration:none;font-weight:500;">View Full Briefing &#8594;</a>
     </div>
     <div class="divider"></div>
     <div class="section-label">&#9989; Steps Completed</div>
@@ -826,12 +815,14 @@
       <li>Sedation benchmarking: 3 UM cases vs. published baselines (Midazolam, Fentanyl, Propofol, Rocuronium, Sugammadex)</li>
       <li>Admin briefing document drafted</li>
       <li>Pilot UM chart review: 3 anesthesia encounters identified</li>
+      <li>Initial case list provided by Miguel Garcia (Tower imaging supervisor) &#8212; cases where sedation was avoided due to Deep Resolve, any age group</li>
     </ul>
     <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
+      <li>Meeting with Patrick (Tue/Wed) to plan EMERGE presentation</li>
+      <li>EMERGE conference April 21&#8211;24 &#8212; Miami Beach Convention Center (presenting Deep Resolve &amp; AI doc foundation model)</li>
+      <li>Continue case collection with Miguel Garcia</li>
       <li>Submit IRB application (Q2 2026)</li>
-      <li>Acquire Deep Resolve scanner access &amp; finalize protocol</li>
-      <li>Begin prospective data collection (Q3 2026)</li>
     </ul>
     <div class="divider"></div>
     <div class="section-label">&#128101; Team</div>
@@ -839,6 +830,65 @@
       <span class="team-tag">Litardo</span>
       <span class="team-tag">Braga</span>
       <span class="team-tag">Reddy</span>
+    </div>
+  </div>
+
+  <!-- 16. Ethics Editorial -->
+  <div class="card" data-status="revision" data-search="ethics editorial ajr radiology ai ethics manuscript ryan krumins bibliography lit review resubmit">
+    <div class="card-header">
+      <div class="card-title">Ethics Editorial &#8212; AI Ethics in Radiology</div>
+      <span class="status-badge badge-revision">Revision Required</span>
+    </div>
+    <div class="card-overview">
+      Editorial manuscript on AI ethics in radiology. Denied at AJR with revisions requested; more extensive literature review performed. Targeting resubmission to a priority journal.
+    </div>
+    <div class="divider"></div>
+    <div class="section-label">&#9989; Steps Completed</div>
+    <ul class="steps-done">
+      <li>Manuscript submitted to AJR</li>
+      <li>Denied at AJR &#8212; revisions requested</li>
+      <li>More extensive literature review performed</li>
+    </ul>
+    <div class="section-label">&#10145; Next Steps</div>
+    <ul class="next-steps">
+      <li>Talk to Ryan and verify bibliography</li>
+      <li>Resubmit to next priority journal</li>
+    </ul>
+    <div class="divider"></div>
+    <div class="section-label">&#128101; Team</div>
+    <div class="team-tags">
+      <span class="team-tag">Krumins, Ryan</span>
+      <span class="team-tag">Litardo</span>
+    </div>
+  </div>
+
+  <!-- 17. IT Pathway / ITAI Track -->
+  <div class="card" data-status="in-progress" data-search="it pathway itai track radiology residency fellowship publications training residents podcast ai slide braga jose">
+    <div class="card-header">
+      <div class="card-title">IT/AI Pathway &#8212; Residency Track Benchmarking &amp; Education</div>
+      <span class="status-badge badge-in-progress">In Progress</span>
+    </div>
+    <div class="card-overview">
+      Research and benchmarking of IT/AI fellowship and ITAI residency tracks at peer institutions. Includes resident training on AI platforms in use at UM and a mini podcast initiative for AI education.
+    </div>
+    <div class="divider"></div>
+    <div class="section-label">&#9989; Steps Completed</div>
+    <ul class="steps-done">
+      <li>Researched similar IT/ITAI pathway positions at peer institutions</li>
+      <li>Analyzed publication output for IT fellowship trainees</li>
+      <li>Slide deck prepared summarizing findings</li>
+    </ul>
+    <div class="section-label">&#10145; Next Steps</div>
+    <ul class="next-steps">
+      <li>Present slide to Dr. Braga and Dr. Jose</li>
+      <li>Develop resident training on AI/IT platforms in use at UM</li>
+      <li>Launch mini podcast on AI in radiology</li>
+    </ul>
+    <div class="divider"></div>
+    <div class="section-label">&#128101; Team</div>
+    <div class="team-tags">
+      <span class="team-tag">Litardo</span>
+      <span class="team-tag">Braga, Jose</span>
     </div>
   </div>
 
