@@ -245,6 +245,16 @@
     color: #c0c8e8;
   }
 
+
+  /* Last updated label */
+  .card-updated {
+    font-size: 0.68rem;
+    color: var(--muted);
+    margin-top: 10px;
+    text-align: right;
+    font-style: italic;
+    opacity: 0.75;
+  }
   .divider { height: 1px; background: var(--border); margin: 14px 0; }
 
   /* No results */
@@ -404,6 +414,7 @@
       <span class="team-tag">McKinney, Alexander</span>
       <span class="team-tag">Braga, Juan Jose</span>
     </div>
+    <div class="card-updated">Last updated: 03/26/2026</div>
   </div>
 
   <!-- 2. Nuance Smart Impressions -->
@@ -436,6 +447,7 @@
       <span class="team-tag">Braga, Thiago</span>
       <span class="team-tag">Albuquerque</span>
     </div>
+    <div class="card-updated">Last updated: 02/12/2026</div>
   </div>
 
   <!-- 3. AI IT Survey -->
@@ -469,6 +481,7 @@
       <span class="team-tag">Collado-Mesa</span>
       <span class="team-tag">Braga, Jose</span>
     </div>
+    <div class="card-updated">Last updated: 02/12/2026</div>
   </div>
 
   <!-- 4. False Positives (ICH and iPE) -->
@@ -500,6 +513,7 @@
       <span class="team-tag">Dr. Jose</span>
       <span class="team-tag">Braga</span>
     </div>
+    <div class="card-updated">Last updated: 11/17/2025</div>
   </div>
 
   <!-- 5. iCAC Project -->
@@ -534,16 +548,17 @@
       <span class="team-tag">Braga, Thiago</span>
       <span class="team-tag">Gorniak, Richard</span>
     </div>
+    <div class="card-updated">Last updated: 03/15/2026</div>
   </div>
 
   <!-- 6. Ethics Editorial -->
-  <div class="card" data-status="revision" data-search="ethics editorial ajr radiology ai ethics manuscript ryan krumins bibliography lit review resubmit">
+  <div class="card" data-status="submitted" data-search="ethics editorial ajr jacr radiology ai ethics manuscript ryan krumins bibliography lit review submitted">
     <div class="card-header">
       <div class="card-title">Ethics Editorial &#8212; AI Ethics in Radiology</div>
-      <span class="status-badge badge-revision">Revision Required</span>
+      <span class="status-badge badge-submitted">Under Review</span>
     </div>
     <div class="card-overview">
-      Editorial manuscript on AI ethics in radiology. Denied at AJR with revisions requested; more extensive literature review performed. Targeting resubmission to a priority journal.
+      Editorial manuscript on AI ethics in radiology. Denied at AJR with revisions requested; more extensive literature review performed. Resubmitted to Journal of the American College of Radiology (JACR).
     </div>
     <div class="divider"></div>
     <div class="section-label">&#9989; Steps Completed</div>
@@ -551,11 +566,11 @@
       <li>Manuscript submitted to AJR</li>
       <li>Denied at AJR &#8212; revisions requested</li>
       <li>More extensive literature review performed</li>
+      <li>Submitted to JACR (03/24/2026)</li>
     </ul>
     <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
-      <li>Talk to Ryan and verify bibliography</li>
-      <li>Resubmit to next priority journal</li>
+      <li>Awaiting peer review from JACR</li>
     </ul>
     <div class="divider"></div>
     <div class="section-label">&#128101; Team</div>
@@ -563,6 +578,7 @@
       <span class="team-tag">Krumins, Ryan</span>
       <span class="team-tag">Litardo</span>
     </div>
+    <div class="card-updated">Last updated: 03/24/2026</div>
   </div>
 
   <!-- 7. ICH Project -->
@@ -580,10 +596,11 @@
       <li>Presented at ACR 2025 by Kirby</li>
       <li>Abstract submitted & accepted (ACR 2025)</li>
       <li>Manuscript first draft nearly complete</li>
+      <li>Submitted to Emergency Radiology (03/2026)</li>
     </ul>
     <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
-      <li>Finalize and submit manuscript</li>
+      <li>Awaiting decision from Emergency Radiology</li>
     </ul>
     <div class="divider"></div>
     <div class="section-label">&#128101; Team</div>
@@ -591,6 +608,7 @@
       <span class="team-tag">Quinn, Kirby</span>
       <span class="team-tag">Sarah (co-author)</span>
     </div>
+    <div class="card-updated">Last updated: 03/26/2026</div>
   </div>
 
   <!-- 8. AI Revenue -->
@@ -620,6 +638,7 @@
       <span class="team-tag">Reddy, Rohit</span>
       <span class="team-tag">Quinn, Kirby</span>
     </div>
+    <div class="card-updated">Last updated: 12/2025</div>
   </div>
 
   <!-- 9. Patient Consent AI Trainer -->
@@ -645,10 +664,11 @@
     <div class="team-tags">
       <span class="team-tag">Krumins, Ryan</span>
     </div>
+    <div class="card-updated">Last updated: 03/2026</div>
   </div>
 
   <!-- 10. Deep Resolve -->
-  <div class="card" data-status="in-progress" data-search="deep resolve mri sedation ai reconstruction siemens anesthesia benchmarking litardo emerge miguel garcia patrick foundation model">
+  <div class="card" data-status="in-progress" data-search="deep resolve mri sedation ai reconstruction siemens anesthesia benchmarking litardo emerge miguel garcia patrick julien jacob foundation model">
     <div class="card-header">
       <div class="card-title">Deep Resolve &#8212; AI Image Reconstruction &amp; Sedation Reduction</div>
       <span class="status-badge badge-in-progress">In Progress</span>
@@ -664,12 +684,13 @@
       <li>Admin briefing document drafted</li>
       <li>Pilot UM chart review: 3 anesthesia encounters identified</li>
       <li>Initial case list provided by Miguel Garcia (Tower imaging supervisor) &#8212; cases where sedation was avoided due to Deep Resolve, any age group</li>
+      <li>Patient data obtained from Miguel Garcia</li>
     </ul>
     <div class="section-label">&#10145; Next Steps</div>
     <ul class="next-steps">
       <li>Met with Patrick &#8212; providing guidance on slides for EMERGE presentation</li>
       <li>EMERGE conference April 30 &#8212; Miami Beach Convention Center (presenting Deep Resolve &amp; AI doc foundation model)</li>
-      <li>Continuing case data collection with Miguel Garcia</li>
+      <li>Reviewing patient data with incoming R1 Julien and medical student Jacob</li>
       <li>Submit IRB application (Q2 2026)</li>
     </ul>
     <div class="divider"></div>
@@ -679,6 +700,7 @@
       <span class="team-tag">Braga</span>
       <span class="team-tag">Reddy</span>
     </div>
+    <div class="card-updated">Last updated: 03/26/2026</div>
   </div>
 
         <!-- 11. AI Rib Fracture Algorithm -->
@@ -713,6 +735,7 @@
       <span class="team-tag">Reddy, Rohit</span>
       <span class="team-tag">Herekar, Rajeev</span>
     </div>
+    <div class="card-updated">Last updated: 02/2025</div>
   </div>
 
   <!-- 12. Contrast Ultrasound -->
@@ -745,10 +768,11 @@
       <span class="team-tag">Litardo, Nicolas A.</span>
       <span class="team-tag">Ott, Nicholas Alexander</span>
     </div>
+    <div class="card-updated">Last updated: 03/2026</div>
   </div>
 
   <!-- 13. Gleamer Algorithm -->
-  <div class="card" data-status="data-collection" data-search="gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel herekar rajeev">
+  <div class="card" data-status="data-collection" data-search="gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel kirby">
     <div class="card-header">
       <div class="card-title">Gleamer Algorithm &#8212; Periprosthetic Fracture Detection</div>
       <span class="status-badge badge-data-collection">Data Collection</span>
@@ -772,9 +796,9 @@
     <div class="section-label">&#128101; Team</div>
     <div class="team-tags">
       <span class="team-tag">Rosenblum, Joel</span>
-      <span class="team-tag">Herekar, Rajeev</span>
       <span class="team-tag">Quinn, Kirby</span>
     </div>
+    <div class="card-updated">Last updated: 03/26/2026</div>
   </div>
 
   <!-- 14. Rohit SIR Project -->
@@ -804,6 +828,7 @@
       <span class="team-tag">Reddy, Rohit</span>
       <span class="team-tag">Quinn, Kirby</span>
     </div>
+    <div class="card-updated">Last updated: 03/2026</div>
   </div>
 
   <!-- 15. Leads Grant Proposal (Net AI) -->
@@ -833,6 +858,7 @@
       <span class="team-tag">Dr. Kinomori</span>
       <span class="team-tag">Quinn, Kirby</span>
     </div>
+    <div class="card-updated">Last updated: 07/2025</div>
   </div>
 
   <!-- 16. Syngo Carbon -->
@@ -861,6 +887,7 @@
       <span class="team-tag">McKinney</span>
       <span class="team-tag">Braga</span>
     </div>
+    <div class="card-updated">Last updated: 03/2026</div>
   </div>
 
 <div class="no-results" id="no-results" style="display:none">No projects match your search.</div>
