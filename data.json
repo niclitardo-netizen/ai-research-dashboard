@@ -3,7 +3,7 @@
   "projects": [
     {
       "id": 1,
-      "title": "iPE ARNP vs Non-ARNP Sites â AI at Point of Care",
+      "title": "iPE ARNP vs Non-ARNP Sites — AI at Point of Care",
       "status": "submitted",
       "badge": "Under Review",
       "search": "ipe arnp advanced practice providers outpatient pulmonary embolism kirby jacob braga mckinney bjr british journal radiology",
@@ -13,7 +13,7 @@
         "Submitted to Journal of Assisted Computed Tomography",
         "Resubmitted to Journal of European Radiology AI",
         "Revisions completed and manuscript re-uploaded (March 14, 2026)",
-        "Author change request denied by European Radiology AI â writing to publisher to request reversal"
+        "Author change request denied by European Radiology AI — writing to publisher to request reversal"
       ],
       "nextSteps": [
         "Awaiting peer review response from British Journal of Radiology (BJR)"
@@ -23,7 +23,7 @@
     },
     {
       "id": 2,
-      "title": "Nuance Smart Impressions â AI-Assisted Radiology Reporting",
+      "title": "Nuance Smart Impressions — AI-Assisted Radiology Reporting",
       "status": "submitted",
       "badge": "Under Review",
       "search": "nuance smart impressions hedging dictation nlp radiology report rohit braga kirby albuquerque radiology artificial intelligence",
@@ -42,17 +42,17 @@
     },
     {
       "id": 3,
-      "title": "AI IT Survey â Satisfaction & Workflow Impact",
+      "title": "AI IT Survey — Satisfaction & Workflow Impact",
       "status": "revision",
       "badge": "Revision",
       "search": "ai it survey satisfaction radiologists providers qualmetrics burnout litardo wahood reddy mckinney collado braga artificial intelligence denied jmir",
-      "overview": "QUALMETRICS satisfaction survey targeting radiologists and providers (ED physicians, PERT team) impacted by AI integration. Denied by Artificial Intelligence journal. Fatal flaws: 21.1% response rate (JMIR requires â¥60%), n=38 substantive respondents, CHERRIES checklist missing, single-center/single-vendor limitations. Hallucination finding (68.4%) is clinically important; paper needs resubmission to better-fit journal.",
+      "overview": "QUALMETRICS satisfaction survey targeting radiologists and providers (ED physicians, PERT team) impacted by AI integration. Denied by Artificial Intelligence journal. Fatal flaws: 21.1% response rate (JMIR requires ≥60%), n=38 substantive respondents, CHERRIES checklist missing, single-center/single-vendor limitations. Hallucination finding (68.4%) is clinically important; paper needs resubmission to better-fit journal.",
       "stepsDone": [
         "Survey designed and deployed",
         "Burnout question module added",
         "Internal data collected",
         "Manuscript developed and submitted to Artificial Intelligence (02/12/2026)",
-        "Denied â fatal flaws: response rate 21.1%, n=38, CHERRIES checklist missing (04/2026)"
+        "Denied — fatal flaws: response rate 21.1%, n=38, CHERRIES checklist missing (04/2026)"
       ],
       "nextSteps": [
         "Resubmit to better-fit journal: Radiology:AI (RSNA), JACR, Academic Radiology, or JMIR Formative Research"
@@ -62,7 +62,7 @@
     },
     {
       "id": 4,
-      "title": "False Positives (ICH & iPE) â AI Triage Accuracy",
+      "title": "False Positives (ICH & iPE) — AI Triage Accuracy",
       "status": "submitted",
       "badge": "Under Review",
       "search": "false positives ich ipe incidental acr 2025 academic radiology kirby sarah",
@@ -81,7 +81,7 @@
     },
     {
       "id": 5,
-      "title": "iCAC Project â AI Coronary Calcium Scoring",
+      "title": "iCAC Project — AI Coronary Calcium Scoring",
       "status": "submitted",
       "badge": "Under Review",
       "search": "icac coronary calcium scoring aidoc chest ct cardiovascular quintero daniel ott nicholas nahourii michael jacc jcct resubmitted",
@@ -100,14 +100,14 @@
     },
     {
       "id": 6,
-      "title": "Ethics Editorial â AI Ethics in Radiology",
+      "title": "Ethics Editorial — AI Ethics in Radiology",
       "status": "submitted",
       "badge": "Under Review",
       "search": "ethics editorial ajr jacr radiology ai ethics manuscript ryan krumins bibliography lit review submitted",
       "overview": "Editorial manuscript on AI ethics in radiology. Denied at AJR with revisions requested; more extensive literature review performed. Resubmitted to Journal of the American College of Radiology (JACR).",
       "stepsDone": [
         "Manuscript submitted to AJR",
-        "Denied at AJR â revisions requested",
+        "Denied at AJR — revisions requested",
         "More extensive literature review performed",
         "Submitted to JACR (03/24/2026)"
       ],
@@ -119,10 +119,10 @@
     },
     {
       "id": 7,
-      "title": "ICH Project â AI-Directed Triage for Intracranial Hemorrhage",
+      "title": "ICH Project — AI-Directed Triage for Intracranial Hemorrhage",
       "status": "revision",
       "badge": "Revision",
-      "search": "ich intracranial hemorrhage kirby sarah aidoc triage emergency radiology denied kerven",
+      "search": "ich intracranial hemorrhage+kirby sarah aidoc triage emergency radiology denied kerven",
       "overview": "Clinical impact of AI-directed triage for incidentally detected outpatient intracranial hemorrhage. Evaluating AIDOC algorithm performance in outpatient CT reads.",
       "stepsDone": [
         "Presented at ACR 2025 by Kirby",
@@ -139,7 +139,7 @@
     },
     {
       "id": 8,
-      "title": "AI Revenue â Financial Impact of AI Integration",
+      "title": "AI Revenue — Financial Impact of AI Integration",
       "status": "in-progress",
       "badge": "In Progress",
       "search": "ai revenue rsna 2025 jacob ayden reddy rohit manuscript submission",
@@ -174,7 +174,7 @@
     },
     {
       "id": 10,
-      "title": "Deep Resolve â AI Image Reconstruction & Sedation Reduction",
+      "title": "Deep Resolve — AI Image Reconstruction & Sedation Reduction",
       "status": "in-progress",
       "badge": "In Progress",
       "search": "deep resolve mri sedation ai reconstruction siemens anesthesia benchmarking litardo emerge miguel garcia patrick julien jacob foundation model",
@@ -184,12 +184,12 @@
         "Sedation benchmarking: 3 UM cases vs. published baselines (Midazolam, Fentanyl, Propofol, Rocuronium, Sugammadex)",
         "Admin briefing document drafted",
         "Pilot UM chart review: 3 anesthesia encounters identified",
-        "Initial case list provided by Miguel Garcia (Tower imaging supervisor) â cases where sedation was avoided due to Deep Resolve, any age group",
+        "Initial case list provided by Miguel Garcia (Tower imaging supervisor) — cases where sedation was avoided due to Deep Resolve, any age group",
         "Patient data obtained from Miguel Garcia",
-        "No qualifying patients identified in March 2026 â sedation-avoided cases not found"
+        "No qualifying patients identified in March 2026 — sedation-avoided cases not found"
       ],
       "nextSteps": [
-        "Follow up with UM techs/schedulers â unresponsive to emails; need help identifying patients where sedation was avoided due to Deep Resolve",
+        "Follow up with UM techs/schedulers — unresponsive to emails; need help identifying patients where sedation was avoided due to Deep Resolve",
         "Submit IRB application (Q2 2026)"
       ],
       "team": ["Litardo", "Braga", "Reddy"],
@@ -197,7 +197,7 @@
     },
     {
       "id": 11,
-      "title": "AI Rib Fracture Algorithm â AIDOC Validation",
+      "title": "AI Rib Fracture Algorithm — AIDOC Validation",
       "status": "data-collection",
       "badge": "Data Collection",
       "search": "rib fracture vertebral aidoc algorithm pilot er rads reinaldo jose braga galan arcilla erekar reddy",
@@ -217,7 +217,7 @@
     },
     {
       "id": 12,
-      "title": "Contrast Ultrasound â AI-Enhanced Contrast US Study",
+      "title": "Contrast Ultrasound — AI-Enhanced Contrast US Study",
       "status": "data-collection",
       "badge": "Data Collection",
       "search": "contrast ultrasound siemens irb grant griffin harris cinthia del toro litardo ott nicholas",
@@ -237,11 +237,11 @@
     },
     {
       "id": 13,
-      "title": "Gleamer Algorithm â Periprosthetic Fracture Detection",
+      "title": "Gleamer Algorithm — Periprosthetic Fracture Detection",
       "status": "data-collection",
       "badge": "Data Collection",
       "search": "gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel kirby",
-      "overview": "Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization â diagnostic use only). Current project: evaluating AI detection of periprosthetic fractures after total hip and knee arthroplasties (~2,000 patients).",
+      "overview": "Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization — diagnostic use only). Current project: evaluating AI detection of periprosthetic fractures after total hip and knee arthroplasties (~2,000 patients).",
       "stepsDone": [
         "Literature review conducted on AI algorithm performance",
         "~2,000 patient cohort identified",
@@ -256,7 +256,7 @@
     },
     {
       "id": 14,
-      "title": "Rohit SIR Project â AI & Time to Thrombectomy",
+      "title": "Rohit SIR Project — AI & Time to Thrombectomy",
       "status": "early-stage",
       "badge": "Early Stage",
       "search": "rohit sir project thrombectomy ipe aidoc nlp pe cases uht emergency inpatient reddy",
@@ -275,7 +275,7 @@
     },
     {
       "id": 15,
-      "title": "Leads Grant Proposal (Net AI) â Cancer Trial Recruitment",
+      "title": "Leads Grant Proposal (Net AI) — Cancer Trial Recruitment",
       "status": "on-hold",
       "badge": "On Hold",
       "search": "leads grant proposal net ai social network cancer trial recruitment kinomori 30k grant cybersecurity",
@@ -286,7 +286,7 @@
         "$30k grant awarded (July 2025)"
       ],
       "nextSteps": [
-        "â  Project halted by UM IT (cybersecurity concerns) â resolution pending",
+        "⚠ Project halted by UM IT (cybersecurity concerns) — resolution pending",
         "Resume study execution once IT clearance obtained"
       ],
       "team": ["Dr. Kinomori", "Quinn, Kirby"],
@@ -294,17 +294,17 @@
     },
     {
       "id": 16,
-      "title": "Syngo Carbon â Next-Gen AI PACS Platform",
+      "title": "Syngo Carbon — Next-Gen AI PACS Platform",
       "status": "on-hold",
       "badge": "On Hold",
       "search": "syngo carbon siemens pacs ehr report generation diagnoses jose mckinney braga on hold",
-      "overview": "Siemens Syngo Carbon â next-generation AI-powered PACS platform integrating EHR, automated report generation, and diagnostic decision support. Currently on hold.",
+      "overview": "Siemens Syngo Carbon — next-generation AI-powered PACS platform integrating EHR, automated report generation, and diagnostic decision support. Currently on hold.",
       "stepsDone": [
         "Platform evaluation initiated",
         "Integration with EHR and PACS assessed"
       ],
       "nextSteps": [
-        "â  Project on hold â monitor for resumption"
+        "⚠ Project on hold — monitor for resumption"
       ],
       "team": ["Dr. Jose", "McKinney", "Braga"],
       "lastUpdated": "03/2026"
