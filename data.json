@@ -206,7 +206,7 @@
       "title": "AI Rib Fracture Algorithm — AIDOC Validation",
       "status": "data-collection",
       "badge": "Data Collection",
-      "search": "rib fracture vertebral aidoc algorithm pilot er rads reinaldo jose braga galan arcilla erekar reddy tony",
+      "search": "rib fracture vertebral aidoc algorithm pilot er rads reinaldo jose braga galan arcilla erekar reddy aguilera",
       "overview": "AI doc rib and vertebral fracture detection algorithm (AIDOC). Small pilot with Dr. Braga and Jose validating IT and algorithm performance. Progressing with ER RADS group for vertebral/rib fracture detection.",
       "stepsDone": [
         "Pilot algorithm deployed (February 2025)",
@@ -215,7 +215,7 @@
         "Leandro Singerman running pilot; AI doc analysis produced"
       ],
       "nextSteps": [
-        "Follow up with Tony on current project status and whether student/resident assistance is needed",
+        "Follow up with Dr. Aguilera on current project status and whether student/resident assistance is needed",
         "Request AI doc results from Singerman",
         "Resident/student evaluation of pilot data (opportunity open)"
       ],
@@ -325,10 +325,10 @@
       "title": "AI Governance in Radiology — Hospital Readiness Survey",
       "status": "early-stage",
       "badge": "Early Stage",
-      "search": "ai governance radiology hospital legal medical legal questionnaire benchmarking rsna abstract tony survey readiness framework radiologist chair chief legal officer",
-      "overview": "Survey-based study evaluating AI governance frameworks across hospital systems, aiming to build a national benchmarking tool for safe and appropriate AI deployment in radiology. Inspired by Tony's recent conference presentation. Highly variable or non-existent governance structures identified — significant lag behind AI adoption pressures. Targets three stakeholder groups: chief legal officers, radiology department chairs, and general radiologists.",
+      "search": "ai governance radiology hospital legal medical legal questionnaire benchmarking rsna abstract aguilera survey readiness framework radiologist chair chief legal officer",
+      "overview": "Survey-based study evaluating AI governance frameworks across hospital systems, aiming to build a national benchmarking tool for safe and appropriate AI deployment in radiology. Inspired by Dr. Aguilera's recent conference presentation. Highly variable or non-existent governance structures identified — significant lag behind AI adoption pressures. Targets three stakeholder groups: chief legal officers, radiology department chairs, and general radiologists.",
       "stepsDone": [
-        "Concept developed — inspired by Tony's recent conference presentation",
+        "Concept developed — inspired by Dr. Aguilera's recent conference presentation",
         "Brainstorming phase: key governance gaps identified; survey structure outlined"
       ],
       "nextSteps": [
@@ -337,7 +337,7 @@
         "Submit as RSNA educational research abstract (deadline: beginning of May)",
         "Consider need for health system governance body outside of radiology to assume responsibility"
       ],
-      "team": ["Litardo, Nicolas A.", "Quinn, Kirby"],
+      "team": ["Litardo, Nicolas A.", "Quinn, Kirby", "Aguilera"],
       "lastUpdated": "04/09/2026"
     }
   ]
