@@ -44,24 +44,24 @@
     {
       "id": 3,
       "title": "AI IT Survey — Satisfaction & Workflow Impact",
-      "status": "revision",
-      "badge": "Revision",
-      "search": "ai it survey satisfaction radiologists providers qualmetrics burnout litardo wahood reddy mckinney collado braga artificial intelligence denied jmir helion",
-      "overview": "QUALMETRICS satisfaction survey targeting radiologists and providers (ED physicians, PERT team) impacted by AI integration. Denied by Artificial Intelligence journal. Fatal flaws: 21.1% response rate (JMIR requires ≥60%), n=38 substantive respondents, CHERRIES checklist missing, single-center/single-vendor limitations. Hallucination finding (68.4%) is clinically important; paper needs resubmission to better-fit journal.",
+      "status": "submitted",
+      "badge": "Under Review",
+      "search": "ai it survey satisfaction radiologists providers qualmetrics burnout litardo wahood reddy mckinney collado braga artificial intelligence denied jmir heliyon",
+      "overview": "QUALMETRICS satisfaction survey targeting radiologists and providers (ED physicians, PERT team) impacted by AI integration. Denied by Artificial Intelligence journal. Fatal flaws: 21.1% response rate (JMIR requires ≥60%), n=38 substantive respondents, CHERRIES checklist missing, single-center/single-vendor limitations. Hallucination finding (68.4%) is clinically important. Resubmitted to Heliyon (04/16/2026).",
       "stepsDone": [
         "Survey designed and deployed",
         "Burnout question module added",
         "Internal data collected",
         "Manuscript developed and submitted to Artificial Intelligence (02/12/2026)",
         "Denied — fatal flaws: response rate 21.1%, n=38, CHERRIES checklist missing (04/2026)",
-        "Editors' revisions incorporated; edited manuscript emailed to McKinney, Braga, Jose (04/09/2026)"
+        "Editors' revisions incorporated; edited manuscript emailed to McKinney, Braga, Jose (04/09/2026)",
+        "Resubmitted to Heliyon (04/16/2026)"
       ],
       "nextSteps": [
-        "Awaiting feedback from McKinney on edited manuscript",
-        "Resubmit to better-fit journal — candidates: Radiology:AI (RSNA), JACR, Academic Radiology, JMIR Formative Research, or Helion journal"
+        "Awaiting peer review from Heliyon"
       ],
       "team": ["Litardo, Nicolas A.", "Wahood, Waseem", "Reddy, Rohit", "Dr. McKinney", "Collado-Mesa", "Braga, Jose"],
-      "lastUpdated": "04/09/2026"
+      "lastUpdated": "04/16/2026"
     },
     {
       "id": 4,
@@ -257,7 +257,7 @@
       ],
       "nextSteps": [
         "Keep Aguilera in the loop with updates",
-        "Submit RSNA abstract by beginning of May — periprosthetic fracture performance or exhibit on algorithm pitfalls",
+        "Submit RSNA abstract by beginning of May — periprosthetic fracture performance or educational exhibit on algorithm pitfalls",
         "Decide on submission format: scientific paper (performance analysis) vs. educational exhibit (pitfalls — acute/chronic, missed fractures)",
         "Explore tumor fracture and additional hip/knee sub-projects",
         "Complete data extraction and analysis"
@@ -322,23 +322,42 @@
     },
     {
       "id": 17,
-      "title": "AI Governance in Radiology — Hospital Readiness Survey",
-      "status": "early-stage",
-      "badge": "Early Stage",
-      "search": "ai governance radiology hospital legal medical legal questionnaire benchmarking rsna abstract aguilera survey readiness framework radiologist chair chief legal officer",
-      "overview": "Survey-based study evaluating AI governance frameworks across hospital systems, aiming to build a national benchmarking tool for safe and appropriate AI deployment in radiology. Inspired by Dr. Aguilera's recent conference presentation. Highly variable or non-existent governance structures identified — significant lag behind AI adoption pressures. Targets three stakeholder groups: chief legal officers, radiology department chairs, and general radiologists.",
+      "title": "AI Governance in Radiology — RSNA Educational Exhibit",
+      "status": "planning",
+      "badge": "Planning",
+      "search": "ai governance radiology hospital legal medical legal questionnaire benchmarking rsna abstract aguilera educational exhibit readiness framework radiologist chair chief legal officer",
+      "overview": "RSNA educational exhibit on AI governance frameworks in radiology, highlighting the gap between AI adoption pressures and governance readiness across hospital systems. Inspired by Dr. Aguilera's recent conference presentation. Targets three stakeholder groups: chief legal officers, radiology department chairs, and general radiologists. Exhibit prepared and ready for RSNA abstract submission (deadline: beginning of May).",
       "stepsDone": [
         "Concept developed — inspired by Dr. Aguilera's recent conference presentation",
-        "Brainstorming phase: key governance gaps identified; survey structure outlined"
+        "Brainstorming phase: key governance gaps identified; survey structure outlined",
+        "RSNA educational exhibit prepared and ready for submission"
       ],
       "nextSteps": [
-        "Develop separate questionnaires for: (1) Chief Legal Officer, (2) Radiology Department Chair, (3) General Radiologists",
-        "Build scoring/benchmarking framework to assess where each hospital system stands on safe AI deployment nationally",
-        "Submit as RSNA educational research abstract (deadline: beginning of May)",
+        "Submit RSNA educational exhibit abstract (deadline: beginning of May)",
         "Consider need for health system governance body outside of radiology to assume responsibility"
       ],
       "team": ["Litardo, Nicolas A.", "Quinn, Kirby", "Aguilera"],
-      "lastUpdated": "04/09/2026"
+      "lastUpdated": "04/16/2026"
+    },
+    {
+      "id": 18,
+      "title": "AI Governance Survey — Real-World Hospital Governance Data",
+      "status": "early-stage",
+      "badge": "Early Stage",
+      "search": "ai governance survey hospital governance bodies data collection benchmarking radiology legal chief legal officer department chair radiologists aguilera national",
+      "overview": "Survey-based research project collecting real-world data from hospital governance bodies on AI governance frameworks in radiology. Companion project to the RSNA educational exhibit (Project #17). Aims to build a national benchmarking dataset by gathering structured input from chief legal officers, radiology department chairs, and general radiologists across health systems.",
+      "stepsDone": [
+        "Project scope defined — companion to RSNA educational exhibit",
+        "Key stakeholder groups identified: (1) Chief Legal Officer, (2) Radiology Department Chair, (3) General Radiologists"
+      ],
+      "nextSteps": [
+        "Develop separate questionnaires for each stakeholder group",
+        "Build scoring/benchmarking framework to assess where each hospital system stands on safe AI deployment nationally",
+        "IRB consideration — determine if human subjects research approval required",
+        "Identify target health systems and governance contacts for survey distribution"
+      ],
+      "team": ["Litardo, Nicolas A.", "Quinn, Kirby", "Aguilera"],
+      "lastUpdated": "04/16/2026"
     }
   ]
 }
