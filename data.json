@@ -363,19 +363,27 @@
     },
     {
       "id": 19,
-      "title": "Quantifee — AI Fee Schedule Optimization",
-      "status": "planning",
-      "badge": "RSNA Abstract Planned",
-      "search": "quantifee fee schedule optimization rsna abstract submission litardo",
-      "overview": "New project evaluating Quantifee for AI-driven fee schedule optimization in radiology. Planning to submit an abstract to RSNA 2026.",
+      "title": "Hurricode — Automated ICD-10 Coding & Incidental Finding Surfacing",
+      "status": "in-progress",
+      "badge": "RSNA Abstract Due 05/06",
+      "search": "hurricode quantiphi icd-10 coding ehr reconciliation incidental findings aif nlp rag radiology braga jose gorniak saigal litardo mckinney rsna 2026 abstract",
+      "overview": "Radiologist-attested, multi-organ system for automated ICD-10 code assignment from CT, MRI, and PET reports with EHR reconciliation to surface newly-documented actionable incidental findings. Built on a RAG backbone with curated ICD-10 vocabulary. Validated on 1,417 reports across multiple anatomic regions; overall F1 0.909, ICD-10 coding accuracy 99.6%. Quantiphi engineering support. RSNA 2026 abstract submission deadline: May 6, 2026.",
       "stepsDone": [
-        "Project identified and scoped (05/2026)"
+        "IRB-approved retrospective protocol established",
+        "1,417 de-identified reports (CT/CTA/MRI/MRA/MRV) processed across multiple anatomic regions",
+        "RAG pipeline deployed with curated ICD-10 vocabulary and clinical rules layer",
+        "Radiologist validation completed on 1,381 reports — overall F1 0.909, coding accuracy 99.6%",
+        "AIF identification accuracy 93.4% on n=699 evaluated (sensitivity 0.639, specificity 0.974)",
+        "139 reviewer-flagged issues captured; 112 (80.6%) resolved in Phase 2",
+        "RSNA 2026 abstract draft v3.4 completed"
       ],
       "nextSteps": [
-        "Review Quantifee platform and define study aims",
-        "Prepare and submit RSNA abstract"
+        "Submit RSNA 2026 abstract by May 6, 2026 (12 p.m. CT)",
+        "Decision pending: include inter-rater agreement (Cohen's kappa) if exercise completed before deadline",
+        "Quantiphi to provide top 5 most frequently surfaced AIFs for results",
+        "Phase 3 development — resolve remaining 27 deferred issues"
       ],
-      "team": ["Litardo, Nicolas A."],
+      "team": ["Braga, Thiago A.", "Jose, Jean", "Gorniak, Richard", "Saigal, Gaurav", "Litardo, Nicolas A.", "McKinney, Alexander M."],
       "lastUpdated": "05/02/2026"
     }
   ]
