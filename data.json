@@ -2,26 +2,6 @@
   "lastUpdated": "May 2026",
   "projects": [
     {
-      "id": 1,
-      "title": "iPE ARNP vs Non-ARNP Sites — AI at Point of Care",
-      "status": "submitted",
-      "badge": "Under Review",
-      "search": "ipe arnp advanced practice providers outpatient pulmonary embolism kirby jacob braga mckinney bjr british journal radiology",
-      "overview": "Integrating Advanced Practice Providers with Point-of-Care AI imaging solutions in the outpatient setting. Studies whether an AI-guided triage system significantly reduces time to treatment for suspected iPE. Author change reversal denied by European Radiology AI; submitted to British Journal of Radiology (BJR) (04/2026).",
-      "stepsDone": [
-        "Accepted & presented at RSNA 2025",
-        "Submitted to Journal of Assisted Computed Tomography",
-        "Resubmitted to Journal of European Radiology AI",
-        "Revisions completed and manuscript re-uploaded (March 14, 2026)",
-        "Author change request denied by European Radiology AI — writing to publisher to request reversal"
-      ],
-      "nextSteps": [
-        "Awaiting peer review response from British Journal of Radiology (BJR)"
-      ],
-      "team": ["Quinn, Kirby", "Jacob, Ayden", "Braga, Thiago", "McKinney, Alexander", "Braga, Juan Jose"],
-      "lastUpdated": "04/06/2026"
-    },
-    {
       "id": 2,
       "title": "Nuance Smart Impressions — AI-Assisted Radiology Reporting",
       "status": "published",
@@ -40,6 +20,26 @@
       ],
       "team": ["Reddy, Rohit", "Quinn, Kirby", "Jose, Jean", "Braga, Thiago", "Albuquerque"],
       "lastUpdated": "05/02/2026"
+    },
+    {
+      "id": 1,
+      "title": "iPE ARNP vs Non-ARNP Sites — AI at Point of Care",
+      "status": "submitted",
+      "badge": "Under Review",
+      "search": "ipe arnp advanced practice providers outpatient pulmonary embolism kirby jacob braga mckinney bjr british journal radiology",
+      "overview": "Integrating Advanced Practice Providers with Point-of-Care AI imaging solutions in the outpatient setting. Studies whether an AI-guided triage system significantly reduces time to treatment for suspected iPE. Author change reversal denied by European Radiology AI; submitted to British Journal of Radiology (BJR) (04/2026).",
+      "stepsDone": [
+        "Accepted & presented at RSNA 2025",
+        "Submitted to Journal of Assisted Computed Tomography",
+        "Resubmitted to Journal of European Radiology AI",
+        "Revisions completed and manuscript re-uploaded (March 14, 2026)",
+        "Author change request denied by European Radiology AI — writing to publisher to request reversal"
+      ],
+      "nextSteps": [
+        "Awaiting peer review response from British Journal of Radiology (BJR)"
+      ],
+      "team": ["Quinn, Kirby", "Jacob, Ayden", "Braga, Thiago", "McKinney, Alexander", "Braga, Juan Jose"],
+      "lastUpdated": "04/06/2026"
     },
     {
       "id": 3,
@@ -143,6 +143,67 @@
       "lastUpdated": "04/09/2026"
     },
     {
+      "id": 9,
+      "title": "Patient Consent AI Trainer",
+      "status": "submitted",
+      "badge": "Under Review",
+      "search": "patient consent ai trainer krumins ryan manuscript submitted under review",
+      "overview": "AI-powered patient consent trainer tool. Manuscript submitted by Krumins, Ryan.",
+      "stepsDone": [
+        "Project development completed",
+        "Manuscript submitted"
+      ],
+      "nextSteps": [
+        "Awaiting peer review response"
+      ],
+      "team": ["Krumins, Ryan"],
+      "lastUpdated": "03/26/2026"
+    },
+    {
+      "id": 17,
+      "title": "AI Governance in Radiology — RSNA Educational Exhibit",
+      "status": "submitted",
+      "badge": "Submitted to RSNA",
+      "search": "ai governance radiology hospital legal medical legal questionnaire benchmarking rsna abstract aguilera educational exhibit readiness framework radiologist chair chief legal officer submitted pending",
+      "overview": "RSNA educational exhibit on AI governance frameworks in radiology, highlighting the gap between AI adoption pressures and governance readiness across hospital systems. Targets three stakeholder groups: chief legal officers, radiology department chairs, and general radiologists. Submitted to RSNA; pending approval.",
+      "stepsDone": [
+        "Concept developed — inspired by Dr. Aguilera's recent conference presentation",
+        "Brainstorming phase: key governance gaps identified; survey structure outlined",
+        "RSNA educational exhibit prepared and ready for submission",
+        "Submitted to RSNA — pending approval (05/2026)"
+      ],
+      "nextSteps": [
+        "Awaiting RSNA acceptance decision"
+      ],
+      "team": ["Litardo, Nicolas A.", "Quinn, Kirby", "Aguilera"],
+      "lastUpdated": "05/02/2026"
+    },
+    {
+      "id": 19,
+      "title": "Hurricode — Automated ICD-10 Coding & Incidental Finding Surfacing",
+      "status": "in-progress",
+      "badge": "RSNA Abstract Due 05/06",
+      "search": "hurricode quantiphi icd-10 coding ehr reconciliation incidental findings aif nlp rag radiology braga jose gorniak saigal litardo mckinney rsna 2026 abstract",
+      "overview": "Radiologist-attested, multi-organ system for automated ICD-10 code assignment from CT, MRI, and PET reports with EHR reconciliation to surface newly-documented actionable incidental findings. Built on a RAG backbone with curated ICD-10 vocabulary. Validated on 1,417 reports across multiple anatomic regions; overall F1 0.909, ICD-10 coding accuracy 99.6%. Quantiphi engineering support. RSNA 2026 abstract submission deadline: May 6, 2026.",
+      "stepsDone": [
+        "IRB-approved retrospective protocol established",
+        "1,417 de-identified reports (CT/CTA/MRI/MRA/MRV) processed across multiple anatomic regions",
+        "RAG pipeline deployed with curated ICD-10 vocabulary and clinical rules layer",
+        "Radiologist validation completed on 1,381 reports — overall F1 0.909, coding accuracy 99.6%",
+        "AIF identification accuracy 93.4% on n=699 evaluated (sensitivity 0.639, specificity 0.974)",
+        "139 reviewer-flagged issues captured; 112 (80.6%) resolved in Phase 2",
+        "RSNA 2026 abstract draft v3.4 completed"
+      ],
+      "nextSteps": [
+        "Submit RSNA 2026 abstract by May 6, 2026 (12 p.m. CT)",
+        "Decision pending: include inter-rater agreement (Cohen's kappa) if exercise completed before deadline",
+        "Quantiphi to provide top 5 most frequently surfaced AIFs for results",
+        "Phase 3 development — resolve remaining 27 deferred issues"
+      ],
+      "team": ["Braga, Thiago A.", "Jose, Jean", "Gorniak, Richard", "Saigal, Gaurav", "Litardo, Nicolas A.", "McKinney, Alexander M."],
+      "lastUpdated": "05/02/2026"
+    },
+    {
       "id": 8,
       "title": "AI Revenue — Financial Impact of AI Integration",
       "status": "in-progress",
@@ -161,45 +222,24 @@
       "lastUpdated": "03/26/2026"
     },
     {
-      "id": 9,
-      "title": "Patient Consent AI Trainer",
-      "status": "submitted",
-      "badge": "Under Review",
-      "search": "patient consent ai trainer krumins ryan manuscript submitted under review",
-      "overview": "AI-powered patient consent trainer tool. Manuscript submitted by Krumins, Ryan.",
+      "id": 18,
+      "title": "AI Governance Survey — Real-World Hospital Governance Data",
+      "status": "in-progress",
+      "badge": "Survey in Editing",
+      "search": "ai governance survey hospital governance bodies data collection benchmarking radiology legal chief legal officer department chair radiologists aguilera national questionnaire",
+      "overview": "Survey-based research project collecting real-world data from hospital governance bodies on AI governance frameworks in radiology. Companion project to the RSNA educational exhibit (Project #17). Aims to build a national benchmarking dataset by gathering structured input from chief legal officers, radiology department chairs, and general radiologists across health systems.",
       "stepsDone": [
-        "Project development completed",
-        "Manuscript submitted"
+        "Project scope defined — companion to RSNA educational exhibit",
+        "Key stakeholder groups identified: (1) Chief Legal Officer, (2) Radiology Department Chair, (3) General Radiologists",
+        "Survey instrument created — currently being edited (05/2026)"
       ],
       "nextSteps": [
-        "Awaiting peer review response"
+        "Finalize survey edits and distribute",
+        "Build scoring/benchmarking framework to assess where each hospital system stands on safe AI deployment nationally",
+        "IRB consideration — determine if human subjects research approval required",
+        "Identify target health systems and governance contacts for survey distribution"
       ],
-      "team": ["Krumins, Ryan"],
-      "lastUpdated": "03/26/2026"
-    },
-    {
-      "id": 10,
-      "title": "Deep Resolve — AI Image Reconstruction & Sedation Reduction",
-      "status": "on-hold",
-      "badge": "On Hold",
-      "search": "deep resolve mri sedation ai reconstruction siemens anesthesia benchmarking litardo emerge miguel garcia patrick julien jacob foundation model epic",
-      "overview": "Prospective study evaluating whether Siemens Deep Resolve AI reconstruction reduces MRI sedation rates. Patient data was provided and sedation/MRI acquisition timing data sent to Patrick, but imaging comparison issues between studies prevented abstract creation. Project on hold pending resolution.",
-      "stepsDone": [
-        "IRB strategy defined; literature review complete",
-        "Sedation benchmarking: 3 UM cases vs. published baselines (Midazolam, Fentanyl, Propofol, Rocuronium, Sugammadex)",
-        "Admin briefing document drafted",
-        "Pilot UM chart review: 3 anesthesia encounters identified",
-        "Initial case list provided by Miguel Garcia (Tower imaging supervisor)",
-        "Patient data obtained from Miguel Garcia",
-        "No qualifying patients identified in March 2026",
-        "Sedation and MRI acquisition timing data provided to Patrick",
-        "Imaging comparison issues identified — studies/imaging done for each patient not suitable for comparison; abstract could not be created (05/2026)"
-      ],
-      "nextSteps": [
-        "Resolve imaging comparison issues with Patrick before proceeding",
-        "Determine if alternative patient cohort or study design can salvage project"
-      ],
-      "team": ["Litardo", "Braga", "Reddy"],
+      "team": ["Litardo, Nicolas A.", "Quinn, Kirby", "Aguilera"],
       "lastUpdated": "05/02/2026"
     },
     {
@@ -286,6 +326,31 @@
       "lastUpdated": "03/2026"
     },
     {
+      "id": 10,
+      "title": "Deep Resolve — AI Image Reconstruction & Sedation Reduction",
+      "status": "on-hold",
+      "badge": "On Hold",
+      "search": "deep resolve mri sedation ai reconstruction siemens anesthesia benchmarking litardo emerge miguel garcia patrick julien jacob foundation model epic",
+      "overview": "Prospective study evaluating whether Siemens Deep Resolve AI reconstruction reduces MRI sedation rates. Patient data was provided and sedation/MRI acquisition timing data sent to Patrick, but imaging comparison issues between studies prevented abstract creation. Project on hold pending resolution.",
+      "stepsDone": [
+        "IRB strategy defined; literature review complete",
+        "Sedation benchmarking: 3 UM cases vs. published baselines (Midazolam, Fentanyl, Propofol, Rocuronium, Sugammadex)",
+        "Admin briefing document drafted",
+        "Pilot UM chart review: 3 anesthesia encounters identified",
+        "Initial case list provided by Miguel Garcia (Tower imaging supervisor)",
+        "Patient data obtained from Miguel Garcia",
+        "No qualifying patients identified in March 2026",
+        "Sedation and MRI acquisition timing data provided to Patrick",
+        "Imaging comparison issues identified — studies/imaging done for each patient not suitable for comparison; abstract could not be created (05/2026)"
+      ],
+      "nextSteps": [
+        "Resolve imaging comparison issues with Patrick before proceeding",
+        "Determine if alternative patient cohort or study design can salvage project"
+      ],
+      "team": ["Litardo", "Braga", "Reddy"],
+      "lastUpdated": "05/02/2026"
+    },
+    {
       "id": 15,
       "title": "Leads Grant Proposal (Net AI) — Cancer Trial Recruitment",
       "status": "on-hold",
@@ -320,71 +385,6 @@
       ],
       "team": ["Dr. Jose", "McKinney", "Braga"],
       "lastUpdated": "03/2026"
-    },
-    {
-      "id": 17,
-      "title": "AI Governance in Radiology — RSNA Educational Exhibit",
-      "status": "submitted",
-      "badge": "Submitted to RSNA",
-      "search": "ai governance radiology hospital legal medical legal questionnaire benchmarking rsna abstract aguilera educational exhibit readiness framework radiologist chair chief legal officer submitted pending",
-      "overview": "RSNA educational exhibit on AI governance frameworks in radiology, highlighting the gap between AI adoption pressures and governance readiness across hospital systems. Targets three stakeholder groups: chief legal officers, radiology department chairs, and general radiologists. Submitted to RSNA; pending approval.",
-      "stepsDone": [
-        "Concept developed — inspired by Dr. Aguilera's recent conference presentation",
-        "Brainstorming phase: key governance gaps identified; survey structure outlined",
-        "RSNA educational exhibit prepared and ready for submission",
-        "Submitted to RSNA — pending approval (05/2026)"
-      ],
-      "nextSteps": [
-        "Awaiting RSNA acceptance decision"
-      ],
-      "team": ["Litardo, Nicolas A.", "Quinn, Kirby", "Aguilera"],
-      "lastUpdated": "05/02/2026"
-    },
-    {
-      "id": 18,
-      "title": "AI Governance Survey — Real-World Hospital Governance Data",
-      "status": "in-progress",
-      "badge": "Survey in Editing",
-      "search": "ai governance survey hospital governance bodies data collection benchmarking radiology legal chief legal officer department chair radiologists aguilera national questionnaire",
-      "overview": "Survey-based research project collecting real-world data from hospital governance bodies on AI governance frameworks in radiology. Companion project to the RSNA educational exhibit (Project #17). Aims to build a national benchmarking dataset by gathering structured input from chief legal officers, radiology department chairs, and general radiologists across health systems.",
-      "stepsDone": [
-        "Project scope defined — companion to RSNA educational exhibit",
-        "Key stakeholder groups identified: (1) Chief Legal Officer, (2) Radiology Department Chair, (3) General Radiologists",
-        "Survey instrument created — currently being edited (05/2026)"
-      ],
-      "nextSteps": [
-        "Finalize survey edits and distribute",
-        "Build scoring/benchmarking framework to assess where each hospital system stands on safe AI deployment nationally",
-        "IRB consideration — determine if human subjects research approval required",
-        "Identify target health systems and governance contacts for survey distribution"
-      ],
-      "team": ["Litardo, Nicolas A.", "Quinn, Kirby", "Aguilera"],
-      "lastUpdated": "05/02/2026"
-    },
-    {
-      "id": 19,
-      "title": "Hurricode — Automated ICD-10 Coding & Incidental Finding Surfacing",
-      "status": "in-progress",
-      "badge": "RSNA Abstract Due 05/06",
-      "search": "hurricode quantiphi icd-10 coding ehr reconciliation incidental findings aif nlp rag radiology braga jose gorniak saigal litardo mckinney rsna 2026 abstract",
-      "overview": "Radiologist-attested, multi-organ system for automated ICD-10 code assignment from CT, MRI, and PET reports with EHR reconciliation to surface newly-documented actionable incidental findings. Built on a RAG backbone with curated ICD-10 vocabulary. Validated on 1,417 reports across multiple anatomic regions; overall F1 0.909, ICD-10 coding accuracy 99.6%. Quantiphi engineering support. RSNA 2026 abstract submission deadline: May 6, 2026.",
-      "stepsDone": [
-        "IRB-approved retrospective protocol established",
-        "1,417 de-identified reports (CT/CTA/MRI/MRA/MRV) processed across multiple anatomic regions",
-        "RAG pipeline deployed with curated ICD-10 vocabulary and clinical rules layer",
-        "Radiologist validation completed on 1,381 reports — overall F1 0.909, coding accuracy 99.6%",
-        "AIF identification accuracy 93.4% on n=699 evaluated (sensitivity 0.639, specificity 0.974)",
-        "139 reviewer-flagged issues captured; 112 (80.6%) resolved in Phase 2",
-        "RSNA 2026 abstract draft v3.4 completed"
-      ],
-      "nextSteps": [
-        "Submit RSNA 2026 abstract by May 6, 2026 (12 p.m. CT)",
-        "Decision pending: include inter-rater agreement (Cohen's kappa) if exercise completed before deadline",
-        "Quantiphi to provide top 5 most frequently surfaced AIFs for results",
-        "Phase 3 development — resolve remaining 27 deferred issues"
-      ],
-      "team": ["Braga, Thiago A.", "Jose, Jean", "Gorniak, Richard", "Saigal, Gaurav", "Litardo, Nicolas A.", "McKinney, Alexander M."],
-      "lastUpdated": "05/02/2026"
     }
   ]
 }
