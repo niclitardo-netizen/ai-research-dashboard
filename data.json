@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "April 2026",
+  "lastUpdated": "May 2026",
   "projects": [
     {
       "id": 1,
@@ -24,22 +24,22 @@
     {
       "id": 2,
       "title": "Nuance Smart Impressions — AI-Assisted Radiology Reporting",
-      "status": "submitted",
-      "badge": "Under Review",
-      "search": "nuance smart impressions hedging dictation nlp radiology report rohit braga kirby albuquerque radiology artificial intelligence rsna",
-      "overview": "AI-Assisted Impression Drafting: Effects on Hedging, Style Standards, and Critical-Finding Prioritization. Analyzes AI's effect on radiology impression length, style consistency, hedging language, and critical-finding detection.",
+      "status": "published",
+      "badge": "Accepted",
+      "search": "nuance smart impressions hedging dictation nlp radiology report rohit braga kirby albuquerque radiology artificial intelligence rsna accepted",
+      "overview": "AI-Assisted Impression Drafting: Effects on Hedging, Style Standards, and Critical-Finding Prioritization. Analyzes AI's effect on radiology impression length, style consistency, hedging language, and critical-finding detection. Accepted by Radiology: Artificial Intelligence (05/2026).",
       "stepsDone": [
         "Data analysis completed across 4 analytics buckets",
         "Manuscript reworked and revised (11/16/2025)",
         "Figures, tables, and supplementary materials updated",
-        "Submitted to Radiology: Artificial Intelligence (02/12/2026)"
+        "Submitted to Radiology: Artificial Intelligence (02/12/2026)",
+        "Accepted for publication by Radiology: Artificial Intelligence (05/2026)"
       ],
       "nextSteps": [
-        "Awaiting peer review from Radiology: Artificial Intelligence",
-        "Confirm whether abstract was presented at RSNA 2025 — update steps accordingly"
+        "Await galley proofs and finalize publication"
       ],
       "team": ["Reddy, Rohit", "Quinn, Kirby", "Jose, Jean", "Braga, Thiago", "Albuquerque"],
-      "lastUpdated": "04/09/2026"
+      "lastUpdated": "05/02/2026"
     },
     {
       "id": 3,
@@ -180,26 +180,27 @@
     {
       "id": 10,
       "title": "Deep Resolve — AI Image Reconstruction & Sedation Reduction",
-      "status": "in-progress",
-      "badge": "In Progress",
+      "status": "on-hold",
+      "badge": "On Hold",
       "search": "deep resolve mri sedation ai reconstruction siemens anesthesia benchmarking litardo emerge miguel garcia patrick julien jacob foundation model epic",
-      "overview": "Prospective study evaluating whether Siemens Deep Resolve AI reconstruction reduces MRI sedation rates. Benchmarking sedation drug usage against published literature. No qualifying patients (sedation-avoided cases) identified in March 2026. Exploring Siemens access to Epic to pull patient data.",
+      "overview": "Prospective study evaluating whether Siemens Deep Resolve AI reconstruction reduces MRI sedation rates. Patient data was provided and sedation/MRI acquisition timing data sent to Patrick, but imaging comparison issues between studies prevented abstract creation. Project on hold pending resolution.",
       "stepsDone": [
         "IRB strategy defined; literature review complete",
         "Sedation benchmarking: 3 UM cases vs. published baselines (Midazolam, Fentanyl, Propofol, Rocuronium, Sugammadex)",
         "Admin briefing document drafted",
         "Pilot UM chart review: 3 anesthesia encounters identified",
-        "Initial case list provided by Miguel Garcia (Tower imaging supervisor) — cases where sedation was avoided due to Deep Resolve, any age group",
+        "Initial case list provided by Miguel Garcia (Tower imaging supervisor)",
         "Patient data obtained from Miguel Garcia",
-        "No qualifying patients identified in March 2026 — sedation-avoided cases not found"
+        "No qualifying patients identified in March 2026",
+        "Sedation and MRI acquisition timing data provided to Patrick",
+        "Imaging comparison issues identified — studies/imaging done for each patient not suitable for comparison; abstract could not be created (05/2026)"
       ],
       "nextSteps": [
-        "Miguel Garcia and Patrick meeting re: patients removed from anesthesia pull list — awaiting Patrick's response",
-        "Explore Siemens access to Epic to pull sedation-avoided patient data",
-        "Submit IRB application (Q2 2026)"
+        "Resolve imaging comparison issues with Patrick before proceeding",
+        "Determine if alternative patient cohort or study design can salvage project"
       ],
       "team": ["Litardo", "Braga", "Reddy"],
-      "lastUpdated": "04/09/2026"
+      "lastUpdated": "05/02/2026"
     },
     {
       "id": 11,
@@ -246,24 +247,24 @@
       "id": 13,
       "title": "Gleamer Algorithm — Periprosthetic, Vertebral & Tumor Fracture Detection",
       "status": "data-collection",
-      "badge": "Data Collection",
-      "search": "gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel kirby vertebral tumor aguilera rsna abstract educational exhibit",
-      "overview": "Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization — diagnostic use only). Projects include: periprosthetic fractures after total hip/knee arthroplasty (~2,000 patients), tumor fractures, and vertebral fractures. Evaluating algorithm performance and pitfalls (acute vs. chronic, missed fractures). RSNA abstract submission deadline: beginning of May.",
+      "badge": "Awaiting Aidoc Data",
+      "search": "gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel kirby vertebral tumor aguilera rsna abstract educational exhibit aidoc analysis",
+      "overview": "Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization — diagnostic use only). Projects include: periprosthetic fractures after total hip/knee arthroplasty (~2,000 patients), tumor fractures, and vertebral fractures. Data currently being analyzed by Aidoc; awaiting their results for statistical analysis. RSNA abstract submission deadline: beginning of May.",
       "stepsDone": [
         "Literature review conducted on AI algorithm performance",
         "~2,000 patient cohort identified",
         "Joel reviewing pathologic and periprosthetic fracture cases through Gleamer",
-        "Surgical proven periprosthetic fracture cases identified via Epic search; X-rays collected for retrospective Gleamer evaluation"
+        "Surgical proven periprosthetic fracture cases identified via Epic search; X-rays collected for retrospective Gleamer evaluation",
+        "Data sent to Aidoc for algorithm analysis (05/2026)"
       ],
       "nextSteps": [
-        "Keep Aguilera in the loop with updates",
-        "Submit RSNA abstract by beginning of May — periprosthetic fracture performance or educational exhibit on algorithm pitfalls",
-        "Decide on submission format: scientific paper (performance analysis) vs. educational exhibit (pitfalls — acute/chronic, missed fractures)",
-        "Explore tumor fracture and additional hip/knee sub-projects",
-        "Complete data extraction and analysis"
+        "Awaiting Aidoc data return for statistical analysis",
+        "Submit RSNA abstract once data analysis complete",
+        "Decide on submission format: scientific paper (performance analysis) vs. educational exhibit (pitfalls)",
+        "Explore tumor fracture and additional hip/knee sub-projects"
       ],
       "team": ["Rosenblum, Joel", "Quinn, Kirby", "Aguilera"],
-      "lastUpdated": "04/09/2026"
+      "lastUpdated": "05/02/2026"
     },
     {
       "id": 14,
@@ -323,41 +324,59 @@
     {
       "id": 17,
       "title": "AI Governance in Radiology — RSNA Educational Exhibit",
-      "status": "planning",
-      "badge": "Planning",
-      "search": "ai governance radiology hospital legal medical legal questionnaire benchmarking rsna abstract aguilera educational exhibit readiness framework radiologist chair chief legal officer",
-      "overview": "RSNA educational exhibit on AI governance frameworks in radiology, highlighting the gap between AI adoption pressures and governance readiness across hospital systems. Inspired by Dr. Aguilera's recent conference presentation. Targets three stakeholder groups: chief legal officers, radiology department chairs, and general radiologists. Exhibit prepared and ready for RSNA abstract submission (deadline: beginning of May).",
+      "status": "submitted",
+      "badge": "Submitted to RSNA",
+      "search": "ai governance radiology hospital legal medical legal questionnaire benchmarking rsna abstract aguilera educational exhibit readiness framework radiologist chair chief legal officer submitted pending",
+      "overview": "RSNA educational exhibit on AI governance frameworks in radiology, highlighting the gap between AI adoption pressures and governance readiness across hospital systems. Targets three stakeholder groups: chief legal officers, radiology department chairs, and general radiologists. Submitted to RSNA; pending approval.",
       "stepsDone": [
         "Concept developed — inspired by Dr. Aguilera's recent conference presentation",
         "Brainstorming phase: key governance gaps identified; survey structure outlined",
-        "RSNA educational exhibit prepared and ready for submission"
+        "RSNA educational exhibit prepared and ready for submission",
+        "Submitted to RSNA — pending approval (05/2026)"
       ],
       "nextSteps": [
-        "Submit RSNA educational exhibit abstract (deadline: beginning of May)",
-        "Consider need for health system governance body outside of radiology to assume responsibility"
+        "Awaiting RSNA acceptance decision"
       ],
       "team": ["Litardo, Nicolas A.", "Quinn, Kirby", "Aguilera"],
-      "lastUpdated": "04/16/2026"
+      "lastUpdated": "05/02/2026"
     },
     {
       "id": 18,
       "title": "AI Governance Survey — Real-World Hospital Governance Data",
-      "status": "early-stage",
-      "badge": "Early Stage",
-      "search": "ai governance survey hospital governance bodies data collection benchmarking radiology legal chief legal officer department chair radiologists aguilera national",
+      "status": "in-progress",
+      "badge": "Survey in Editing",
+      "search": "ai governance survey hospital governance bodies data collection benchmarking radiology legal chief legal officer department chair radiologists aguilera national questionnaire",
       "overview": "Survey-based research project collecting real-world data from hospital governance bodies on AI governance frameworks in radiology. Companion project to the RSNA educational exhibit (Project #17). Aims to build a national benchmarking dataset by gathering structured input from chief legal officers, radiology department chairs, and general radiologists across health systems.",
       "stepsDone": [
         "Project scope defined — companion to RSNA educational exhibit",
-        "Key stakeholder groups identified: (1) Chief Legal Officer, (2) Radiology Department Chair, (3) General Radiologists"
+        "Key stakeholder groups identified: (1) Chief Legal Officer, (2) Radiology Department Chair, (3) General Radiologists",
+        "Survey instrument created — currently being edited (05/2026)"
       ],
       "nextSteps": [
-        "Develop separate questionnaires for each stakeholder group",
+        "Finalize survey edits and distribute",
         "Build scoring/benchmarking framework to assess where each hospital system stands on safe AI deployment nationally",
         "IRB consideration — determine if human subjects research approval required",
         "Identify target health systems and governance contacts for survey distribution"
       ],
       "team": ["Litardo, Nicolas A.", "Quinn, Kirby", "Aguilera"],
-      "lastUpdated": "04/16/2026"
+      "lastUpdated": "05/02/2026"
+    },
+    {
+      "id": 19,
+      "title": "Quantifee — AI Fee Schedule Optimization",
+      "status": "planning",
+      "badge": "RSNA Abstract Planned",
+      "search": "quantifee fee schedule optimization rsna abstract submission litardo",
+      "overview": "New project evaluating Quantifee for AI-driven fee schedule optimization in radiology. Planning to submit an abstract to RSNA 2026.",
+      "stepsDone": [
+        "Project identified and scoped (05/2026)"
+      ],
+      "nextSteps": [
+        "Review Quantifee platform and define study aims",
+        "Prepare and submit RSNA abstract"
+      ],
+      "team": ["Litardo, Nicolas A."],
+      "lastUpdated": "05/02/2026"
     }
   ]
 }
