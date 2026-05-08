@@ -181,8 +181,8 @@
     {
       "id": 19,
       "title": "Hurricode — Automated ICD-10 Coding & Incidental Finding Surfacing",
-      "status": "in-progress",
-      "badge": "RSNA Abstract Due 05/06",
+      "status": "submitted",
+      "badge": "Submitted to RSNA",
       "search": "hurricode quantiphi icd-10 coding ehr reconciliation incidental findings aif nlp rag radiology braga jose gorniak saigal litardo mckinney rsna 2026 abstract",
       "overview": "Radiologist-attested, multi-organ system for automated ICD-10 code assignment from CT, MRI, and PET reports with EHR reconciliation to surface newly-documented actionable incidental findings. Built on a RAG backbone with curated ICD-10 vocabulary. Validated on 1,417 reports across multiple anatomic regions; overall F1 0.909, ICD-10 coding accuracy 99.6%. Quantiphi engineering support. RSNA 2026 abstract submission deadline: May 6, 2026.",
       "stepsDone": [
@@ -192,16 +192,16 @@
         "Radiologist validation completed on 1,381 reports — overall F1 0.909, coding accuracy 99.6%",
         "AIF identification accuracy 93.4% on n=699 evaluated (sensitivity 0.639, specificity 0.974)",
         "139 reviewer-flagged issues captured; 112 (80.6%) resolved in Phase 2",
-        "RSNA 2026 abstract draft v3.4 completed"
+        "RSNA 2026 abstract draft v3.4 completed",
+        "Abstract submitted to RSNA 2026 (05/06/2026)"
       ],
       "nextSteps": [
-        "Submit RSNA 2026 abstract by May 6, 2026 (12 p.m. CT)",
-        "Decision pending: include inter-rater agreement (Cohen's kappa) if exercise completed before deadline",
+        "Awaiting RSNA 2026 acceptance decision",
         "Quantiphi to provide top 5 most frequently surfaced AIFs for results",
         "Phase 3 development — resolve remaining 27 deferred issues"
       ],
       "team": ["Braga, Thiago A.", "Jose, Jean", "Gorniak, Richard", "Saigal, Gaurav", "Litardo, Nicolas A.", "McKinney, Alexander M."],
-      "lastUpdated": "05/02/2026"
+      "lastUpdated": "05/06/2026"
     },
     {
       "id": 8,
@@ -328,10 +328,10 @@
     {
       "id": 10,
       "title": "Deep Resolve — AI Image Reconstruction & Sedation Reduction",
-      "status": "on-hold",
-      "badge": "On Hold",
+      "status": "submitted",
+      "badge": "Submitted to RSNA",
       "search": "deep resolve mri sedation ai reconstruction siemens anesthesia benchmarking litardo emerge miguel garcia patrick julien jacob foundation model epic",
-      "overview": "Prospective study evaluating whether Siemens Deep Resolve AI reconstruction reduces MRI sedation rates. Patient data was provided and sedation/MRI acquisition timing data sent to Patrick, but imaging comparison issues between studies prevented abstract creation. Project on hold pending resolution.",
+      "overview": "Prospective study evaluating whether Siemens Deep Resolve AI reconstruction reduces MRI sedation rates. Qualifying patients (MRN 1 and 10) identified after earlier imaging comparison setbacks. Abstract submitted to RSNA 2026 (05/06/2026).",
       "stepsDone": [
         "IRB strategy defined; literature review complete",
         "Sedation benchmarking: 3 UM cases vs. published baselines (Midazolam, Fentanyl, Propofol, Rocuronium, Sugammadex)",
@@ -341,14 +341,17 @@
         "Patient data obtained from Miguel Garcia",
         "No qualifying patients identified in March 2026",
         "Sedation and MRI acquisition timing data provided to Patrick",
-        "Imaging comparison issues identified — studies/imaging done for each patient not suitable for comparison; abstract could not be created (05/2026)"
+        "Imaging comparison issues identified — studies not suitable for comparison",
+        "Qualifying patients found (MRN 1 and 10)",
+        "Abstract submitted to RSNA 2026 (05/06/2026)"
       ],
       "nextSteps": [
-        "Resolve imaging comparison issues with Patrick before proceeding",
-        "Determine if alternative patient cohort or study design can salvage project"
+        "Awaiting RSNA 2026 acceptance decision",
+        "Continue patient recruitment and data analysis",
+        "Submit IRB application (Q2 2026)"
       ],
       "team": ["Litardo", "Braga", "Reddy"],
-      "lastUpdated": "05/02/2026"
+      "lastUpdated": "05/06/2026"
     },
     {
       "id": 15,
