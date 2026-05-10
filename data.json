@@ -287,24 +287,25 @@
       "id": 13,
       "title": "Gleamer Algorithm — Periprosthetic, Vertebral & Tumor Fracture Detection",
       "status": "data-collection",
-      "badge": "Awaiting Aidoc Data",
-      "search": "gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel kirby vertebral tumor aguilera rsna abstract educational exhibit aidoc analysis",
-      "overview": "Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization — diagnostic use only). Projects include: periprosthetic fractures after total hip/knee arthroplasty (~2,000 patients), tumor fractures, and vertebral fractures. Data currently being analyzed by Aidoc; awaiting their results for statistical analysis. RSNA abstract submission deadline: beginning of May.",
+      "badge": "Data Analysis",
+      "search": "gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel kirby vertebral tumor aguilera rsna abstract educational exhibit aidoc data received analysis in progress",
+      "overview": "Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization — diagnostic use only). Projects include: periprosthetic fractures after total hip/knee arthroplasty (~2,000 patients), tumor fractures, and vertebral fractures. Aidoc analysis returned (05/2026); statistical analysis in progress.",
       "stepsDone": [
         "Literature review conducted on AI algorithm performance",
         "~2,000 patient cohort identified",
         "Joel reviewing pathologic and periprosthetic fracture cases through Gleamer",
         "Surgical proven periprosthetic fracture cases identified via Epic search; X-rays collected for retrospective Gleamer evaluation",
-        "Data sent to Aidoc for algorithm analysis (05/2026)"
+        "Data sent to Aidoc for algorithm analysis (05/2026)",
+        "Aidoc data received (05/2026)"
       ],
       "nextSteps": [
-        "Awaiting Aidoc data return for statistical analysis",
-        "Submit RSNA abstract once data analysis complete",
+        "Statistical analysis of Aidoc-returned data",
+        "Prepare and submit RSNA abstract",
         "Decide on submission format: scientific paper (performance analysis) vs. educational exhibit (pitfalls)",
         "Explore tumor fracture and additional hip/knee sub-projects"
       ],
       "team": ["Rosenblum, Joel", "Quinn, Kirby", "Aguilera"],
-      "lastUpdated": "05/02/2026"
+      "lastUpdated": "05/10/2026"
     },
     {
       "id": 14,
