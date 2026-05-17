@@ -233,25 +233,26 @@
       "lastUpdated": "05/06/2026"
     },
     {
-      "id": 20,
-      "title": "RadBoards — AI Voice-Interactive Oral Board Preparation",
+      "id": 13,
+      "title": "Gleamer Algorithm — Periprosthetic, Vertebral & Tumor Fracture Detection",
       "status": "submitted",
-      "badge": "Abstract at AAR",
-      "search": "radboards ai oral boards voice interactive diagnostic radiology board preparation reddy lampen-sachar litardo ott aar manuscript prospective irb pgy resident training education",
-      "overview": "AI-driven voice-interactive platform for diagnostic radiology oral board preparation. IRB-approved prospective single-institution study with 11 participants (PGY-2 through PGY-5). Pre- and post-session surveys showed improved confidence (SMD +0.48), preparedness (SMD +1.12), and decreased anxiety/stress. Abstract presented at AAR; manuscript in development.",
+      "badge": "Submitted to RSNA",
+      "search": "gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel kirby vertebral tumor aguilera rsna abstract educational exhibit aidoc analysis submitted",
+      "overview": "Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization — diagnostic use only). Projects include: periprosthetic fractures after total hip/knee arthroplasty (~2,000 patients), tumor fractures, and vertebral fractures. Data analyzed by Aidoc; abstract submitted to RSNA.",
       "stepsDone": [
-        "Platform developed — AI voice-interactive oral board simulator",
-        "IRB approval obtained (prospective single-institution study)",
-        "11 participants enrolled (PGY-2 through PGY-5)",
-        "Pre- and post-session surveys administered",
-        "Statistical analysis completed — confidence SMD +0.48, preparedness SMD +1.12",
-        "Abstract presented at AAR (05/2026)"
+        "Literature review conducted on AI algorithm performance",
+        "~2,000 patient cohort identified",
+        "Joel reviewing pathologic and periprosthetic fracture cases through Gleamer",
+        "Surgical proven periprosthetic fracture cases identified via Epic search; X-rays collected for retrospective Gleamer evaluation",
+        "Data sent to Aidoc for algorithm analysis (05/2026)",
+        "Submitted to RSNA (05/2026)"
       ],
       "nextSteps": [
-        "Manuscript development in progress",
-        "Expand participant pool for larger validation study"
+        "Awaiting RSNA acceptance decision",
+        "Decide on submission format: scientific paper (performance analysis) vs. educational exhibit (pitfalls)",
+        "Explore tumor fracture and additional hip/knee sub-projects"
       ],
-      "team": ["Reddy, Rohit", "Lampen-Sachar, Katrina", "Litardo, Nicolas A.", "Ott, Nicholas Alexander"],
+      "team": ["Rosenblum, Joel", "Quinn, Kirby", "Aguilera"],
       "lastUpdated": "05/17/2026"
     },
     {
@@ -271,6 +272,28 @@
       ],
       "team": ["Jacob, Ayden", "Reddy, Rohit", "Quinn, Kirby"],
       "lastUpdated": "03/26/2026"
+    },
+    {
+      "id": 20,
+      "title": "RadBoards — AI Voice-Interactive Oral Board Preparation",
+      "status": "in-progress",
+      "badge": "In Progress",
+      "search": "radboards ai oral boards voice interactive diagnostic radiology board preparation reddy lampen-sachar litardo ott aar manuscript prospective irb pgy resident training education",
+      "overview": "AI-driven voice-interactive platform for diagnostic radiology oral board preparation. IRB-approved prospective single-institution study with 11 participants (PGY-2 through PGY-5). Pre- and post-session surveys showed improved confidence (SMD +0.48), preparedness (SMD +1.12), and decreased anxiety/stress. Abstract presented at AAR; manuscript in development.",
+      "stepsDone": [
+        "Platform developed — AI voice-interactive oral board simulator",
+        "IRB approval obtained (prospective single-institution study)",
+        "11 participants enrolled (PGY-2 through PGY-5)",
+        "Pre- and post-session surveys administered",
+        "Statistical analysis completed — confidence SMD +0.48, preparedness SMD +1.12",
+        "Abstract presented at AAR (05/2026)"
+      ],
+      "nextSteps": [
+        "Manuscript development in progress",
+        "Expand participant pool for larger validation study"
+      ],
+      "team": ["Reddy, Rohit", "Lampen-Sachar, Katrina", "Litardo, Nicolas A.", "Ott, Nicholas Alexander"],
+      "lastUpdated": "05/17/2026"
     },
     {
       "id": 18,
@@ -333,29 +356,6 @@
       ],
       "team": ["Griffin Harris", "Cinthia del Toro", "Litardo, Nicolas A.", "Ott, Nicholas Alexander"],
       "lastUpdated": "03/2026"
-    },
-    {
-      "id": 13,
-      "title": "Gleamer Algorithm — Periprosthetic, Vertebral & Tumor Fracture Detection",
-      "status": "data-collection",
-      "badge": "Awaiting Aidoc Data",
-      "search": "gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel kirby vertebral tumor aguilera rsna abstract educational exhibit aidoc analysis",
-      "overview": "Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization — diagnostic use only). Projects include: periprosthetic fractures after total hip/knee arthroplasty (~2,000 patients), tumor fractures, and vertebral fractures. Data currently being analyzed by Aidoc; awaiting their results for statistical analysis. RSNA abstract submission deadline: beginning of May.",
-      "stepsDone": [
-        "Literature review conducted on AI algorithm performance",
-        "~2,000 patient cohort identified",
-        "Joel reviewing pathologic and periprosthetic fracture cases through Gleamer",
-        "Surgical proven periprosthetic fracture cases identified via Epic search; X-rays collected for retrospective Gleamer evaluation",
-        "Data sent to Aidoc for algorithm analysis (05/2026)"
-      ],
-      "nextSteps": [
-        "Awaiting Aidoc data return for statistical analysis",
-        "Submit RSNA abstract once data analysis complete",
-        "Decide on submission format: scientific paper (performance analysis) vs. educational exhibit (pitfalls)",
-        "Explore tumor fracture and additional hip/knee sub-projects"
-      ],
-      "team": ["Rosenblum, Joel", "Quinn, Kirby", "Aguilera"],
-      "lastUpdated": "05/02/2026"
     },
     {
       "id": 14,
