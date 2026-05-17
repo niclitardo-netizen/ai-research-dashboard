@@ -4,22 +4,23 @@
     {
       "id": 2,
       "title": "Nuance Smart Impressions — AI-Assisted Radiology Reporting",
-      "status": "published",
-      "badge": "Accepted",
-      "search": "nuance smart impressions hedging dictation nlp radiology report rohit braga kirby albuquerque radiology artificial intelligence rsna accepted",
-      "overview": "AI-Assisted Impression Drafting: Effects on Hedging, Style Standards, and Critical-Finding Prioritization. Analyzes AI's effect on radiology impression length, style consistency, hedging language, and critical-finding detection. Accepted by Radiology: Artificial Intelligence (05/2026).",
+      "status": "submitted",
+      "badge": "Submitted to RSNA",
+      "search": "nuance smart impressions hedging dictation nlp radiology report rohit braga kirby albuquerque radiology artificial intelligence rsna submitted awaiting decision",
+      "overview": "AI-Assisted Impression Drafting: Effects on Hedging, Style Standards, and Critical-Finding Prioritization. Analyzes AI's effect on radiology impression length, style consistency, hedging language, and critical-finding detection. Previously accepted by Radiology: Artificial Intelligence; now submitted to RSNA, awaiting decision.",
       "stepsDone": [
         "Data analysis completed across 4 analytics buckets",
         "Manuscript reworked and revised (11/16/2025)",
         "Figures, tables, and supplementary materials updated",
         "Submitted to Radiology: Artificial Intelligence (02/12/2026)",
-        "Accepted for publication by Radiology: Artificial Intelligence (05/2026)"
+        "Accepted for publication by Radiology: Artificial Intelligence (05/2026)",
+        "Submitted to RSNA — awaiting decision (05/2026)"
       ],
       "nextSteps": [
-        "Await galley proofs and finalize publication"
+        "Awaiting RSNA acceptance decision"
       ],
       "team": ["Reddy, Rohit", "Quinn, Kirby", "Jose, Jean", "Braga, Thiago", "Albuquerque"],
-      "lastUpdated": "05/02/2026"
+      "lastUpdated": "05/17/2026"
     },
     {
       "id": 1,
@@ -47,7 +48,7 @@
       "status": "submitted",
       "badge": "Under Review",
       "search": "ai it survey satisfaction radiologists providers qualmetrics burnout litardo wahood reddy mckinney collado braga artificial intelligence denied jmir heliyon",
-      "overview": "QUALMETRICS satisfaction survey targeting radiologists and providers (ED physicians, PERT team) impacted by AI integration. Denied by Artificial Intelligence journal. Fatal flaws: 21.1% response rate (JMIR requires ≥60%), n=38 substantive respondents, CHERRIES checklist missing, single-center/single-vendor limitations. Hallucination finding (68.4%) is clinically important. Resubmitted to Heliyon (04/16/2026).",
+      "overview": "QUALMETRICS satisfaction survey targeting radiologists and providers (ED physicians, PERT team) impacted by AI integration. Denied by Artificial Intelligence journal. Fatal flaws: 21.1% response rate (JMIR requires >=60%), n=38 substantive respondents, CHERRIES checklist missing, single-center/single-vendor limitations. Hallucination finding (68.4%) is clinically important. Resubmitted to Heliyon (04/16/2026).",
       "stepsDone": [
         "Survey designed and deployed",
         "Burnout question module added",
@@ -204,6 +205,56 @@
       "lastUpdated": "05/06/2026"
     },
     {
+      "id": 10,
+      "title": "Deep Resolve — AI Image Reconstruction & Sedation Reduction",
+      "status": "submitted",
+      "badge": "Submitted to RSNA",
+      "search": "deep resolve mri sedation ai reconstruction siemens anesthesia benchmarking litardo emerge miguel garcia patrick julien jacob foundation model epic",
+      "overview": "Prospective study evaluating whether Siemens Deep Resolve AI reconstruction reduces MRI sedation rates. Qualifying patients (MRN 1 and 10) identified after earlier imaging comparison setbacks. Abstract submitted to RSNA 2026 (05/06/2026).",
+      "stepsDone": [
+        "IRB strategy defined; literature review complete",
+        "Sedation benchmarking: 3 UM cases vs. published baselines (Midazolam, Fentanyl, Propofol, Rocuronium, Sugammadex)",
+        "Admin briefing document drafted",
+        "Pilot UM chart review: 3 anesthesia encounters identified",
+        "Initial case list provided by Miguel Garcia (Tower imaging supervisor)",
+        "Patient data obtained from Miguel Garcia",
+        "No qualifying patients identified in March 2026",
+        "Sedation and MRI acquisition timing data provided to Patrick",
+        "Imaging comparison issues identified — studies not suitable for comparison",
+        "Qualifying patients found (MRN 1 and 10)",
+        "Abstract submitted to RSNA 2026 (05/06/2026)"
+      ],
+      "nextSteps": [
+        "Awaiting RSNA 2026 acceptance decision",
+        "Continue patient recruitment and data analysis",
+        "Submit IRB application (Q2 2026)"
+      ],
+      "team": ["Litardo", "Braga", "Reddy"],
+      "lastUpdated": "05/06/2026"
+    },
+    {
+      "id": 20,
+      "title": "RadBoards — AI Voice-Interactive Oral Board Preparation",
+      "status": "submitted",
+      "badge": "Abstract at AAR",
+      "search": "radboards ai oral boards voice interactive diagnostic radiology board preparation reddy lampen-sachar litardo ott aar manuscript prospective irb pgy resident training education",
+      "overview": "AI-driven voice-interactive platform for diagnostic radiology oral board preparation. IRB-approved prospective single-institution study with 11 participants (PGY-2 through PGY-5). Pre- and post-session surveys showed improved confidence (SMD +0.48), preparedness (SMD +1.12), and decreased anxiety/stress. Abstract presented at AAR; manuscript in development.",
+      "stepsDone": [
+        "Platform developed — AI voice-interactive oral board simulator",
+        "IRB approval obtained (prospective single-institution study)",
+        "11 participants enrolled (PGY-2 through PGY-5)",
+        "Pre- and post-session surveys administered",
+        "Statistical analysis completed — confidence SMD +0.48, preparedness SMD +1.12",
+        "Abstract presented at AAR (05/2026)"
+      ],
+      "nextSteps": [
+        "Manuscript development in progress",
+        "Expand participant pool for larger validation study"
+      ],
+      "team": ["Reddy, Rohit", "Lampen-Sachar, Katrina", "Litardo, Nicolas A.", "Ott, Nicholas Alexander"],
+      "lastUpdated": "05/17/2026"
+    },
+    {
       "id": 8,
       "title": "AI Revenue — Financial Impact of AI Integration",
       "status": "in-progress",
@@ -287,25 +338,24 @@
       "id": 13,
       "title": "Gleamer Algorithm — Periprosthetic, Vertebral & Tumor Fracture Detection",
       "status": "data-collection",
-      "badge": "Data Analysis",
-      "search": "gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel kirby vertebral tumor aguilera rsna abstract educational exhibit aidoc data received analysis in progress",
-      "overview": "Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization — diagnostic use only). Projects include: periprosthetic fractures after total hip/knee arthroplasty (~2,000 patients), tumor fractures, and vertebral fractures. Aidoc analysis returned (05/2026); statistical analysis in progress.",
+      "badge": "Awaiting Aidoc Data",
+      "search": "gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel kirby vertebral tumor aguilera rsna abstract educational exhibit aidoc analysis",
+      "overview": "Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization — diagnostic use only). Projects include: periprosthetic fractures after total hip/knee arthroplasty (~2,000 patients), tumor fractures, and vertebral fractures. Data currently being analyzed by Aidoc; awaiting their results for statistical analysis. RSNA abstract submission deadline: beginning of May.",
       "stepsDone": [
         "Literature review conducted on AI algorithm performance",
         "~2,000 patient cohort identified",
         "Joel reviewing pathologic and periprosthetic fracture cases through Gleamer",
         "Surgical proven periprosthetic fracture cases identified via Epic search; X-rays collected for retrospective Gleamer evaluation",
-        "Data sent to Aidoc for algorithm analysis (05/2026)",
-        "Aidoc data received (05/2026)"
+        "Data sent to Aidoc for algorithm analysis (05/2026)"
       ],
       "nextSteps": [
-        "Statistical analysis of Aidoc-returned data",
-        "Prepare and submit RSNA abstract",
+        "Awaiting Aidoc data return for statistical analysis",
+        "Submit RSNA abstract once data analysis complete",
         "Decide on submission format: scientific paper (performance analysis) vs. educational exhibit (pitfalls)",
         "Explore tumor fracture and additional hip/knee sub-projects"
       ],
       "team": ["Rosenblum, Joel", "Quinn, Kirby", "Aguilera"],
-      "lastUpdated": "05/10/2026"
+      "lastUpdated": "05/02/2026"
     },
     {
       "id": 14,
@@ -327,34 +377,6 @@
       "lastUpdated": "03/2026"
     },
     {
-      "id": 10,
-      "title": "Deep Resolve — AI Image Reconstruction & Sedation Reduction",
-      "status": "submitted",
-      "badge": "Submitted to RSNA",
-      "search": "deep resolve mri sedation ai reconstruction siemens anesthesia benchmarking litardo emerge miguel garcia patrick julien jacob foundation model epic",
-      "overview": "Prospective study evaluating whether Siemens Deep Resolve AI reconstruction reduces MRI sedation rates. Qualifying patients (MRN 1 and 10) identified after earlier imaging comparison setbacks. Abstract submitted to RSNA 2026 (05/06/2026).",
-      "stepsDone": [
-        "IRB strategy defined; literature review complete",
-        "Sedation benchmarking: 3 UM cases vs. published baselines (Midazolam, Fentanyl, Propofol, Rocuronium, Sugammadex)",
-        "Admin briefing document drafted",
-        "Pilot UM chart review: 3 anesthesia encounters identified",
-        "Initial case list provided by Miguel Garcia (Tower imaging supervisor)",
-        "Patient data obtained from Miguel Garcia",
-        "No qualifying patients identified in March 2026",
-        "Sedation and MRI acquisition timing data provided to Patrick",
-        "Imaging comparison issues identified — studies not suitable for comparison",
-        "Qualifying patients found (MRN 1 and 10)",
-        "Abstract submitted to RSNA 2026 (05/06/2026)"
-      ],
-      "nextSteps": [
-        "Awaiting RSNA 2026 acceptance decision",
-        "Continue patient recruitment and data analysis",
-        "Submit IRB application (Q2 2026)"
-      ],
-      "team": ["Litardo", "Braga", "Reddy"],
-      "lastUpdated": "05/06/2026"
-    },
-    {
       "id": 15,
       "title": "Leads Grant Proposal (Net AI) — Cancer Trial Recruitment",
       "status": "on-hold",
@@ -367,7 +389,7 @@
         "$30k grant awarded (July 2025)"
       ],
       "nextSteps": [
-        "⚠ Project halted by UM IT (cybersecurity concerns) — resolution pending",
+        "Project halted by UM IT (cybersecurity concerns) — resolution pending",
         "Resume study execution once IT clearance obtained"
       ],
       "team": ["Dr. Kinomori", "Quinn, Kirby"],
@@ -385,7 +407,7 @@
         "Integration with EHR and PACS assessed"
       ],
       "nextSteps": [
-        "⚠ Project on hold — monitor for resumption"
+        "Project on hold — monitor for resumption"
       ],
       "team": ["Dr. Jose", "McKinney", "Braga"],
       "lastUpdated": "03/2026"
