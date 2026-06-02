@@ -1,26 +1,27 @@
 {
-  "lastUpdated": "May 2026",
+  "lastUpdated": "June 2026",
   "projects": [
     {
       "id": 2,
       "title": "Nuance Smart Impressions — AI-Assisted Radiology Reporting",
       "status": "submitted",
       "badge": "Submitted to RSNA",
-      "search": "nuance smart impressions hedging dictation nlp radiology report rohit braga kirby albuquerque radiology artificial intelligence rsna submitted awaiting decision",
-      "overview": "AI-Assisted Impression Drafting: Effects on Hedging, Style Standards, and Critical-Finding Prioritization. Analyzes AI's effect on radiology impression length, style consistency, hedging language, and critical-finding detection. Previously accepted by Radiology: Artificial Intelligence; now submitted to RSNA, awaiting decision.",
+      "search": "nuance smart impressions hedging dictation nlp radiology report rohit braga kirby albuquerque radiology artificial intelligence rsna submitted pending decision under review",
+      "targetOutlet": "RSNA",
+      "overview": "AI-Assisted Impression Drafting: Effects on Hedging, Style Standards, and Critical-Finding Prioritization. Analyzes AI's effect on radiology impression length, style consistency, hedging language, and critical-finding detection. Submitted to RSNA; pending decision.",
       "stepsDone": [
         "Data analysis completed across 4 analytics buckets",
         "Manuscript reworked and revised (11/16/2025)",
         "Figures, tables, and supplementary materials updated",
         "Submitted to Radiology: Artificial Intelligence (02/12/2026)",
-        "Accepted for publication by Radiology: Artificial Intelligence (05/2026)",
-        "Submitted to RSNA — awaiting decision (05/2026)"
+        "Submitted to RSNA — pending decision (05/2026)"
       ],
       "nextSteps": [
         "Awaiting RSNA acceptance decision"
       ],
       "team": ["Reddy, Rohit", "Quinn, Kirby", "Jose, Jean", "Braga, Thiago", "Albuquerque"],
-      "lastUpdated": "05/17/2026"
+      "lastUpdated": "05/17/2026",
+      "lastUpdatedISO": "2026-05-17"
     },
     {
       "id": 1,
@@ -28,6 +29,7 @@
       "status": "submitted",
       "badge": "Under Review",
       "search": "ipe arnp advanced practice providers outpatient pulmonary embolism kirby jacob braga mckinney bjr british journal radiology",
+      "targetOutlet": "BJR",
       "overview": "Integrating Advanced Practice Providers with Point-of-Care AI imaging solutions in the outpatient setting. Studies whether an AI-guided triage system significantly reduces time to treatment for suspected iPE. Author change reversal denied by European Radiology AI; submitted to British Journal of Radiology (BJR) (04/2026).",
       "stepsDone": [
         "Accepted & presented at RSNA 2025",
@@ -40,15 +42,17 @@
         "Awaiting peer review response from British Journal of Radiology (BJR)"
       ],
       "team": ["Quinn, Kirby", "Jacob, Ayden", "Braga, Thiago", "McKinney, Alexander", "Braga, Juan Jose"],
-      "lastUpdated": "04/06/2026"
+      "lastUpdated": "04/06/2026",
+      "lastUpdatedISO": "2026-04-06"
     },
     {
       "id": 3,
       "title": "AI IT Survey — Satisfaction & Workflow Impact",
-      "status": "submitted",
-      "badge": "Under Review",
-      "search": "ai it survey satisfaction radiologists providers qualmetrics burnout litardo wahood reddy mckinney collado braga artificial intelligence denied jmir heliyon",
-      "overview": "QUALMETRICS satisfaction survey targeting radiologists and providers (ED physicians, PERT team) impacted by AI integration. Denied by Artificial Intelligence journal. Fatal flaws: 21.1% response rate (JMIR requires >=60%), n=38 substantive respondents, CHERRIES checklist missing, single-center/single-vendor limitations. Hallucination finding (68.4%) is clinically important. Resubmitted to Heliyon (04/16/2026).",
+      "status": "in-progress",
+      "badge": "Revising",
+      "search": "ai it survey satisfaction radiologists providers qualmetrics burnout litardo wahood reddy mckinney collado braga artificial intelligence denied jmir heliyon author list revising resubmit",
+      "targetOutlet": "",
+      "overview": "QUALMETRICS satisfaction survey targeting radiologists and providers (ED physicians, PERT team) impacted by AI integration. Denied by Artificial Intelligence journal. Fatal flaws: 21.1% response rate (JMIR requires >=60%), n=38 substantive respondents, CHERRIES checklist missing, single-center/single-vendor limitations. Hallucination finding (68.4%) is clinically important. Resubmitted to Heliyon (04/16/2026), then denied by Heliyon due to author list problems; revising authorship before resubmission.",
       "stepsDone": [
         "Survey designed and deployed",
         "Burnout question module added",
@@ -56,13 +60,16 @@
         "Manuscript developed and submitted to Artificial Intelligence (02/12/2026)",
         "Denied — fatal flaws: response rate 21.1%, n=38, CHERRIES checklist missing (04/2026)",
         "Editors' revisions incorporated; edited manuscript emailed to McKinney, Braga, Jose (04/09/2026)",
-        "Resubmitted to Heliyon (04/16/2026)"
+        "Resubmitted to Heliyon (04/16/2026)",
+        "Denied by Heliyon — author list problems (06/2026)"
       ],
       "nextSteps": [
-        "Awaiting peer review from Heliyon"
+        "Resolve author list issues flagged by Heliyon",
+        "Determine resubmission venue and resubmit"
       ],
       "team": ["Litardo, Nicolas A.", "Wahood, Waseem", "Reddy, Rohit", "Dr. McKinney", "Collado-Mesa", "Braga, Jose"],
-      "lastUpdated": "04/16/2026"
+      "lastUpdated": "06/2026",
+      "lastUpdatedISO": "2026-06-01"
     },
     {
       "id": 4,
@@ -70,6 +77,7 @@
       "status": "submitted",
       "badge": "Under Review",
       "search": "false positives ich ipe incidental acr 2025 academic radiology kirby sarah revision resubmitted",
+      "targetOutlet": "Academic Radiology",
       "overview": "Evaluates the incidence and characteristics of false positive findings generated by an AI-guided triage system for intracranial hemorrhage (ICH) and incidental pulmonary embolism (iPE).",
       "stepsDone": [
         "Abstract presented at ACR 2025 by Kirby",
@@ -82,7 +90,8 @@
         "Awaiting peer review response from Academic Radiology"
       ],
       "team": ["Quinn, Kirby", "Sarah (co-author)", "Dr. Jose", "Braga"],
-      "lastUpdated": "04/09/2026"
+      "lastUpdated": "04/09/2026",
+      "lastUpdatedISO": "2026-04-09"
     },
     {
       "id": 5,
@@ -90,6 +99,7 @@
       "status": "submitted",
       "badge": "Under Review",
       "search": "icac coronary calcium scoring aidoc chest ct cardiovascular quintero daniel ott nicholas nahourii michael jacc jcct resubmitted",
+      "targetOutlet": "JCCT",
       "overview": "Retrospective comparison of AIDOC AI non-gated vs. radiologist-gated coronary artery calcium (CAC) scoring on non-contrast chest CT. Rejected by JACC: Cardiovascular Imaging (Feb 27, 2026); revisions completed and resubmitted to Journal of Cardiovascular Computed Tomography (03/15/2026).",
       "stepsDone": [
         "Study designed, data collected, and manuscript finalized",
@@ -101,7 +111,8 @@
         "Awaiting peer review from Journal of Cardiovascular Computed Tomography"
       ],
       "team": ["Quintero, Daniel", "Ott, Nicholas Alexander", "Nahourii, Michael Robert", "Jose, Jean", "Reddy, Rohit", "Braga, Thiago", "Gorniak, Richard"],
-      "lastUpdated": "03/15/2026"
+      "lastUpdated": "03/15/2026",
+      "lastUpdatedISO": "2026-03-15"
     },
     {
       "id": 6,
@@ -109,6 +120,7 @@
       "status": "submitted",
       "badge": "Under Review",
       "search": "ethics editorial ajr jacr radiology ai ethics manuscript ryan krumins bibliography lit review submitted",
+      "targetOutlet": "JACR",
       "overview": "Editorial manuscript on AI ethics in radiology. Denied at AJR with revisions requested; more extensive literature review performed. Resubmitted to Journal of the American College of Radiology (JACR).",
       "stepsDone": [
         "Manuscript submitted to AJR",
@@ -120,7 +132,8 @@
         "Awaiting peer review from JACR"
       ],
       "team": ["Krumins, Ryan", "Litardo"],
-      "lastUpdated": "03/24/2026"
+      "lastUpdated": "03/24/2026",
+      "lastUpdatedISO": "2026-03-24"
     },
     {
       "id": 7,
@@ -128,6 +141,7 @@
       "status": "submitted",
       "badge": "Under Review",
       "search": "ich intracranial hemorrhage kirby sarah aidoc triage emergency radiology denied kerven cassion journal imaging informatics medicine resubmitted",
+      "targetOutlet": "JIIM",
       "overview": "Clinical impact of AI-directed triage for incidentally detected outpatient intracranial hemorrhage. Evaluating AIDOC algorithm performance in outpatient CT reads. Denied by Emergency Radiology; revised and resubmitted to Journal of Imaging Informatics in Medicine by Kerven Cassion (04/09/2026).",
       "stepsDone": [
         "Presented at ACR 2025 by Kirby",
@@ -141,7 +155,8 @@
         "Awaiting peer review from Journal of Imaging Informatics in Medicine"
       ],
       "team": ["Quinn, Kirby", "Sarah (co-author)", "Cassion, Kerven"],
-      "lastUpdated": "04/09/2026"
+      "lastUpdated": "04/09/2026",
+      "lastUpdatedISO": "2026-04-09"
     },
     {
       "id": 9,
@@ -149,6 +164,7 @@
       "status": "submitted",
       "badge": "Under Review",
       "search": "patient consent ai trainer krumins ryan manuscript submitted under review",
+      "targetOutlet": "",
       "overview": "AI-powered patient consent trainer tool. Manuscript submitted by Krumins, Ryan.",
       "stepsDone": [
         "Project development completed",
@@ -158,7 +174,8 @@
         "Awaiting peer review response"
       ],
       "team": ["Krumins, Ryan"],
-      "lastUpdated": "03/26/2026"
+      "lastUpdated": "03/26/2026",
+      "lastUpdatedISO": "2026-03-26"
     },
     {
       "id": 17,
@@ -166,6 +183,7 @@
       "status": "submitted",
       "badge": "Submitted to RSNA",
       "search": "ai governance radiology hospital legal medical legal questionnaire benchmarking rsna abstract aguilera educational exhibit readiness framework radiologist chair chief legal officer submitted pending",
+      "targetOutlet": "RSNA",
       "overview": "RSNA educational exhibit on AI governance frameworks in radiology, highlighting the gap between AI adoption pressures and governance readiness across hospital systems. Targets three stakeholder groups: chief legal officers, radiology department chairs, and general radiologists. Submitted to RSNA; pending approval.",
       "stepsDone": [
         "Concept developed — inspired by Dr. Aguilera's recent conference presentation",
@@ -177,7 +195,8 @@
         "Awaiting RSNA acceptance decision"
       ],
       "team": ["Litardo, Nicolas A.", "Quinn, Kirby", "Aguilera"],
-      "lastUpdated": "05/02/2026"
+      "lastUpdated": "05/02/2026",
+      "lastUpdatedISO": "2026-05-02"
     },
     {
       "id": 19,
@@ -185,6 +204,7 @@
       "status": "submitted",
       "badge": "Submitted to RSNA",
       "search": "hurricode quantiphi icd-10 coding ehr reconciliation incidental findings aif nlp rag radiology braga jose gorniak saigal litardo mckinney rsna 2026 abstract",
+      "targetOutlet": "RSNA",
       "overview": "Radiologist-attested, multi-organ system for automated ICD-10 code assignment from CT, MRI, and PET reports with EHR reconciliation to surface newly-documented actionable incidental findings. Built on a RAG backbone with curated ICD-10 vocabulary. Validated on 1,417 reports across multiple anatomic regions; overall F1 0.909, ICD-10 coding accuracy 99.6%. Quantiphi engineering support. RSNA 2026 abstract submission deadline: May 6, 2026.",
       "stepsDone": [
         "IRB-approved retrospective protocol established",
@@ -202,7 +222,8 @@
         "Phase 3 development — resolve remaining 27 deferred issues"
       ],
       "team": ["Braga, Thiago A.", "Jose, Jean", "Gorniak, Richard", "Saigal, Gaurav", "Litardo, Nicolas A.", "McKinney, Alexander M."],
-      "lastUpdated": "05/06/2026"
+      "lastUpdated": "05/06/2026",
+      "lastUpdatedISO": "2026-05-06"
     },
     {
       "id": 10,
@@ -210,6 +231,7 @@
       "status": "submitted",
       "badge": "Submitted to RSNA",
       "search": "deep resolve mri sedation ai reconstruction siemens anesthesia benchmarking litardo emerge miguel garcia patrick julien jacob foundation model epic",
+      "targetOutlet": "RSNA",
       "overview": "Prospective study evaluating whether Siemens Deep Resolve AI reconstruction reduces MRI sedation rates. Qualifying patients (MRN 1 and 10) identified after earlier imaging comparison setbacks. Abstract submitted to RSNA 2026 (05/06/2026).",
       "stepsDone": [
         "IRB strategy defined; literature review complete",
@@ -230,7 +252,8 @@
         "Submit IRB application (Q2 2026)"
       ],
       "team": ["Litardo", "Braga", "Reddy"],
-      "lastUpdated": "05/06/2026"
+      "lastUpdated": "05/06/2026",
+      "lastUpdatedISO": "2026-05-06"
     },
     {
       "id": 13,
@@ -238,6 +261,7 @@
       "status": "submitted",
       "badge": "Submitted to RSNA",
       "search": "gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel kirby vertebral tumor aguilera rsna abstract educational exhibit aidoc analysis submitted",
+      "targetOutlet": "RSNA",
       "overview": "Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization — diagnostic use only). Projects include: periprosthetic fractures after total hip/knee arthroplasty (~2,000 patients), tumor fractures, and vertebral fractures. Data analyzed by Aidoc; abstract submitted to RSNA.",
       "stepsDone": [
         "Literature review conducted on AI algorithm performance",
@@ -253,7 +277,8 @@
         "Explore tumor fracture and additional hip/knee sub-projects"
       ],
       "team": ["Rosenblum, Joel", "Quinn, Kirby", "Aguilera"],
-      "lastUpdated": "05/17/2026"
+      "lastUpdated": "05/17/2026",
+      "lastUpdatedISO": "2026-05-17"
     },
     {
       "id": 8,
@@ -261,6 +286,7 @@
       "status": "in-progress",
       "badge": "In Progress",
       "search": "ai revenue rsna 2025 jacob ayden reddy rohit manuscript submission",
+      "targetOutlet": "",
       "overview": "Study evaluating the revenue impact of AI integration in radiology. Abstract accepted and presented at RSNA 2025. Manuscript in final stages of submission.",
       "stepsDone": [
         "Abstract accepted for RSNA 2025",
@@ -271,7 +297,8 @@
         "Submit manuscript"
       ],
       "team": ["Jacob, Ayden", "Reddy, Rohit", "Quinn, Kirby"],
-      "lastUpdated": "03/26/2026"
+      "lastUpdated": "03/26/2026",
+      "lastUpdatedISO": "2026-03-26"
     },
     {
       "id": 20,
@@ -279,6 +306,7 @@
       "status": "in-progress",
       "badge": "In Progress",
       "search": "radboards ai oral boards voice interactive diagnostic radiology board preparation reddy lampen-sachar litardo ott aar manuscript prospective irb pgy resident training education",
+      "targetOutlet": "AAR",
       "overview": "AI-driven voice-interactive platform for diagnostic radiology oral board preparation. IRB-approved prospective single-institution study with 11 participants (PGY-2 through PGY-5). Pre- and post-session surveys showed improved confidence (SMD +0.48), preparedness (SMD +1.12), and decreased anxiety/stress. Abstract presented at AAR; manuscript in development.",
       "stepsDone": [
         "Platform developed — AI voice-interactive oral board simulator",
@@ -293,7 +321,8 @@
         "Expand participant pool for larger validation study"
       ],
       "team": ["Reddy, Rohit", "Lampen-Sachar, Katrina", "Litardo, Nicolas A.", "Ott, Nicholas Alexander"],
-      "lastUpdated": "05/17/2026"
+      "lastUpdated": "05/17/2026",
+      "lastUpdatedISO": "2026-05-17"
     },
     {
       "id": 18,
@@ -301,6 +330,7 @@
       "status": "in-progress",
       "badge": "Survey in Editing",
       "search": "ai governance survey hospital governance bodies data collection benchmarking radiology legal chief legal officer department chair radiologists aguilera national questionnaire",
+      "targetOutlet": "",
       "overview": "Survey-based research project collecting real-world data from hospital governance bodies on AI governance frameworks in radiology. Companion project to the RSNA educational exhibit (Project #17). Aims to build a national benchmarking dataset by gathering structured input from chief legal officers, radiology department chairs, and general radiologists across health systems.",
       "stepsDone": [
         "Project scope defined — companion to RSNA educational exhibit",
@@ -314,7 +344,8 @@
         "Identify target health systems and governance contacts for survey distribution"
       ],
       "team": ["Litardo, Nicolas A.", "Quinn, Kirby", "Aguilera"],
-      "lastUpdated": "05/02/2026"
+      "lastUpdated": "05/02/2026",
+      "lastUpdatedISO": "2026-05-02"
     },
     {
       "id": 11,
@@ -322,6 +353,7 @@
       "status": "data-collection",
       "badge": "Data Collection",
       "search": "rib fracture vertebral aidoc algorithm pilot er rads reinaldo jose braga galan arcilla erekar reddy aguilera",
+      "targetOutlet": "",
       "overview": "AI doc rib and vertebral fracture detection algorithm (AIDOC). Small pilot with Dr. Braga and Jose validating IT and algorithm performance. Progressing with ER RADS group for vertebral/rib fracture detection.",
       "stepsDone": [
         "Pilot algorithm deployed (February 2025)",
@@ -335,7 +367,8 @@
         "Resident/student evaluation of pilot data (opportunity open)"
       ],
       "team": ["Reinaldo, Jose", "Braga", "Galan", "Arcilla", "Reddy, Rohit", "Erekar, Rajeev"],
-      "lastUpdated": "04/09/2026"
+      "lastUpdated": "04/09/2026",
+      "lastUpdatedISO": "2026-04-09"
     },
     {
       "id": 12,
@@ -343,6 +376,7 @@
       "status": "data-collection",
       "badge": "Data Collection",
       "search": "contrast ultrasound siemens irb grant griffin harris cinthia del toro litardo ott nicholas",
+      "targetOutlet": "",
       "overview": "Study examining AI-enhanced contrast use in ultrasound (CEUS). Siemens collaboration with IRB approval and $50k grant funding. 40 patients already scanned; additional 60 patients planned.",
       "stepsDone": [
         "IRB approved",
@@ -355,7 +389,8 @@
         "Data analysis and manuscript preparation"
       ],
       "team": ["Griffin Harris", "Cinthia del Toro", "Litardo, Nicolas A.", "Ott, Nicholas Alexander"],
-      "lastUpdated": "03/2026"
+      "lastUpdated": "03/2026",
+      "lastUpdatedISO": "2026-03-01"
     },
     {
       "id": 14,
@@ -363,6 +398,7 @@
       "status": "early-stage",
       "badge": "Early Stage",
       "search": "rohit sir project thrombectomy ipe aidoc nlp pe cases uht emergency inpatient reddy",
+      "targetOutlet": "SIR",
       "overview": "Extension of the POCAID iPE project evaluating whether AIDOC's implementation at UHT (ED/Inpatient) minimizes time to thrombectomy compared to pre-implementation (pre-2024). Looks at ER and inpatient PE cases.",
       "stepsDone": [
         "12 cases with + NLP and + AIDOC for PE @ UHT identified",
@@ -374,7 +410,8 @@
         "Expand cohort to ED and inpatient cases"
       ],
       "team": ["Reddy, Rohit", "Quinn, Kirby"],
-      "lastUpdated": "03/2026"
+      "lastUpdated": "03/2026",
+      "lastUpdatedISO": "2026-03-01"
     },
     {
       "id": 15,
@@ -382,6 +419,7 @@
       "status": "on-hold",
       "badge": "On Hold",
       "search": "leads grant proposal net ai social network cancer trial recruitment kinomori 30k grant cybersecurity",
+      "targetOutlet": "",
       "overview": "Social network integration study examining whether social media and AI increases recruitment in cancer clinical trials. $30k grant awarded July 2025, led by Dr. Kinomori. Currently halted by UM IT due to cybersecurity concerns.",
       "stepsDone": [
         "Grant proposal draft completed (January 2025)",
@@ -393,7 +431,8 @@
         "Resume study execution once IT clearance obtained"
       ],
       "team": ["Dr. Kinomori", "Quinn, Kirby"],
-      "lastUpdated": "07/2025"
+      "lastUpdated": "07/2025",
+      "lastUpdatedISO": "2025-07-01"
     },
     {
       "id": 16,
@@ -401,6 +440,7 @@
       "status": "on-hold",
       "badge": "On Hold",
       "search": "syngo carbon siemens pacs ehr report generation diagnoses jose mckinney braga on hold",
+      "targetOutlet": "",
       "overview": "Siemens Syngo Carbon — next-generation AI-powered PACS platform integrating EHR, automated report generation, and diagnostic decision support. Currently on hold.",
       "stepsDone": [
         "Platform evaluation initiated",
@@ -410,7 +450,9 @@
         "Project on hold — monitor for resumption"
       ],
       "team": ["Dr. Jose", "McKinney", "Braga"],
-      "lastUpdated": "03/2026"
+      "lastUpdated": "03/2026",
+      "lastUpdatedISO": "2026-03-01"
     }
   ]
 }
+
