@@ -1,228 +1,458 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>AI Research Projects Dashboard</title>
-<style>
-  :root {
-    --bg: #0f1117; --card: #1a1d27; --border: #2a2e42;
-    --accent: #4f8ef7; --green: #2ecc71; --text: #e8eaf6;
-    --muted: #8892b0; --tag-bg: #252941;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
-  header {
-    background: linear-gradient(135deg, #12152a 0%, #1a1f3a 100%);
-    border-bottom: 1px solid var(--border); padding: 28px 40px 24px;
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
-  }
-  .header-left h1 {
-    font-size: 1.7rem; font-weight: 700; letter-spacing: -0.5px;
-    background: linear-gradient(90deg, #4f8ef7, #9b59b6);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  }
-  .header-left p { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
-  .stats { display: flex; gap: 20px; flex-wrap: wrap; }
-  .stat { text-align: center; background: #252941; border-radius: 10px; padding: 10px 18px; border: 1px solid var(--border); }
-  .stat-num { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
-  .stat-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
-  .controls {
-    padding: 20px 40px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-    border-bottom: 1px solid var(--border); background: #12152a; position: sticky; top: 0; z-index: 10;
-  }
-  .controls label { color: var(--muted); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-  .filter-btn { border: 1px solid var(--border); background: transparent; color: var(--muted); padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 0.8rem; transition: all 0.2s; }
-  .filter-btn:hover { border-color: var(--accent); color: var(--text); }
-  .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
-  .search-wrap { margin-left: auto; position: relative; }
-  .search-wrap input { background: #1a1d27; border: 1px solid var(--border); color: var(--text); padding: 7px 14px 7px 34px; border-radius: 20px; font-size: 0.85rem; width: 220px; outline: none; transition: border-color 0.2s; }
-  .search-wrap input:focus { border-color: var(--accent); }
-  .search-wrap::before { content: '\1F50D'; position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 0.75rem; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px; padding: 28px 40px; }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; cursor: default; position: relative; overflow: hidden; }
-  .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: 14px 14px 0 0; }
-  .card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.4); border-color: #3d4468; }
-  .card.hidden { display: none; }
-  .card[data-status="published"]::before       { background: linear-gradient(90deg, #2ecc71, #1abc9c); }
-  .card[data-status="submitted"]::before       { background: linear-gradient(90deg, #4f8ef7, #3498db); }
-  .card[data-status="revision"]::before        { background: linear-gradient(90deg, #e67e22, #d35400); }
-  .card[data-status="in-progress"]::before     { background: linear-gradient(90deg, #f1c40f, #e67e22); }
-  .card[data-status="data-collection"]::before { background: linear-gradient(90deg, #9b59b6, #8e44ad); }
-  .card[data-status="early-stage"]::before     { background: linear-gradient(90deg, #e74c3c, #c0392b); }
-  .card[data-status="planning"]::before        { background: linear-gradient(90deg, #95a5a6, #7f8c8d); }
-  .card[data-status="on-hold"]::before         { background: linear-gradient(90deg, #7f8c8d, #636e72); }
-  .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
-  .card-title { font-size: 1rem; font-weight: 700; line-height: 1.3; flex: 1; }
-  .status-badge { font-size: 0.68rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; white-space: nowrap; flex-shrink: 0; text-transform: uppercase; letter-spacing: 0.4px; }
-  .badge-published       { background: rgba(46,204,113,0.15); color: #2ecc71; border: 1px solid rgba(46,204,113,0.3); }
-  .badge-submitted       { background: rgba(79,142,247,0.15); color: #4f8ef7; border: 1px solid rgba(79,142,247,0.3); }
-  .badge-revision        { background: rgba(230,126,34,0.15); color: #e67e22; border: 1px solid rgba(230,126,34,0.3); }
-  .badge-in-progress     { background: rgba(241,196,15,0.15); color: #f1c40f; border: 1px solid rgba(241,196,15,0.3); }
-  .badge-data-collection { background: rgba(155,89,182,0.15); color: #b388ff; border: 1px solid rgba(155,89,182,0.3); }
-  .badge-early-stage     { background: rgba(231,76,60,0.15); color: #e74c3c; border: 1px solid rgba(231,76,60,0.3); }
-  .badge-planning        { background: rgba(149,165,166,0.15); color: #bdc3c7; border: 1px solid rgba(149,165,166,0.3); }
-  .badge-on-hold         { background: rgba(127,140,141,0.15); color: #95a5a6; border: 1px solid rgba(127,140,141,0.3); }
-  .card-overview { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
-  .section-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 700; color: var(--muted); margin-bottom: 6px; margin-top: 14px; }
-  .steps-done { list-style: none; }
-  .steps-done li { font-size: 0.8rem; color: #a8b4d8; padding: 3px 0 3px 18px; position: relative; line-height: 1.4; }
-  .steps-done li::before { content: '\2713'; position: absolute; left: 0; color: var(--green); font-weight: 700; font-size: 0.75rem; }
-  .next-steps { list-style: none; }
-  .next-steps li { font-size: 0.8rem; color: #a8b4d8; padding: 3px 0 3px 18px; position: relative; line-height: 1.4; }
-  .next-steps li::before { content: '\2192'; position: absolute; left: 0; color: var(--accent); font-weight: 700; font-size: 0.8rem; }
-  .team-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-  .team-tag { background: var(--tag-bg); border: 1px solid var(--border); border-radius: 20px; padding: 3px 10px; font-size: 0.72rem; color: #c0c8e8; }
-  .card-updated { font-size: 0.68rem; color: var(--muted); margin-top: 10px; text-align: right; font-style: italic; opacity: 0.75; }
-  .divider { height: 1px; background: var(--border); margin: 14px 0; }
-  .no-results { grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--muted); font-size: 1rem; }
-  footer { text-align: center; padding: 24px; color: var(--muted); font-size: 0.75rem; border-top: 1px solid var(--border); margin-top: 20px; }
-  #pw-gate { position: fixed; inset: 0; z-index: 9999; background: #0f1117; display: flex; align-items: center; justify-content: center; }
-  #pw-box { background: #1a1d27; border: 1px solid #2a2e42; border-radius: 16px; padding: 48px 40px; max-width: 380px; width: 90%; text-align: center; box-shadow: 0 24px 64px rgba(0,0,0,0.6); }
-  #pw-box .icon { font-size: 2.2rem; margin-bottom: 12px; }
-  #pw-box h2 { color: #e8eaf6; font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
-  #pw-box p { color: #8892b0; font-size: 0.9rem; margin-bottom: 28px; }
-  #pw-input { width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid #2a2e42; background: #0f1117; color: #e8eaf6; font-size: 1rem; outline: none; margin-bottom: 12px; box-sizing: border-box; transition: border-color 0.2s; }
-  #pw-input:focus { border-color: #4f8ef7; }
-  #pw-err { color: #e74c3c; font-size: 0.82rem; min-height: 18px; margin-bottom: 10px; }
-  #pw-btn { width: 100%; padding: 12px; border-radius: 8px; border: none; cursor: pointer; background: linear-gradient(135deg, #4f8ef7, #7c5cbf); color: #fff; font-size: 1rem; font-weight: 600; transition: opacity 0.2s; }
-  #pw-btn:hover { opacity: 0.88; }
-  @media (max-width: 600px) {
-    header, .controls, .grid { padding-left: 16px; padding-right: 16px; }
-    .grid { grid-template-columns: 1fr; }
-    .stats { gap: 10px; }
-  }
-</style>
-</head>
-<body>
-
-<div id="pw-gate">
-  <div id="pw-box">
-    <div class="icon">&#128274;</div>
-    <h2>AI Research Dashboard</h2>
-    <p>Enter the password to continue</p>
-    <input id="pw-input" type="password" placeholder="Password"
-      onkeydown="if(event.key==='Enter')checkPw()"
-      onfocus="this.style.borderColor='#4f8ef7'"
-      onblur="this.style.borderColor='#2a2e42'" />
-    <div id="pw-err"></div>
-    <button id="pw-btn" onclick="checkPw()">Unlock</button>
-  </div>
-</div>
-
-<script>
-(function(){
-  if(sessionStorage.getItem('dash_auth')==='1'){
-    document.getElementById('pw-gate').style.display='none';
-  }
-})();
-function checkPw(){
-  var val=document.getElementById('pw-input').value;
-  if(val==='UMiamiRadiology'){
-    sessionStorage.setItem('dash_auth','1');
-    var g=document.getElementById('pw-gate');
-    g.style.transition='opacity 0.4s'; g.style.opacity='0';
-    setTimeout(function(){g.style.display='none';},400);
-  } else {
-    var err=document.getElementById('pw-err');
-    err.textContent='Incorrect password. Try again.';
-    var inp=document.getElementById('pw-input');
-    inp.style.borderColor='#e74c3c'; inp.value=''; inp.focus();
-    setTimeout(function(){ err.textContent=''; inp.style.borderColor='#2a2e42'; },2500);
-  }
+{
+  "lastUpdated": "June 2026",
+  "projects": [
+    {
+      "id": 2,
+      "title": "Nuance Smart Impressions — AI-Assisted Radiology Reporting",
+      "status": "submitted",
+      "badge": "Submitted to RSNA",
+      "search": "nuance smart impressions hedging dictation nlp radiology report rohit braga kirby albuquerque radiology artificial intelligence rsna submitted pending decision under review",
+      "targetOutlet": "RSNA",
+      "overview": "AI-Assisted Impression Drafting: Effects on Hedging, Style Standards, and Critical-Finding Prioritization. Analyzes AI's effect on radiology impression length, style consistency, hedging language, and critical-finding detection. Submitted to RSNA; pending decision.",
+      "stepsDone": [
+        "Data analysis completed across 4 analytics buckets",
+        "Manuscript reworked and revised (11/16/2025)",
+        "Figures, tables, and supplementary materials updated",
+        "Submitted to Radiology: Artificial Intelligence (02/12/2026)",
+        "Submitted to RSNA — pending decision (05/2026)"
+      ],
+      "nextSteps": [
+        "Awaiting RSNA acceptance decision"
+      ],
+      "team": ["Reddy, Rohit", "Quinn, Kirby", "Jose, Jean", "Braga, Thiago", "Albuquerque"],
+      "lastUpdated": "05/17/2026",
+      "lastUpdatedISO": "2026-05-17"
+    },
+    {
+      "id": 1,
+      "title": "iPE ARNP vs Non-ARNP Sites — AI at Point of Care",
+      "status": "submitted",
+      "badge": "Under Review",
+      "search": "ipe arnp advanced practice providers outpatient pulmonary embolism kirby jacob braga mckinney bjr british journal radiology",
+      "targetOutlet": "BJR",
+      "overview": "Integrating Advanced Practice Providers with Point-of-Care AI imaging solutions in the outpatient setting. Studies whether an AI-guided triage system significantly reduces time to treatment for suspected iPE. Author change reversal denied by European Radiology AI; submitted to British Journal of Radiology (BJR) (04/2026).",
+      "stepsDone": [
+        "Accepted & presented at RSNA 2025",
+        "Submitted to Journal of Assisted Computed Tomography",
+        "Resubmitted to Journal of European Radiology AI",
+        "Revisions completed and manuscript re-uploaded (March 14, 2026)",
+        "Author change request denied by European Radiology AI — writing to publisher to request reversal"
+      ],
+      "nextSteps": [
+        "Awaiting peer review response from British Journal of Radiology (BJR)"
+      ],
+      "team": ["Quinn, Kirby", "Jacob, Ayden", "Braga, Thiago", "McKinney, Alexander", "Braga, Juan Jose"],
+      "lastUpdated": "04/06/2026",
+      "lastUpdatedISO": "2026-04-06"
+    },
+    {
+      "id": 3,
+      "title": "AI IT Survey — Satisfaction & Workflow Impact",
+      "status": "in-progress",
+      "badge": "Revising",
+      "search": "ai it survey satisfaction radiologists providers qualmetrics burnout litardo wahood reddy mckinney collado braga artificial intelligence denied jmir heliyon author list revising resubmit",
+      "targetOutlet": "",
+      "overview": "QUALMETRICS satisfaction survey targeting radiologists and providers (ED physicians, PERT team) impacted by AI integration. Denied by Artificial Intelligence journal. Fatal flaws: 21.1% response rate (JMIR requires >=60%), n=38 substantive respondents, CHERRIES checklist missing, single-center/single-vendor limitations. Hallucination finding (68.4%) is clinically important. Resubmitted to Heliyon (04/16/2026), then denied by Heliyon due to author list problems; revising authorship before resubmission.",
+      "stepsDone": [
+        "Survey designed and deployed",
+        "Burnout question module added",
+        "Internal data collected",
+        "Manuscript developed and submitted to Artificial Intelligence (02/12/2026)",
+        "Denied — fatal flaws: response rate 21.1%, n=38, CHERRIES checklist missing (04/2026)",
+        "Editors' revisions incorporated; edited manuscript emailed to McKinney, Braga, Jose (04/09/2026)",
+        "Resubmitted to Heliyon (04/16/2026)",
+        "Denied by Heliyon — author list problems (06/2026)"
+      ],
+      "nextSteps": [
+        "Resolve author list issues flagged by Heliyon",
+        "Determine resubmission venue and resubmit"
+      ],
+      "team": ["Litardo, Nicolas A.", "Wahood, Waseem", "Reddy, Rohit", "Dr. McKinney", "Collado-Mesa", "Braga, Jose"],
+      "lastUpdated": "06/2026",
+      "lastUpdatedISO": "2026-06-01"
+    },
+    {
+      "id": 4,
+      "title": "False Positives (ICH & iPE) — AI Triage Accuracy",
+      "status": "submitted",
+      "badge": "Under Review",
+      "search": "false positives ich ipe incidental acr 2025 academic radiology kirby sarah revision resubmitted",
+      "targetOutlet": "Academic Radiology",
+      "overview": "Evaluates the incidence and characteristics of false positive findings generated by an AI-guided triage system for intracranial hemorrhage (ICH) and incidental pulmonary embolism (iPE).",
+      "stepsDone": [
+        "Abstract presented at ACR 2025 by Kirby",
+        "Rough draft manuscript completed",
+        "Sent to Dr. Jose and Braga for review",
+        "Submitted to Academic Radiology (11/17/2025)",
+        "Revisions completed and resubmitted to Academic Radiology (04/09/2026)"
+      ],
+      "nextSteps": [
+        "Awaiting peer review response from Academic Radiology"
+      ],
+      "team": ["Quinn, Kirby", "Sarah (co-author)", "Dr. Jose", "Braga"],
+      "lastUpdated": "04/09/2026",
+      "lastUpdatedISO": "2026-04-09"
+    },
+    {
+      "id": 5,
+      "title": "iCAC Project — AI Coronary Calcium Scoring",
+      "status": "submitted",
+      "badge": "Under Review",
+      "search": "icac coronary calcium scoring aidoc chest ct cardiovascular quintero daniel ott nicholas nahourii michael jacc jcct resubmitted",
+      "targetOutlet": "JCCT",
+      "overview": "Retrospective comparison of AIDOC AI non-gated vs. radiologist-gated coronary artery calcium (CAC) scoring on non-contrast chest CT. Rejected by JACC: Cardiovascular Imaging (Feb 27, 2026); revisions completed and resubmitted to Journal of Cardiovascular Computed Tomography (03/15/2026).",
+      "stepsDone": [
+        "Study designed, data collected, and manuscript finalized",
+        "Submitted to JACC: Cardiovascular Imaging (11/13/2025)",
+        "Rejected by JACC: Cardiovascular Imaging (Feb 27, 2026)",
+        "Revisions completed with Quintero; Nick Ott resubmitted to JCCT (03/15/2026)"
+      ],
+      "nextSteps": [
+        "Awaiting peer review from Journal of Cardiovascular Computed Tomography"
+      ],
+      "team": ["Quintero, Daniel", "Ott, Nicholas Alexander", "Nahourii, Michael Robert", "Jose, Jean", "Reddy, Rohit", "Braga, Thiago", "Gorniak, Richard"],
+      "lastUpdated": "03/15/2026",
+      "lastUpdatedISO": "2026-03-15"
+    },
+    {
+      "id": 6,
+      "title": "Ethics Editorial — AI Ethics in Radiology",
+      "status": "submitted",
+      "badge": "Under Review",
+      "search": "ethics editorial ajr jacr radiology ai ethics manuscript ryan krumins bibliography lit review submitted",
+      "targetOutlet": "JACR",
+      "overview": "Editorial manuscript on AI ethics in radiology. Denied at AJR with revisions requested; more extensive literature review performed. Resubmitted to Journal of the American College of Radiology (JACR).",
+      "stepsDone": [
+        "Manuscript submitted to AJR",
+        "Denied at AJR — revisions requested",
+        "More extensive literature review performed",
+        "Submitted to JACR (03/24/2026)"
+      ],
+      "nextSteps": [
+        "Awaiting peer review from JACR"
+      ],
+      "team": ["Krumins, Ryan", "Litardo"],
+      "lastUpdated": "03/24/2026",
+      "lastUpdatedISO": "2026-03-24"
+    },
+    {
+      "id": 7,
+      "title": "ICH Project — AI-Directed Triage for Intracranial Hemorrhage",
+      "status": "submitted",
+      "badge": "Under Review",
+      "search": "ich intracranial hemorrhage kirby sarah aidoc triage emergency radiology denied kerven cassion journal imaging informatics medicine resubmitted",
+      "targetOutlet": "JIIM",
+      "overview": "Clinical impact of AI-directed triage for incidentally detected outpatient intracranial hemorrhage. Evaluating AIDOC algorithm performance in outpatient CT reads. Denied by Emergency Radiology; revised and resubmitted to Journal of Imaging Informatics in Medicine by Kerven Cassion (04/09/2026).",
+      "stepsDone": [
+        "Presented at ACR 2025 by Kirby",
+        "Abstract submitted & accepted (ACR 2025)",
+        "Manuscript first draft nearly complete",
+        "Submitted to Emergency Radiology (03/2026)",
+        "Denied by Emergency Radiology (04/2026)",
+        "Kerven Cassion (med student) completed revisions and resubmitted to Journal of Imaging Informatics in Medicine (04/09/2026)"
+      ],
+      "nextSteps": [
+        "Awaiting peer review from Journal of Imaging Informatics in Medicine"
+      ],
+      "team": ["Quinn, Kirby", "Sarah (co-author)", "Cassion, Kerven"],
+      "lastUpdated": "04/09/2026",
+      "lastUpdatedISO": "2026-04-09"
+    },
+    {
+      "id": 9,
+      "title": "Patient Consent AI Trainer",
+      "status": "submitted",
+      "badge": "Under Review",
+      "search": "patient consent ai trainer krumins ryan manuscript submitted under review",
+      "targetOutlet": "",
+      "overview": "AI-powered patient consent trainer tool. Manuscript submitted by Krumins, Ryan.",
+      "stepsDone": [
+        "Project development completed",
+        "Manuscript submitted"
+      ],
+      "nextSteps": [
+        "Awaiting peer review response"
+      ],
+      "team": ["Krumins, Ryan"],
+      "lastUpdated": "03/26/2026",
+      "lastUpdatedISO": "2026-03-26"
+    },
+    {
+      "id": 17,
+      "title": "AI Governance in Radiology — RSNA Educational Exhibit",
+      "status": "submitted",
+      "badge": "Submitted to RSNA",
+      "search": "ai governance radiology hospital legal medical legal questionnaire benchmarking rsna abstract aguilera educational exhibit readiness framework radiologist chair chief legal officer submitted pending",
+      "targetOutlet": "RSNA",
+      "overview": "RSNA educational exhibit on AI governance frameworks in radiology, highlighting the gap between AI adoption pressures and governance readiness across hospital systems. Targets three stakeholder groups: chief legal officers, radiology department chairs, and general radiologists. Submitted to RSNA; pending approval.",
+      "stepsDone": [
+        "Concept developed — inspired by Dr. Aguilera's recent conference presentation",
+        "Brainstorming phase: key governance gaps identified; survey structure outlined",
+        "RSNA educational exhibit prepared and ready for submission",
+        "Submitted to RSNA — pending approval (05/2026)"
+      ],
+      "nextSteps": [
+        "Awaiting RSNA acceptance decision"
+      ],
+      "team": ["Litardo, Nicolas A.", "Quinn, Kirby", "Aguilera"],
+      "lastUpdated": "05/02/2026",
+      "lastUpdatedISO": "2026-05-02"
+    },
+    {
+      "id": 19,
+      "title": "Hurricode — Automated ICD-10 Coding & Incidental Finding Surfacing",
+      "status": "submitted",
+      "badge": "Submitted to RSNA",
+      "search": "hurricode quantiphi icd-10 coding ehr reconciliation incidental findings aif nlp rag radiology braga jose gorniak saigal litardo mckinney rsna 2026 abstract",
+      "targetOutlet": "RSNA",
+      "overview": "Radiologist-attested, multi-organ system for automated ICD-10 code assignment from CT, MRI, and PET reports with EHR reconciliation to surface newly-documented actionable incidental findings. Built on a RAG backbone with curated ICD-10 vocabulary. Validated on 1,417 reports across multiple anatomic regions; overall F1 0.909, ICD-10 coding accuracy 99.6%. Quantiphi engineering support. RSNA 2026 abstract submission deadline: May 6, 2026.",
+      "stepsDone": [
+        "IRB-approved retrospective protocol established",
+        "1,417 de-identified reports (CT/CTA/MRI/MRA/MRV) processed across multiple anatomic regions",
+        "RAG pipeline deployed with curated ICD-10 vocabulary and clinical rules layer",
+        "Radiologist validation completed on 1,381 reports — overall F1 0.909, coding accuracy 99.6%",
+        "AIF identification accuracy 93.4% on n=699 evaluated (sensitivity 0.639, specificity 0.974)",
+        "139 reviewer-flagged issues captured; 112 (80.6%) resolved in Phase 2",
+        "RSNA 2026 abstract draft v3.4 completed",
+        "Abstract submitted to RSNA 2026 (05/06/2026)"
+      ],
+      "nextSteps": [
+        "Awaiting RSNA 2026 acceptance decision",
+        "Quantiphi to provide top 5 most frequently surfaced AIFs for results",
+        "Phase 3 development — resolve remaining 27 deferred issues"
+      ],
+      "team": ["Braga, Thiago A.", "Jose, Jean", "Gorniak, Richard", "Saigal, Gaurav", "Litardo, Nicolas A.", "McKinney, Alexander M."],
+      "lastUpdated": "05/06/2026",
+      "lastUpdatedISO": "2026-05-06"
+    },
+    {
+      "id": 10,
+      "title": "Deep Resolve — AI Image Reconstruction & Sedation Reduction",
+      "status": "submitted",
+      "badge": "Submitted to RSNA",
+      "search": "deep resolve mri sedation ai reconstruction siemens anesthesia benchmarking litardo emerge miguel garcia patrick julien jacob foundation model epic",
+      "targetOutlet": "RSNA",
+      "overview": "Prospective study evaluating whether Siemens Deep Resolve AI reconstruction reduces MRI sedation rates. Qualifying patients (MRN 1 and 10) identified after earlier imaging comparison setbacks. Abstract submitted to RSNA 2026 (05/06/2026).",
+      "stepsDone": [
+        "IRB strategy defined; literature review complete",
+        "Sedation benchmarking: 3 UM cases vs. published baselines (Midazolam, Fentanyl, Propofol, Rocuronium, Sugammadex)",
+        "Admin briefing document drafted",
+        "Pilot UM chart review: 3 anesthesia encounters identified",
+        "Initial case list provided by Miguel Garcia (Tower imaging supervisor)",
+        "Patient data obtained from Miguel Garcia",
+        "No qualifying patients identified in March 2026",
+        "Sedation and MRI acquisition timing data provided to Patrick",
+        "Imaging comparison issues identified — studies not suitable for comparison",
+        "Qualifying patients found (MRN 1 and 10)",
+        "Abstract submitted to RSNA 2026 (05/06/2026)"
+      ],
+      "nextSteps": [
+        "Awaiting RSNA 2026 acceptance decision",
+        "Continue patient recruitment and data analysis",
+        "Submit IRB application (Q2 2026)"
+      ],
+      "team": ["Litardo", "Braga", "Reddy"],
+      "lastUpdated": "05/06/2026",
+      "lastUpdatedISO": "2026-05-06"
+    },
+    {
+      "id": 13,
+      "title": "Gleamer Algorithm — Periprosthetic, Vertebral & Tumor Fracture Detection",
+      "status": "submitted",
+      "badge": "Submitted to RSNA",
+      "search": "gleamer algorithm fracture periprosthetic hip knee arthroplasty rosenblum joel kirby vertebral tumor aguilera rsna abstract educational exhibit aidoc analysis submitted",
+      "targetOutlet": "RSNA",
+      "overview": "Gleamer AI algorithm for fracture detection (not FDA cleared for prioritization — diagnostic use only). Projects include: periprosthetic fractures after total hip/knee arthroplasty (~2,000 patients), tumor fractures, and vertebral fractures. Data analyzed by Aidoc; abstract submitted to RSNA.",
+      "stepsDone": [
+        "Literature review conducted on AI algorithm performance",
+        "~2,000 patient cohort identified",
+        "Joel reviewing pathologic and periprosthetic fracture cases through Gleamer",
+        "Surgical proven periprosthetic fracture cases identified via Epic search; X-rays collected for retrospective Gleamer evaluation",
+        "Data sent to Aidoc for algorithm analysis (05/2026)",
+        "Submitted to RSNA (05/2026)"
+      ],
+      "nextSteps": [
+        "Awaiting RSNA acceptance decision",
+        "Decide on submission format: scientific paper (performance analysis) vs. educational exhibit (pitfalls)",
+        "Explore tumor fracture and additional hip/knee sub-projects"
+      ],
+      "team": ["Rosenblum, Joel", "Quinn, Kirby", "Aguilera"],
+      "lastUpdated": "05/17/2026",
+      "lastUpdatedISO": "2026-05-17"
+    },
+    {
+      "id": 8,
+      "title": "AI Revenue — Financial Impact of AI Integration",
+      "status": "in-progress",
+      "badge": "In Progress",
+      "search": "ai revenue rsna 2025 jacob ayden reddy rohit manuscript submission",
+      "targetOutlet": "",
+      "overview": "Study evaluating the revenue impact of AI integration in radiology. Abstract accepted and presented at RSNA 2025. Manuscript in final stages of submission.",
+      "stepsDone": [
+        "Abstract accepted for RSNA 2025",
+        "Presented at RSNA 2025",
+        "Manuscript written and in final stages of submission"
+      ],
+      "nextSteps": [
+        "Submit manuscript"
+      ],
+      "team": ["Jacob, Ayden", "Reddy, Rohit", "Quinn, Kirby"],
+      "lastUpdated": "03/26/2026",
+      "lastUpdatedISO": "2026-03-26"
+    },
+    {
+      "id": 20,
+      "title": "RadBoards — AI Voice-Interactive Oral Board Preparation",
+      "status": "in-progress",
+      "badge": "In Progress",
+      "search": "radboards ai oral boards voice interactive diagnostic radiology board preparation reddy lampen-sachar litardo ott aar manuscript prospective irb pgy resident training education",
+      "targetOutlet": "AAR",
+      "overview": "AI-driven voice-interactive platform for diagnostic radiology oral board preparation. IRB-approved prospective single-institution study with 11 participants (PGY-2 through PGY-5). Pre- and post-session surveys showed improved confidence (SMD +0.48), preparedness (SMD +1.12), and decreased anxiety/stress. Abstract presented at AAR; manuscript in development.",
+      "stepsDone": [
+        "Platform developed — AI voice-interactive oral board simulator",
+        "IRB approval obtained (prospective single-institution study)",
+        "11 participants enrolled (PGY-2 through PGY-5)",
+        "Pre- and post-session surveys administered",
+        "Statistical analysis completed — confidence SMD +0.48, preparedness SMD +1.12",
+        "Abstract presented at AAR (05/2026)"
+      ],
+      "nextSteps": [
+        "Manuscript development in progress",
+        "Expand participant pool for larger validation study"
+      ],
+      "team": ["Reddy, Rohit", "Lampen-Sachar, Katrina", "Litardo, Nicolas A.", "Ott, Nicholas Alexander"],
+      "lastUpdated": "05/17/2026",
+      "lastUpdatedISO": "2026-05-17"
+    },
+    {
+      "id": 18,
+      "title": "AI Governance Survey — Real-World Hospital Governance Data",
+      "status": "in-progress",
+      "badge": "Survey in Editing",
+      "search": "ai governance survey hospital governance bodies data collection benchmarking radiology legal chief legal officer department chair radiologists aguilera national questionnaire",
+      "targetOutlet": "",
+      "overview": "Survey-based research project collecting real-world data from hospital governance bodies on AI governance frameworks in radiology. Companion project to the RSNA educational exhibit (Project #17). Aims to build a national benchmarking dataset by gathering structured input from chief legal officers, radiology department chairs, and general radiologists across health systems.",
+      "stepsDone": [
+        "Project scope defined — companion to RSNA educational exhibit",
+        "Key stakeholder groups identified: (1) Chief Legal Officer, (2) Radiology Department Chair, (3) General Radiologists",
+        "Survey instrument created — currently being edited (05/2026)"
+      ],
+      "nextSteps": [
+        "Finalize survey edits and distribute",
+        "Build scoring/benchmarking framework to assess where each hospital system stands on safe AI deployment nationally",
+        "IRB consideration — determine if human subjects research approval required",
+        "Identify target health systems and governance contacts for survey distribution"
+      ],
+      "team": ["Litardo, Nicolas A.", "Quinn, Kirby", "Aguilera"],
+      "lastUpdated": "05/02/2026",
+      "lastUpdatedISO": "2026-05-02"
+    },
+    {
+      "id": 11,
+      "title": "AI Rib Fracture Algorithm — AIDOC Validation",
+      "status": "data-collection",
+      "badge": "Data Collection",
+      "search": "rib fracture vertebral aidoc algorithm pilot er rads reinaldo jose braga galan arcilla erekar reddy aguilera",
+      "targetOutlet": "",
+      "overview": "AI doc rib and vertebral fracture detection algorithm (AIDOC). Small pilot with Dr. Braga and Jose validating IT and algorithm performance. Progressing with ER RADS group for vertebral/rib fracture detection.",
+      "stepsDone": [
+        "Pilot algorithm deployed (February 2025)",
+        "Small group validation complete",
+        "ER RADS group enrolled for vertebral/rib fracture evaluation",
+        "Leandro Singerman running pilot; AI doc analysis produced"
+      ],
+      "nextSteps": [
+        "Follow up with Dr. Aguilera on current project status and whether student/resident assistance is needed",
+        "Request AI doc results from Singerman",
+        "Resident/student evaluation of pilot data (opportunity open)"
+      ],
+      "team": ["Reinaldo, Jose", "Braga", "Galan", "Arcilla", "Reddy, Rohit", "Erekar, Rajeev"],
+      "lastUpdated": "04/09/2026",
+      "lastUpdatedISO": "2026-04-09"
+    },
+    {
+      "id": 12,
+      "title": "Contrast Ultrasound — AI-Enhanced Contrast US Study",
+      "status": "data-collection",
+      "badge": "Data Collection",
+      "search": "contrast ultrasound siemens irb grant griffin harris cinthia del toro litardo ott nicholas",
+      "targetOutlet": "",
+      "overview": "Study examining AI-enhanced contrast use in ultrasound (CEUS). Siemens collaboration with IRB approval and $50k grant funding. 40 patients already scanned; additional 60 patients planned.",
+      "stepsDone": [
+        "IRB approved",
+        "$50k grant approved",
+        "Siemens collected data from 40 patients (July 2025)"
+      ],
+      "nextSteps": [
+        "Actively recruiting additional patients (March 2026)",
+        "Siemens to return for 60 additional scans once recruitment complete",
+        "Data analysis and manuscript preparation"
+      ],
+      "team": ["Griffin Harris", "Cinthia del Toro", "Litardo, Nicolas A.", "Ott, Nicholas Alexander"],
+      "lastUpdated": "03/2026",
+      "lastUpdatedISO": "2026-03-01"
+    },
+    {
+      "id": 14,
+      "title": "Rohit SIR Project — AI & Time to Thrombectomy",
+      "status": "early-stage",
+      "badge": "Early Stage",
+      "search": "rohit sir project thrombectomy ipe aidoc nlp pe cases uht emergency inpatient reddy",
+      "targetOutlet": "SIR",
+      "overview": "Extension of the POCAID iPE project evaluating whether AIDOC's implementation at UHT (ED/Inpatient) minimizes time to thrombectomy compared to pre-implementation (pre-2024). Looks at ER and inpatient PE cases.",
+      "stepsDone": [
+        "12 cases with + NLP and + AIDOC for PE @ UHT identified",
+        "Study concept defined"
+      ],
+      "nextSteps": [
+        "Meet with Rohit to discuss SIR abstract and next steps",
+        "Rohit to contact AIDOC for data/accession numbers",
+        "Expand cohort to ED and inpatient cases"
+      ],
+      "team": ["Reddy, Rohit", "Quinn, Kirby"],
+      "lastUpdated": "03/2026",
+      "lastUpdatedISO": "2026-03-01"
+    },
+    {
+      "id": 15,
+      "title": "Leads Grant Proposal (Net AI) — Cancer Trial Recruitment",
+      "status": "on-hold",
+      "badge": "On Hold",
+      "search": "leads grant proposal net ai social network cancer trial recruitment kinomori 30k grant cybersecurity",
+      "targetOutlet": "",
+      "overview": "Social network integration study examining whether social media and AI increases recruitment in cancer clinical trials. $30k grant awarded July 2025, led by Dr. Kinomori. Currently halted by UM IT due to cybersecurity concerns.",
+      "stepsDone": [
+        "Grant proposal draft completed (January 2025)",
+        "Dr. Kinomori assigned to lead project (5/12/2025)",
+        "$30k grant awarded (July 2025)"
+      ],
+      "nextSteps": [
+        "Project halted by UM IT (cybersecurity concerns) — resolution pending",
+        "Resume study execution once IT clearance obtained"
+      ],
+      "team": ["Dr. Kinomori", "Quinn, Kirby"],
+      "lastUpdated": "07/2025",
+      "lastUpdatedISO": "2025-07-01"
+    },
+    {
+      "id": 16,
+      "title": "Syngo Carbon — Next-Gen AI PACS Platform",
+      "status": "on-hold",
+      "badge": "On Hold",
+      "search": "syngo carbon siemens pacs ehr report generation diagnoses jose mckinney braga on hold",
+      "targetOutlet": "",
+      "overview": "Siemens Syngo Carbon — next-generation AI-powered PACS platform integrating EHR, automated report generation, and diagnostic decision support. Currently on hold.",
+      "stepsDone": [
+        "Platform evaluation initiated",
+        "Integration with EHR and PACS assessed"
+      ],
+      "nextSteps": [
+        "Project on hold — monitor for resumption"
+      ],
+      "team": ["Dr. Jose", "McKinney", "Braga"],
+      "lastUpdated": "03/2026",
+      "lastUpdatedISO": "2026-03-01"
+    }
+  ]
 }
-</script>
 
-<header>
-  <div class="header-left">
-    <h1>&#129504; AI Research Projects</h1>
-    <p id="header-sub">University of Miami &mdash; Radiology AI Research Group</p>
-  </div>
-  <div class="stats">
-    <div class="stat"><div class="stat-num" id="total-count">â</div><div class="stat-label">Total Projects</div></div>
-    <div class="stat"><div class="stat-num" style="color:#4f8ef7" id="submitted-count">â</div><div class="stat-label">Submitted</div></div>
-    <div class="stat"><div class="stat-num" style="color:#f1c40f" id="inprogress-count">â</div><div class="stat-label">In Progress</div></div>
-    <div class="stat"><div class="stat-num" style="color:#2ecc71" id="published-count">â</div><div class="stat-label">Accepted/Published</div></div>
-  </div>
-</header>
-
-<div class="controls">
-  <label>Filter:</label>
-  <button class="filter-btn active" onclick="filterCards('all',this)">All</button>
-  <button class="filter-btn" onclick="filterCards('submitted',this)">&#128196; Submitted</button>
-  <button class="filter-btn" onclick="filterCards('revision',this)">&#9888;&#65039; Revision</button>
-  <button class="filter-btn" onclick="filterCards('in-progress',this)">&#128260; In Progress</button>
-  <button class="filter-btn" onclick="filterCards('data-collection',this)">&#128452;&#65039; Data Collection</button>
-  <button class="filter-btn" onclick="filterCards('early-stage',this)">&#127793; Early Stage</button>
-  <button class="filter-btn" onclick="filterCards('planning',this)">&#128203; Planning</button>
-  <div class="search-wrap">
-    <input type="text" id="search" placeholder="Search projects or team..." oninput="searchCards(this.value)" />
-  </div>
-</div>
-
-<div class="grid" id="grid">
-  <div class="no-results">Loading projects...</div>
-</div>
-
-<footer>AI Research Projects Dashboard &nbsp;&#183;&nbsp; University of Miami Radiology &nbsp;&#183;&nbsp; Built from Microsoft Teams data</footer>
-
-<script>
-function badgeClass(s){
-  return {'published':'badge-published','submitted':'badge-submitted','revision':'badge-revision',
-    'in-progress':'badge-in-progress','data-collection':'badge-data-collection',
-    'early-stage':'badge-early-stage','planning':'badge-planning','on-hold':'badge-on-hold'}[s]||'badge-planning';
-}
-function renderCard(p){
-  return '<div class="card" data-status="'+p.status+'" data-search="'+p.search+' '+p.title.toLowerCase()+' '+p.team.join(' ').toLowerCase()+'">'+
-    '<div class="card-header"><div class="card-title">'+p.title+'</div>'+
-    '<span class="status-badge '+badgeClass(p.status)+'">'+p.badge+'</span></div>'+
-    '<div class="card-overview">'+p.overview+'</div>'+
-    '<div class="divider"></div>'+
-    '<div class="section-label">&#9989; Steps Completed</div>'+
-    '<ul class="steps-done">'+p.stepsDone.map(function(s){return'<li>'+s+'</li>';}).join('')+'</ul>'+
-    '<div class="section-label">&#10145; Next Steps</div>'+
-    '<ul class="next-steps">'+p.nextSteps.map(function(s){return'<li>'+s+'</li>';}).join('')+'</ul>'+
-    '<div class="divider"></div>'+
-    '<div class="section-label">&#128101; Team</div>'+
-    '<div class="team-tags">'+p.team.map(function(t){return'<span class="team-tag">'+t+'</span>';}).join('')+'</div>'+
-    '<div class="card-updated">Last updated: '+p.lastUpdated+'</div>'+
-  '</div>';
-}
-fetch('data.json?v='+Date.now())
-  .then(function(r){return r.json();})
-  .then(function(data){
-    document.getElementById('header-sub').innerHTML=
-      'University of Miami &mdash; Radiology AI Research Group &nbsp;&#183;&nbsp; Last updated: '+data.lastUpdated;
-    var grid=document.getElementById('grid');
-    grid.innerHTML=data.projects.map(renderCard).join('')+
-      '<div class="no-results" id="no-results" style="display:none">No projects match your search.</div>';
-    document.getElementById('total-count').textContent=data.projects.length;
-    document.getElementById('submitted-count').textContent=data.projects.filter(function(p){return p.status==='submitted'||p.status==='revision';}).length;
-    document.getElementById('inprogress-count').textContent=data.projects.filter(function(p){return p.status==='in-progress';}).length;
-    document.getElementById('published-count').textContent=data.projects.filter(function(p){return p.status==='published';}).length;
-  })
-  .catch(function(){
-    document.getElementById('grid').innerHTML='<div class="no-results">Failed to load project data.</div>';
-  });
-function filterCards(status,btn){
-  document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
-  btn.classList.add('active');
-  document.querySelectorAll('.card').forEach(function(c){
-    c.classList.toggle('hidden',status!=='all'&&c.dataset.status!==status);
-  });
-  checkNoResults();
-}
-function searchCards(val){
-  var q=val.toLowerCase().trim();
-  document.querySelectorAll('.card').forEach(function(c){
-    c.classList.toggle('hidden',!!q&&!c.dataset.search.includes(q)&&!c.innerText.toLowerCase().includes(q));
-  });
-  checkNoResults();
-}
-function checkNoResults(){
-  var nr=document.getElementById('no-results');
-  if(nr) nr.style.display=document.querySelectorAll('.card:not(.hidden)').length===0?'block':'none';
-}
-</script>
-</body>
-</html>
