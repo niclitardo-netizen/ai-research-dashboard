@@ -4,11 +4,11 @@
     {
       "id": 2,
       "title": "Nuance Smart Impressions — AI-Assisted Radiology Reporting",
-      "status": "submitted",
-      "badge": "Submitted to RSNA",
-      "search": "nuance smart impressions hedging dictation nlp radiology report rohit braga kirby albuquerque radiology artificial intelligence rsna submitted pending decision under review",
+      "status": "in-progress",
+      "badge": "Revising",
+      "search": "nuance smart impressions hedging dictation nlp radiology report rohit braga kirby albuquerque radiology artificial intelligence rsna revising revisions medical student manuscript submission",
       "targetOutlet": "RSNA",
-      "overview": "AI-Assisted Impression Drafting: Effects on Hedging, Style Standards, and Critical-Finding Prioritization. Analyzes AI's effect on radiology impression length, style consistency, hedging language, and critical-finding detection. Submitted to RSNA; pending decision.",
+      "overview": "AI-Assisted Impression Drafting: Effects on Hedging, Style Standards, and Critical-Finding Prioritization. Analyzes AI's effect on radiology impression length, style consistency, hedging language, and critical-finding detection. Previously submitted to RSNA. The manuscript now requires revisions; recruiting a medical student to assist with the revision and prepare it for submission.",
       "stepsDone": [
         "Data analysis completed across 4 analytics buckets",
         "Manuscript reworked and revised (11/16/2025)",
@@ -17,11 +17,13 @@
         "Submitted to RSNA — pending decision (05/2026)"
       ],
       "nextSteps": [
-        "Awaiting RSNA acceptance decision"
+        "Perform required manuscript revisions",
+        "Recruit a medical student to assist with the revision",
+        "Finalize and prepare for submission"
       ],
       "team": ["Reddy, Rohit", "Quinn, Kirby", "Jose, Jean", "Braga, Thiago", "Albuquerque"],
-      "lastUpdated": "05/17/2026",
-      "lastUpdatedISO": "2026-05-17"
+      "lastUpdated": "06/2026",
+      "lastUpdatedISO": "2026-06-01"
     },
     {
       "id": 1,
@@ -52,7 +54,7 @@
       "badge": "Revising",
       "search": "ai it survey satisfaction radiologists providers qualmetrics burnout litardo wahood reddy mckinney collado braga artificial intelligence denied jmir heliyon author list revising resubmit",
       "targetOutlet": "",
-      "overview": "QUALMETRICS satisfaction survey targeting radiologists and providers (ED physicians, PERT team) impacted by AI integration. Denied by Artificial Intelligence journal. Fatal flaws: 21.1% response rate (JMIR requires >=60%), n=38 substantive respondents, CHERRIES checklist missing, single-center/single-vendor limitations. Hallucination finding (68.4%) is clinically important. Resubmitted to Heliyon (04/16/2026), then denied by Heliyon due to author list problems; revising authorship before resubmission.",
+      "overview": "QUALMETRICS satisfaction survey targeting radiologists and providers (ED physicians, PERT team) impacted by AI integration. Denied by Artificial Intelligence journal. Fatal flaws: 21.1% response rate (JMIR requires >=60%), n=38 substantive respondents, CHERRIES checklist missing, single-center/single-vendor limitations. Hallucination finding (68.4%) is clinically important. Resubmitted to Heliyon (04/16/2026), then denied by Heliyon due to author list problems; revising authorship and selecting a target journal among Calder Library-affiliated journals before resubmission.",
       "stepsDone": [
         "Survey designed and deployed",
         "Burnout question module added",
@@ -65,7 +67,8 @@
       ],
       "nextSteps": [
         "Resolve author list issues flagged by Heliyon",
-        "Determine resubmission venue and resubmit"
+        "Select best target journal among Calder Library-affiliated journals",
+        "Resubmit once journal is selected"
       ],
       "team": ["Litardo, Nicolas A.", "Wahood, Waseem", "Reddy, Rohit", "Dr. McKinney", "Collado-Mesa", "Braga, Jose"],
       "lastUpdated": "06/2026",
@@ -373,24 +376,24 @@
     {
       "id": 12,
       "title": "Contrast Ultrasound — AI-Enhanced Contrast US Study",
-      "status": "data-collection",
-      "badge": "Data Collection",
-      "search": "contrast ultrasound siemens irb grant griffin harris cinthia del toro litardo ott nicholas",
+      "status": "submitted",
+      "badge": "Under Review",
+      "search": "contrast ultrasound ceus siemens irb grant griffin harris cinthia del toro litardo ott nicholas submitted pending review enrollment complete",
       "targetOutlet": "",
-      "overview": "Study examining AI-enhanced contrast use in ultrasound (CEUS). Siemens collaboration with IRB approval and $50k grant funding. 40 patients already scanned; additional 60 patients planned.",
+      "overview": "Study examining AI-enhanced contrast use in ultrasound (CEUS). Siemens collaboration with IRB approval and $50k grant funding. Siemens completed enrollment of a sufficient patient cohort; the study has been submitted to a journal and is now pending peer review.",
       "stepsDone": [
         "IRB approved",
         "$50k grant approved",
-        "Siemens collected data from 40 patients (July 2025)"
+        "Siemens collected data from 40 patients (July 2025)",
+        "Siemens completed enrollment of a sufficient patient cohort",
+        "Study submitted to journal"
       ],
       "nextSteps": [
-        "Actively recruiting additional patients (March 2026)",
-        "Siemens to return for 60 additional scans once recruitment complete",
-        "Data analysis and manuscript preparation"
+        "Awaiting peer review decision"
       ],
       "team": ["Griffin Harris", "Cinthia del Toro", "Litardo, Nicolas A.", "Ott, Nicholas Alexander"],
-      "lastUpdated": "03/2026",
-      "lastUpdatedISO": "2026-03-01"
+      "lastUpdated": "06/2026",
+      "lastUpdatedISO": "2026-06-01"
     },
     {
       "id": 14,
@@ -452,6 +455,28 @@
       "team": ["Dr. Jose", "McKinney", "Braga"],
       "lastUpdated": "03/2026",
       "lastUpdatedISO": "2026-03-01"
+    },
+    {
+      "id": 21,
+      "title": "AJR Viewpoint — The AI Translation Trap: Patient-Facing Radiology Summaries Require a Human Provider in the Loop",
+      "status": "in-progress",
+      "badge": "Revising",
+      "search": "ajr viewpoint american journal roentgenology ai translation trap patient facing radiology summaries human provider in the loop braga jose paes mckinney rejected revision resubmission braga approval",
+      "targetOutlet": "AJR",
+      "overview": "AJR Viewpoint manuscript arguing that AI-generated, patient-facing radiology report summaries require a human provider in the loop to prevent translation and oversight errors. Recently rejected by AJR; undergoing revision and awaiting Dr. Braga's approval of the revised manuscript before resubmission.",
+      "stepsDone": [
+        "Viewpoint manuscript drafted (title page and author list finalized)",
+        "Submitted to AJR (American Journal of Roentgenology)",
+        "Rejected by AJR"
+      ],
+      "nextSteps": [
+        "Revise manuscript per reviewer feedback",
+        "Obtain Dr. Braga's approval on the revised manuscript",
+        "Resubmit to AJR"
+      ],
+      "team": ["Braga, Thiago A.", "Jose, Jean", "Paes, Fabio"],
+      "lastUpdated": "06/2026",
+      "lastUpdatedISO": "2026-06-01"
     }
   ]
 }
